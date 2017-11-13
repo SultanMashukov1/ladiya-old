@@ -1,7 +1,8 @@
 <?php
 
-function includeArea($file, $withSiteDir = true){
-    \WM\Components\IncludeArea::inc('', array('PATH' => ($withSiteDir ? SITE_DIR : null) .'include/'.$file.'.php'));
+function includeArea($file, $withSiteDir = true)
+{
+    \WM\Components\IncludeArea::inc('', array('PATH' => ($withSiteDir ? SITE_DIR : null) . 'include/' . $file . '.php'));
 }
 
 defined('_DS_') or define('_DS_', DIRECTORY_SEPARATOR);
