@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Туры", 
+		"/tours/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Экскурсии", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Транспорт", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гостиницы", 
+		"/hotel/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Санатории", 
+		"/sanatorium/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

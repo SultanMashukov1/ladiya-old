@@ -1,0 +1,1691 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"td",
+				"trsdu\ttransition-duration: ${1:time};"
+			],
+			[
+				"fw",
+				"fw\tfont-weight"
+			],
+			[
+				"colr",
+				"color"
+			],
+			[
+				"tal",
+				"ta:l\ttext-align:left"
+			],
+			[
+				"pos",
+				"pos:a\tposition:absolute"
+			],
+			[
+				"in",
+				"initSlick"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"wh",
+				"where"
+			],
+			[
+				"ca",
+				"categories"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"br",
+				"border-radius"
+			],
+			[
+				"padi",
+				"padding-top"
+			],
+			[
+				"bgr",
+				"bgr:y\tbackground-repeat:repeat-y"
+			],
+			[
+				"produc",
+				"products-page"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"pro",
+				"products-page"
+			],
+			[
+				"pd",
+				"padding"
+			],
+			[
+				"pdo",
+				"products-page"
+			],
+			[
+				"web",
+				"webkit-appearance"
+			],
+			[
+				"wdi",
+				"width"
+			],
+			[
+				"fl",
+				"fl:l\tfloat:left"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"bb",
+				"bdb\tborder-bottom"
+			],
+			[
+				"cur",
+				"cur:d\tcursor:default"
+			],
+			[
+				"pr",
+				"products-page"
+			],
+			[
+				"f",
+				"f_l"
+			],
+			[
+				"bot",
+				"border-top-style"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"ta",
+				"ta-r\ttext-align: right;"
+			],
+			[
+				"bo",
+				"bootstrap"
+			],
+			[
+				"al",
+				"alt\tAttr"
+			],
+			[
+				"n",
+				"nowrap"
+			],
+			[
+				"to",
+				"topPosition"
+			],
+			[
+				"top",
+				"scrollTop"
+			],
+			[
+				"mt",
+				"mt\tmargin-top"
+			],
+			[
+				"tra",
+				"transition-duration"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"da",
+				"dark"
+			],
+			[
+				"bi",
+				"background-origin"
+			],
+			[
+				"cl",
+				"classname"
+			],
+			[
+				"va",
+				"vertical-align"
+			],
+			[
+				"i",
+				"id\tAttr"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"p",
+				"photo"
+			],
+			[
+				"bgn",
+				"background"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"l",
+				"link\tTag"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"c",
+				"col-md-6"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"tp",
+				"top"
+			],
+			[
+				"in_a",
+				"in_array_r"
+			],
+			[
+				"h",
+				"h5\tTag"
+			],
+			[
+				"backgr",
+				"background-repeat"
+			],
+			[
+				"background",
+				"background-repeat"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"b",
+				"background-image"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"te",
+				"textarea\tTag"
+			],
+			[
+				"col-xs",
+				"col-xs-12"
+			],
+			[
+				"posit",
+				"position-to"
+			],
+			[
+				"posti",
+				"position-from"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"list",
+				"list-style-image"
+			],
+			[
+				"contai",
+				"container-fluid"
+			],
+			[
+				"an",
+				"animation-name"
+			],
+			[
+				"bs",
+				"background-size"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"conta",
+				"container-fluid"
+			],
+			[
+				"fs",
+				"font-size"
+			],
+			[
+				"cn",
+				"container"
+			],
+			[
+				"col-",
+				"col-xs-12"
+			],
+			[
+				"boxs",
+				"box-shadow"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"col-md",
+				"col-md-6"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"box-s",
+				"box-shadow"
+			],
+			[
+				"clr",
+				"color"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"span",
+				"letter-spacing"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"fo",
+				"for\tfor …"
+			],
+			[
+				"tras",
+				"transform"
+			],
+			[
+				"col-l",
+				"col-lg-2"
+			],
+			[
+				"ori",
+				"orient"
+			],
+			[
+				"siz",
+				"sizes"
+			],
+			[
+				"rep",
+				"report_id"
+			],
+			[
+				"plac",
+				"place_perc"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"t",
+				"transparent"
+			],
+			[
+				"bc",
+				"background-color"
+			],
+			[
+				"out",
+				"outline"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"form",
+				"font-variant-numeric"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"col-sm",
+				"col-sm-8"
+			],
+			[
+				"sc",
+				"script\tTag"
+			],
+			[
+				"fore",
+				"foreach\tforeach …"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"s",
+				"src\tAttr"
+			],
+			[
+				"up",
+				"updatedAlbum"
+			],
+			[
+				"albu",
+				"album_create"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"bgc",
+				"background-color"
+			],
+			[
+				"is_i",
+				"is_int"
+			],
+			[
+				"crea",
+				"create"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 6073,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 19179,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/style.css",
+			"settings":
+			{
+				"buffer_size": 6848,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.scss",
+			"settings":
+			{
+				"buffer_size": 14097,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/scripts.js",
+			"settings":
+			{
+				"buffer_size": 2402,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"set ",
+				"Set Syntax: SCSS"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"set",
+				"Set Syntax: Sass"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"set s",
+				"Set Syntax: HTML"
+			],
+			[
+				"PackageResourceViewer",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git g",
+				"Git: Graph All"
+			],
+			[
+				"git h",
+				"Git: Commit history"
+			],
+			[
+				"g",
+				"Git: Status"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git qu",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"gitrem",
+				"Git: Track Remote Branch"
+			],
+			[
+				"git q",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"his",
+				"Git: Commit history"
+			],
+			[
+				"qu",
+				"Git: Quick Commit (current file)"
+			],
+			[
+				"histo",
+				"Git: Commit history"
+			],
+			[
+				"q",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"gitq",
+				"Git: Quick Commit (current file)"
+			],
+			[
+				"git: ",
+				"Git: Init"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 542.0
+	},
+	"console":
+	{
+		"height": 407.0,
+		"history":
+		[
+			"git add ."
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/tour-page",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/tour-page/js"
+	],
+	"file_history":
+	[
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/index.html",
+		"/Users/hohloma/Documents/SITES/PROJECTS/ilia/articles/Биоревитализация.md",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/tour-page/js/scripts.js",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/style.css",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/tour-page/style.scss",
+		"/Applications/MAMP/htdocs/shift/public/view/js/main.js",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/cosy-home/index.html",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/cosy-home/__src/js/maps/main_page.js",
+		"/Users/hohloma/Library/Caches/Transmit/FAB643FB-2815-4412-B3AB-ABB5C3F88FE5/u0224972.cp.regruhosting.ru/public_html/fursov_school/public/view/index.php",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/tour-page/_mixins.scss",
+		"/Users/hohloma/Library/Caches/Transmit/D596C230-0AF9-4535-AFC6-715140205D77/u0224972.cp.regruhosting.ru/public_html/fursov_school/public/view/index.php",
+		"/Applications/MAMP/htdocs/ilia/public/view/js/main.js",
+		"/Applications/MAMP/htdocs/lfg/public/view/sections/brands.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/sections/main.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/_src/js/script.js",
+		"/Applications/MAMP/htdocs/lfg/public/view/sections/modal_brands.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/_src/sass/pages/_main.sass",
+		"/Applications/MAMP/htdocs/lfg/public/view/_src/sass/_mixins.scss",
+		"/Applications/MAMP/htdocs/ilia/anchor/config/app.php",
+		"/Applications/MAMP/htdocs/lfg/anchor/routes/site.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/index.php",
+		"/Applications/MAMP/htdocs/lfg/anchor/models/gallery.php",
+		"/Applications/MAMP/htdocs/fur_school/anchor/routes/site.php",
+		"/Applications/MAMP/htdocs/lfg/anchor/views/posts/add.php",
+		"/Applications/MAMP/htdocs/fur_school/public/view/_src/js/script.js",
+		"/Applications/MAMP/htdocs/lfg/public/view/sections/contacts.php",
+		"/Applications/MAMP/htdocs/fur_school/public/view/_src/sass/pages/_main.sass",
+		"/Applications/MAMP/htdocs/praha/anchor/routes/site.php",
+		"/Applications/MAMP/htdocs/praha/themes/praha/scripts.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/partial/loading.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/_src/sass/style.sass",
+		"/Applications/MAMP/htdocs/lfg/anchor/views/posts/edit.php",
+		"/Applications/MAMP/htdocs/lfg/anchor/routes/posts.php",
+		"/Applications/MAMP/htdocs/lfg/anchor/models/category.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/partial/scripts.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/partial/navigation.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/index2.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/sections/about.php",
+		"/Applications/MAMP/htdocs/lfg/public/view/partial/header.php",
+		"/Users/hohloma/Documents/SITES/PROJECTS/leo-fashion/html/_src/js/script.js",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/pages/_product-page.sass",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/_adaptive.scss",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/index.html",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/_navigation.scss",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/products.html",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/_mixins.scss",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/_footer.scss",
+		"/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/_copyright.scss",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/_copyright.scss",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/smm/html/scss/sections/_footer.scss",
+		"/Applications/MAMP/htdocs/ilia/public/view/scss/_mixins.scss",
+		"/Users/acciuga/Library/Caches/Transmit/9F2B74BE-DD8E-4736-B2C9-607DCD02F2AC/u0224972.cp.regruhosting.ru/public_html/pmk/products.html",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/PMK/PMK-animations/img/icons/products-page/all.svg",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/PMK/PMK-animations/index.html",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/sections/pages/_product-page.sass",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/PMK/PMK-animations/scss/style.scss",
+		"/Users/acciuga/Library/Caches/Transmit/C8F2422F-2D6A-4E13-ACCA-690DD13FB4C6/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/header.php",
+		"/Users/acciuga/Library/Caches/Transmit/31FCA15F-57EC-436D-B0D9-B8410D1675A4/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/template_styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/74D6C014-C74C-4DDF-BAF3-F590E6E384DD/92.53.96.112/test/public_html/local/templates/water/css/inner.css",
+		"/Users/acciuga/Library/Caches/Transmit/9C8457BD-A334-465C-B9C9-7D19A6B5A181/onecleaning.ru/public_html/include/3.php",
+		"/Users/acciuga/Library/Caches/Transmit/9E1D2062-0FC4-40D2-ABD5-02595067E496/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/header.php",
+		"/Users/acciuga/Library/Caches/Transmit/B1C080F1-A68C-4DC6-AE0B-1B74B8DC8E2C/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/template_styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/288D6DAF-2BFC-4F41-9748-F8E14F98185F/92.53.96.112/test.mever/public_html/local/templates/water/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/F73BF3D1-7B2F-4D4E-B9FC-019F37A09838/92.53.96.112/test/public_html/local/templates/water/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/453C87F4-F28A-471F-950A-F2D6F0C5F4BA/onecleaning.ru/public_html/include/3.php",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/leo-fashion/logo/32f924bd6f2e47946b5ff097cc52ba46.svg",
+		"/Users/acciuga/Library/Caches/Transmit/1B04713A-C039-4AFF-A331-4762D84F0E76/92.53.96.112/test/public_html/local/templates/water/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/25B20D75-8862-43F2-907F-0F0648A0C126/92.53.96.112/test.mever/public_html/local/templates/water/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/24FF34B8-6AD2-47D8-A58C-04E5D858D1CB/92.53.96.112/test.mever/public_html/local/templates/water/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/7E945B38-C3AB-4EA2-800D-5D7BA9729A8F/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/assets/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/537144E8-E00A-4035-B05B-D2DF5F4FAE2F/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/assets/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/7B7411E4-67A4-4FAC-82DE-5E1ED9D43C43/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/template_styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/3E91BC7C-EFFD-4F31-934F-236A8B63AEAC/le-junior.ru/public_html/bitrix/templates/aspro-digital/template_styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/C2706061-A03F-49C2-8D78-8295BE609B2C/le-junior.ru/public_html/bitrix/templates/aspro-digital/template_styles.min.css",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/rychalsu/public_html/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/24DC6170-B966-42A7-99A1-A586E2C4AE9D/31.31.196.159/www/hobbymania.club/include/header/nasvyazi.php",
+		"/Users/acciuga/Library/Caches/Transmit/862875E2-2D79-409F-8C2B-7309EF4CB285/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/header.php",
+		"/Users/acciuga/Library/Caches/Transmit/5E0319AC-38DB-4695-81B3-A9F663BFB268/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/assets/css/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/F8BCA0FE-D5CD-482A-89D7-A9FA847BEC08/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/assets/js/script.js",
+		"/Users/acciuga/Library/Caches/Transmit/C559AE76-7D8A-4DDB-B7BA-CB5ADB7B844C/31.31.196.159/www/hobbymania.club/include/popup/nasvyazi/index.php",
+		"/Users/acciuga/Library/Caches/Transmit/420B2608-9443-4E6B-9EBA-39975CB69390/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/components/bitrix/catalog.store.list/nasvyazi/template.php",
+		"/Users/acciuga/Library/Caches/Transmit/D0153F27-4A95-4844-98A4-5B08FC36A037/31.31.196.159/www/hobbymania.club/bitrix/templates/prokids_default/footer.php",
+		"/Users/acciuga/Library/Caches/Transmit/7289CF76-EC46-4D29-B275-0A39A7D295B1/31.31.196.159/www/hobbymania.club/index.php",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/_mixins.scss",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/index.html",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/style.scss",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/smm/html/scss/sections/_advanced.scss",
+		"/Users/acciuga/Library/Caches/Transmit/11ECFF79-A60B-41D6-85E1-B4F81D21D804/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/components/vilka/feedback/style2/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/8D8AAEF9-64E4-4416-AEF3-F0F41D77AFC7/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/template_styles.css",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/less/bootstrap/bootstrap.less",
+		"/Users/acciuga/Library/Caches/Transmit/C6A27210-AFBF-4FE4-8302-D796688BFCFD/onecleaning.ru/public_html/bitrix/templates/vilka_lp_s1/components/bitrix/news.list/service/template.php",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/script.js",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/bootstrap.css",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/index.html",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/style.css",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/style.sass",
+		"/Users/acciuga/Library/Application Support/Sublime Text 3/Packages/SASS Build/SASS.sublime-build",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/ladiya/tour-page/jquery.js",
+		"/Users/acciuga/Desktop/SITES/PROJECTS/__LEMA/PMK/PMK-animations/products.html",
+		"/Users/acciuga/Library/Caches/Transmit/44D12A3C-AB9E-4782-9792-E74D80004A94/92.53.118.144/public_html/local/templates/stroigroup/template_styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/592FED3B-0D1D-46CE-8AEF-FEB041893C99/92.53.118.144/public_html/local/templates/stroigroup/header.php",
+		"/Applications/MAMP/htdocs/ilia/anchor/routes/posts.php",
+		"/Users/acciuga/Library/Caches/Transmit/3930B993-4C9E-4CCE-BBB8-D947D19E4CB9/92.53.118.144/public_html/bitrix/templates/strgrp/template_styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/9BFD9D68-CA2F-4ADB-A4CD-43D4513449E8/92.53.118.144/public_html/bitrix/templates/strgrp/styles.css",
+		"/Users/acciuga/Library/Caches/Transmit/A2F56CE4-7DFB-44C0-A18B-1C70B0AC6620/selina1.tmweb.ru/public_html/local/templates/main/css/default/style.css",
+		"/Users/acciuga/Library/Caches/Transmit/BD90B2A0-8433-40EF-9B65-49A2D229C4ED/selina1.tmweb.ru/public_html/local/templates/main/styles.css",
+		"/Applications/MAMP/htdocs/shift/anchor/config/app.php",
+		"/Applications/MAMP/htdocs/shift/anchor/config/db.php",
+		"/Users/acciuga/Library/Caches/Transmit/A3D6B410-2927-4D02-8926-78F2BCC7D1C1/le-junior.ru/public_html/bitrix/templates/aspro-digital/header.php",
+		"/Users/acciuga/Library/Caches/Transmit/DB2BEB98-3D97-47A5-8839-A15779B5C0E4/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_1.php",
+		"/Users/acciuga/Library/Caches/Transmit/0B14FE63-371B-494D-A469-3EB5906049FF/le-junior.ru/public_html/bitrix/modules/aspro.digital/classes/general/CDigital.php",
+		"/Users/acciuga/Library/Caches/Transmit/00E00F69-9433-4695-8947-402B24BBD875/le-junior.ru/public_html/bitrix/modules/aspro.digital/parametrs.php",
+		"/Users/acciuga/Library/Caches/Transmit/32E7F9B9-DC9B-47FE-978D-E5D5059A8621/le-junior.ru/public_html/index.php",
+		"/Users/acciuga/Library/Caches/Transmit/F6B69BE6-BDEF-4EBD-BE70-F10A9AB824A8/le-junior.ru/public_html/bitrix/index.php",
+		"/Users/acciuga/Library/Caches/Transmit/63112C7E-03D6-4A04-857A-35EBE02B910A/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_1.php",
+		"/Users/acciuga/Library/Caches/Transmit/03736AE7-A949-41CE-85EA-AB874101A1D7/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_2.php",
+		"/Users/acciuga/Library/Caches/Transmit/6C91BBBD-F471-4DA7-A7FA-BD2610939BCD/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_6.php",
+		"/Users/acciuga/Library/Caches/Transmit/30D298CC-92A3-4866-ABB8-F80191F5A3A3/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_7.php",
+		"/Users/acciuga/Library/Caches/Transmit/E34A3D14-C03F-48EB-8CEA-C27D7E74D312/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_8.php",
+		"/Users/acciuga/Library/Caches/Transmit/6BAB77DE-A14C-4DC5-BF41-38C2E1555757/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_9.php",
+		"/Users/acciuga/Library/Caches/Transmit/C4574AE3-EAFB-463A-ABC4-093C6CF85B72/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_4.php",
+		"/Users/acciuga/Library/Caches/Transmit/48072EAD-AEC8-4023-A613-88FBC744AABE/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_5.php",
+		"/Users/acciuga/Library/Caches/Transmit/86A5240C-65C9-4D22-BB5F-E72A0B11862A/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_3.php",
+		"/Users/acciuga/Library/Caches/Transmit/2917D821-B377-4D5E-9FC1-8F058B14E97F/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_10.php",
+		"/Users/acciuga/Library/Caches/Transmit/8E4D5B6A-94FA-4D1A-A2E6-2E5848ED55E8/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_12.php",
+		"/Users/acciuga/Library/Caches/Transmit/607531F3-585C-4510-927A-9FEB232ADA28/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_11.php",
+		"/Users/acciuga/Library/Caches/Transmit/C1F3C2DB-8831-411A-AC66-3A9C0F75E3B6/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_13.php",
+		"/Users/acciuga/Library/Caches/Transmit/F8609930-EB58-4A2F-96C0-666E314CE2B8/le-junior.ru/public_html/bitrix/templates/aspro-digital/page_blocks/header_14.php"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 132.0,
+		"where_history":
+		[
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#f15922",
+			"h2 {\n\t\t\tmargin-bottom: 60px;",
+			"</div>",
+			"white",
+			"\"input\">",
+			"input",
+			".children()",
+			"name",
+			"input",
+			"<label>",
+			"<select",
+			"<option",
+			"</select>",
+			"<option",
+			"Продолжительность",
+			"мость\">",
+			"Транспорт\">",
+			"Продолжительность\"",
+			"сть\">",
+			"ца\">",
+			"0",
+			"Visa",
+			"data-label=\"Дата заезда\">",
+			"<td data-label=\"Дата заезда\">",
+			"ountd",
+			"mountnd",
+			"Period",
+			"Amount",
+			"Amountd",
+			"Amountnd",
+			"Amount",
+			"Amount3",
+			"Amount2",
+			"Amount",
+			"Due Date",
+			"Account",
+			"<td data-label=\"Amount\">",
+			"<td data-label=\"Amount\">$1,190</td>",
+			"data-fancybox=\"photo\"",
+			"rl(img/carousel/",
+			"\"></div>",
+			"<div st",
+			"\"p\"",
+			"png);\"",
+			"d-4",
+			"d-4\"",
+			"href=\"",
+			"=\"",
+			"</div>",
+			"tour",
+			".parent()",
+			"#items",
+			"День",
+			"</div>",
+			"ul.tablist",
+			"tablist",
+			"day",
+			"    ",
+			"greyScaleMapTypeId",
+			"h4",
+			"</li>",
+			"\u0003"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$orange",
+			"\t"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6073,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										71,
+										72
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										65,
+										66
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14409,
+								14421
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										14421,
+										14422
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										14408,
+										14409
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 829.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/hohloma/Documents/SITES/PROJECTS/__LEMA/ladiya/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1121,
+								1121
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1122,
+										1123
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1112,
+										1113
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 453.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14097,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										277,
+										278
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										249,
+										250
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 97.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/scripts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								543,
+								543
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										982,
+										983
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										519,
+										520
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 25.0
+	},
+	"pinned_build_system": "",
+	"project": "tour.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/Applications/MAMP/htdocs/ilia/public/view/ilia.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 404.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

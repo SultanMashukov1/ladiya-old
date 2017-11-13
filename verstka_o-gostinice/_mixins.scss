@@ -1,0 +1,328 @@
+@mixin responsive($breakpoint, $type: min-width) {
+
+    @media (#{$type}: $breakpoint) {
+		@content;
+    }
+
+}
+
+
+// 
+// COLORS
+// 
+$dark: black;
+
+// 
+// VARIABLES 
+// 
+$font-size: 14px;
+$line-height: 1.4em;
+
+
+//
+// FONTS
+// 
+@mixin font_face($fonts) {
+
+	$folder: 'fonts' !default;
+
+	@each $first_level in $fonts {
+
+		$font: nth($first_level, 1);
+		$inner: nth($first_level, 2);
+
+		@each $second_level in $inner {
+
+			$name: nth($second_level, 1);
+			$weight: nth($second_level, 2);
+			$type:  nth($second_level, 3);
+			$formats: nth($second_level, 4);
+
+			@font-face {
+				
+				font-family: '#{$font}';
+
+				font-weight: $weight;
+				font-style: $type;
+
+				@each $format in $formats {
+					src: url('../#{$folder}/#{$font}/#{$name}/#{$font}#{$name}.#{$format}'),
+				}
+			}
+		}
+	}
+}
+
+
+// add custon fonts
+@mixin title($size: $font-size, $transform: uppercase) {
+	font-family: 'Bodoni';
+	font-weight: normal;
+
+	@if $size != false {
+		font-size: $size;
+	}
+
+	text-transform: $transform
+}
+
+@mixin text($size: $font-size, $transform: none) {
+	font-family: 'AvenirNext';
+	font-weight: normal;
+	font-size: $size;
+
+	text-transform: $transform
+}
+
+
+// default font
+@mixin default_font($type: null) {
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	font-size: $font-size;
+	line-height: 1.4em;
+
+	color: $dark;
+
+	@if $type == custom {
+		@include text()
+	} @else {
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-style: normal;
+		font-variant: normal;
+	}
+}
+
+//
+// BACKGROUNDS
+// 
+
+@mixin bg($size: cover, $horizotal: center,	$vertical: center, $color: transparent,	$repeat: no-repeat) {
+
+	@if $horizotal == false and $vertical == false {
+
+	}
+		
+	@elseif $vertical == false {
+		background-position: $horizotal $horizotal;
+	}
+	@else {
+		background-position: $horizotal $vertical;
+	}
+
+	@if $size != false {
+		-webkit-background-size: $size;
+		-moz-background-size: $size;
+		-o-background-size: $size;
+		background-size: $size
+	}
+
+	@if $color != false {
+		background-color: $color
+	}
+	
+	background-repeat: $repeat
+
+}
+
+
+// 
+// BORDER
+// 
+@mixin border($top, $bottom: false, $left: false, $right: false) {
+
+	@if $bottom == false or $left == false or $right == false {
+		border: $top;
+	}
+	@else {
+		border-top: $top;
+		border-bottom: $bottom;
+		border-left: $left;
+		border-right: $right;
+	}
+
+}
+
+
+// 
+// SHADOW
+// 
+@mixin box_shadow($inset: false, $horizontal: 2px, $vertical: 2px, $blur: 4px, $spread: 0, $color: black, $opacity: 0.5) {
+
+	@if $inset == false {
+		-webkit-box-shadow: $horizontal $vertical $blur $spread rgba(red($color), green($color), blue($color), $opacity);
+		   -moz-box-shadow: $horizontal $vertical $blur $spread rgba(red($color), green($color), blue($color), $opacity);
+		        box-shadow: $horizontal $vertical $blur $spread rgba(red($color), green($color), blue($color), $opacity)
+	} @else {
+		-webkit-box-shadow: inset $horizontal $vertical $blur $spread rgba(red($color), green($color), blue($color), $opacity);
+		   -moz-box-shadow: inset $horizontal $vertical $blur $spread rgba(red($color), green($color), blue($color), $opacity);
+		        box-shadow: inset $horizontal $vertical $blur $spread rgba(red($color), green($color), blue($color), $opacity)
+	}
+}
+
+@mixin text_shadow() {
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33)
+}
+
+
+// 
+// BACKGROUND COLOR w/ OPACITY
+//
+@mixin bg_color_rgba($color: black, $opacity: 1) {
+	background-color: rgba(red($color), green($color), blue($color), $opacity)
+}
+
+
+//
+// CONVERT TO RGBA
+// 
+@mixin rgba($color: black, $opacity: 1) {
+	color: rgba(red($color), green($color), blue($color), $opacity)
+}
+
+
+//
+// GRADIENT
+// 
+@mixin gradient(
+	$deg: 45deg,
+	$color-from: white,
+	$opacity-from: 0.01,
+	$position-from: 0%,
+	$color-to: black,
+	$opacity-to: 1,
+	$position-to: 100%) {
+
+	background:
+		-moz-linear-gradient((180-#{$deg}),
+		rgba(red($color-from), green($color-from),blue($color-from), $opacity-from) $position-from,
+		rgba(red($color-to), green($color-to), blue($color-to), $opacity-to) $position-to);
+
+	background:
+		-webkit-linear-gradient((180-#{$deg}),
+		rgba(red($color-from), green($color-from), blue($color-from), $opacity-from) $position-from,
+		rgba(red($color-to), green($color-to), blue($color-to), $opacity-to) $position-to);
+
+	background: 
+		inear-gradient(#{$deg},
+		rgba(red($color-from), green($color-from), blue($color-from), $opacity-from) $position-from,
+		rgba(red($color-to), green($color-to), blue($color-to), $opacity-to) $position-to);
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color-from}', endColorstr='#{$color-to}',GradientType=1 )
+
+}
+
+
+//
+// PSEUDO ELEMENT
+// 
+@mixin pseudo($before: true, $after: true) {
+
+	@if $before == true and $after == true {
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+
+			@content;
+		}
+	}
+
+	@if $after == false {
+		&:before {
+			content: '';
+			display: block;
+
+			@content;
+		}
+	}
+
+	@if $before == false {
+		&:after {
+			content: '';
+			display: block;
+
+			@content;
+		}
+	}
+
+}
+
+//
+// SIZE BASED RATIO t/ WIDTH
+// 
+@mixin ratio_size($ratio) {
+
+	@include pseudo(false) {
+		padding-bottom: #{$ratio * 100%}
+	}
+
+}
+		
+
+//
+//  LIST
+//  
+@mixin list($display: block, $margin: 0, $padding: 0) {
+
+	@if $display != false {
+		display: $display
+	}
+
+	@if $margin != false {
+		margin: $margin
+	}
+
+	@if $padding != false {
+		padding: $padding
+	}
+
+	list-style: none
+
+}
+
+
+//
+// PLACEHOLDER STYLE
+// 
+@mixin placeholder($color: black, $font-style: normal) {
+
+	::-webkit-input-placeholder {
+		color: $color;
+		font-style: $font-style
+	}
+
+	::-moz-placeholder {
+		color: $color;
+		font-style: $font-style
+	}
+
+	:-moz-placeholder {
+		color: $color;
+		font-style: $font-style
+	}
+
+	:-ms-input-placeholder {
+		color: $color;
+		font-style: $font-style
+	}
+
+}
+
+//
+// UNSELECT
+//
+@mixin unselect() {
+
+	$type: none;
+
+	-webkit-touch-callout: $type; /* iOS Safari */
+	  -webkit-user-select: $type; /* Safari */
+	   -khtml-user-select: $type; /* Konqueror HTML */
+	     -moz-user-select: $type; /* Firefox */
+	      -ms-user-select: $type; /* Internet Explorer/Edge */
+	          user-select: $type;
+
+}
