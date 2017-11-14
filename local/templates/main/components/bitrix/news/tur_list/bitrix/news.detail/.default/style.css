@@ -11,3 +11,9 @@ div.news-detail img.detail_picture
 {
 	color:#486DAA;
 }
+.tour-detail_interest .item:hover .text {
+	display: block !important;
+}
+.tour-detail_tabs__wrapper > .addtional-buttons a {
+	display: block;
+}

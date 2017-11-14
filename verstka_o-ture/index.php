@@ -1,5 +1,16 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
+
+//add js
+\WM\Common\AssetManager::get()->addJsArray(array(
+    '/assets/js/jquery-ui.js',
+    '//maps.googleapis.com/maps/api/js?key=AIzaSyAYfOA-1ATF0mTT9Ms6u7qofcQaHzgesEk&sensor=false',
+    '/assets/js/slick.js',
+    '/assets/js/bootstrap.js',
+    '/assets/js/fancybox.js',
+    '/assets/js/scripts.js',
+));
+
 ?>
 
 
@@ -557,13 +568,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
 
     </div>
 
-
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYfOA-1ATF0mTT9Ms6u7qofcQaHzgesEk&sensor=false"></script>
-    <script type="text/javascript" src="js/slick.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/fancybox.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php';
 ?>

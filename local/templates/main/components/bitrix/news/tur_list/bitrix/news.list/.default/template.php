@@ -71,8 +71,8 @@ $this->setFrameMode(true);
                                     <p><?= $arItem['PREVIEW_TEXT'] ?></p>
                                 <? endif; ?>
                             </div>
-							<a href="/verstka_o-ture/">Подробнее</a>
-                            <!--<a href="<?= $arItem['DETAIL_PAGE_URL'] ?>">Подробнее</a>-->
+							<!--<a href="/verstka_o-ture/">Подробнее</a>-->
+                            <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>">Подробнее</a>
 
                             <div class="price">
                                 <div>

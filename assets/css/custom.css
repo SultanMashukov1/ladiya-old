@@ -1535,3 +1535,251 @@ font-size: 18px;
 .page__hotel__detail .tour-detail_gallery .title * {
     padding: 0;
     margin: 0}
+
+
+.text__block__wrap {
+    background-color: #F5F5F5;
+}
+.text__block {
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    text-align: justify;
+    border: 5px solid #f0f1f3;
+    border-width: 0 5px;}
+
+.text___block__images {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid #003D5D;
+}
+.text___block__images__title {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    margin: 80px 0 0;
+    display: inline-block;
+    position: relative;
+}
+.text___block__images__title:before,
+.text___block__images__title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: -6px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.text___block__images__title:before {
+    left: -22px;
+}
+.text___block__images__title:after {
+    right: -22px;
+}
+@media (max-width: 800px) {
+    .text___block__images {height: auto;
+    padding-bottom: 50px}
+    .text___block__images__title {
+        margin-top: 50px;
+        font-size: 35px;
+    }
+}
+
+.text___block__breadcrumbs {
+    font-weight: bold;
+}
+.text___block__breadcrumbs li {
+    display: inline-block;
+    color: inherit;
+}
+.text___block__breadcrumbs a {
+    text-decoration: underline;
+}
+.text___block__breadcrumbs span {
+    position: relative;
+    display: inline-block;
+    margin-left: 36px;
+    color: #f6f6f6;
+    cursor: default;
+}
+.text___block__breadcrumbs span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 8px;
+    left: -22px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.text__block__title {
+
+}
+
+
+/* Комментарии */
+.form__comment__add {
+    overflow: hidden;
+    position: relative;
+    background: #EAE9E9;
+}
+.form__comment__add__wrap {
+    padding: 40px 200px;
+}
+.form__comment__add__img {
+    position: absolute;
+    left: -100px;
+    bottom: -49px;
+}
+.form__comment__add__img svg {
+    fill: #ccc;
+    width: 300px;
+}
+.form__comment__add__title {
+    position: relative;
+    text-align: left;
+    margin: 0 0 15px;
+    font-size: 25px;
+    padding: 0 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(243, 240, 240, 0.4);
+}
+.form__comment__add__block {
+    display: table;
+    width: 100%;
+}
+.form__comment__add__block__item {
+    display: table-cell;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.form__comment__add input,
+.form__comment__add textarea
+{
+    display: block;
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 13px 15px 12px;
+    border: 1px solid #E9EBEE;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.form__comment__add__btn {
+    text-align: left;
+}
+.form__comment__add button {
+    height: 38px;
+    margin: 5px 0;
+    padding: 0 35px 0px;
+    border: none;
+    border-radius: 3px;
+    background: #F15922;
+    transition: .1s;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFF;
+}
+.form__comment__add button:hover {
+    background: #fff;
+    color: #F15922;
+}
+@media (max-width: 1000px) {
+    .form__comment__add__img {
+        display: none;
+    }
+    .form__comment__add__wrap {
+        padding: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .form__comment__add__wrap {
+        padding: 40px 0;
+    }
+    .form__comment__add__block__item {
+        display: block;
+    }
+}
+
+.comment__list {
+    overflow: hidden;
+}
+.comment__list__wrap {
+    padding: 40px 200px;
+}
+.comment__list__item {
+    margin: 0 10px;
+    margin-bottom: 0px;
+    margin-bottom: 14px;
+    position: relative;
+    padding: 15px 15px 15px 80px;
+    min-height: 65px;
+    text-align: left;
+    clear: both;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.04);
+}
+.comment__list__item__avatar {
+    display: inline-block;
+    background: #f2f2f2;
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 3px;
+}
+.comment__list__item__avatar svg {
+    width: 40px;
+    height: 40px;
+    fill: #70777b;
+}
+.comment__list__item__header{
+    margin-bottom: 2px;
+}
+.comment__list__item__header b {
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.comment__list__item__header span {
+    font-size: 10px;
+    color: #f15922;
+}
+.comment__list__item__text {
+    font-size: 13px;
+    color: #656363;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+    .comment__list__wrap {
+        padding: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .comment__list__wrap {
+        padding: 40px 0;
+    }
+}
+
+
+/* Для табов */
+.tab-pane .form__comment__add .container,
+.tab-pane .comment__list .container {
+    width: 100%;
+}

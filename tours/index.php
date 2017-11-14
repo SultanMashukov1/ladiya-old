@@ -1,6 +1,16 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Туры");
+
+//add js
+\WM\Common\AssetManager::get()->addJsArray(array(
+    '/assets/js/jquery-ui.js',
+    '//maps.googleapis.com/maps/api/js?key=AIzaSyAYfOA-1ATF0mTT9Ms6u7qofcQaHzgesEk&sensor=false',
+    '/assets/js/slick.js',
+    '/assets/js/bootstrap.js',
+    '/assets/js/fancybox.js',
+    '/assets/js/scripts.js',
+));
 ?>
 
 <?$APPLICATION->IncludeComponent(
@@ -31,8 +41,18 @@ $APPLICATION->SetTitle("Туры");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+            0 => "TYPE",
+            1 => "VIEW",
+            2 => "DATE",
+            3 => "COUNT",
+            4 => "DAY",
+            5 => "CITY",
+            6 => "HEADER",
+            7 => "NIGHT",
+            8 => "DISCOUNT",
+            9 => "COUNTRY",
+            10 => "PRICE",
+            11 => "PROGRAMMS",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -55,7 +75,7 @@ $APPLICATION->SetTitle("Туры");
 			1 => "VIEW",
 			2 => "DATE",
 			3 => "COUNT",
-			4 => "DAY",
+			4 => "DAYS_COUNT",
 			5 => "CITY",
 			6 => "HEADER",
 			7 => "NIGHT",
@@ -76,7 +96,7 @@ $APPLICATION->SetTitle("Туры");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -104,18 +124,15 @@ $APPLICATION->SetTitle("Туры");
 			1 => "VIEW",
 			2 => "DATE",
 			3 => "COUNT",
-			4 => "DAY",
+			4 => "DAYS_COUNT",
 			5 => "CITY",
-			6 => "test3",
-			7 => "test4",
-			8 => "test1",
-			9 => "test2",
-			10 => "test5",
 			11 => "",
 		),
-		"VARIABLE_ALIASES" => array(
-			"SECTION_ID" => "SECTION_ID",
-			"ELEMENT_ID" => "ELEMENT_ID",
+		"SEF_FOLDER" => "/tours/",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "",
+			"section" => "",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

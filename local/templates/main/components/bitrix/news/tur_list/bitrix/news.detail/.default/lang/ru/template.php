@@ -1,2 +1,23 @@
 <?
-?>
+$MESS['TOUR_DESCRIPTION_TITLE'] = 'Описание';
+$MESS['TOUR_PROGRAMM_TITLE'] = 'Программа';
+$MESS['TOUR_PRICE_TITLE'] = 'Стоимость';
+$MESS['TOUR_MEMO_TITLE'] = 'Памятка тура';
+$MESS['TOUR_REVIEWS_TITLE'] = 'Отзывы';
+$MESS['TOUR_ROUTE_TITLE'] = 'Маршрут';
+$MESS['TOUR_GALLERY_TITLE'] = 'Фотогалерея';
+$MESS['TOUR_PRICE_FROM'] = 'от';
+$MESS['TOUR_PRICE_TO'] = 'до';
+$MESS['TOUR_PRICE_CURRENCY_1'] = 'руб';
+$MESS['TOUR_PRICE_CURRENCY_2'] = 'рублей';
+$MESS['TOUR_DAY_ONE'] = 'день';
+$MESS['TOUR_DAY_TWO'] = 'дня';
+$MESS['TOUR_DAY_MORE'] = 'дней';
+$MESS['TOUR_NIGHT_ONE'] = 'ночь';
+$MESS['TOUR_NIGHT_TWO'] = 'ночи';
+$MESS['TOUR_NIGHT_MORE'] = 'ночей';
+$MESS['TOUR_PROGRAMM'] = 'Программа';
+$MESS['TOUR_MORE_BTN'] = 'Подробнее';
+$MESS['TOUR_MAYBE_INTERESTED'] = 'Вас может заинтересовать';
+$MESS['TOUR_ORDER_BTN_TITLE'] = 'Забронировать';
+$MESS['TOUR_SHOW_FULL_PROGRAMM_TITLE'] = 'Посмотреть полную программу тура';
