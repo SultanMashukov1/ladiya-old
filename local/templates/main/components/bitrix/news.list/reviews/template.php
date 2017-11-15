@@ -26,6 +26,7 @@ $this->setFrameMode(true);
             </div>
             <div class="form__comment__add__title">Добавить комментарий</div>
             <form method="post" action="/ajax/add-review.php" class="js-add-review">
+                <input type="hidden" name="tour_id" value="<?=$arResult['TOUR_ID'];?>">
                 <div class="form__comment__add__block">
                     <div class="form__comment__add__block__item">
                         <input type="text" name="name" placeholder="Ваше имя">
