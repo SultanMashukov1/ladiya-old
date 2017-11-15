@@ -1620,10 +1620,25 @@ font-size: 18px;
     background-color: #fff;
 }
 
-.text__block__title {
-
+.text__block {}
+.text__block h2 {
+    margin: 20px 0 40px;
+    font-weight: bold;
 }
-
+.text__block__table {
+    display: table;
+    width: 100%;
+}
+.text__block__table__cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px;
+}
+@media (max-width: 1000px) {
+    .text__block__table__cell {
+        display: block;
+    }
+}
 
 /* Комментарии */
 .form__comment__add {
