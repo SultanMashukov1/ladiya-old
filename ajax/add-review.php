@@ -30,6 +30,7 @@ if($form->validate())
             'PREVIEW_TEXT' => Helper::enc($form->getField('text')),
             'PROPERTY_VALUES' => array(
                 'EMAIL' => Helper::enc($form->getField('email')),
+                'TOUR' => $form->getField('tour_id'),
             ),
             'ACTIVE' => 'N',
         ),
