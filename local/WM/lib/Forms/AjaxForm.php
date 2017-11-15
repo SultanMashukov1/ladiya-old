@@ -15,10 +15,14 @@ class AjaxForm extends Form
     protected $iblockId = null;
 
     /**
+     * Send message from bitrix (CEvent::Send)
+     *
      * @param $event
      * @param array $data
      * @param string $siteId
      * @return bool
+     *
+     * @access public
      */
     public function sendMessage($event, array $data, $siteId = 's1')
     {
@@ -31,9 +35,13 @@ class AjaxForm extends Form
     }
 
     /**
+     * Add record to iblock
+     *
      * @param $iblockId
      * @param array $data
      * @return bool
+     *
+     * @access public
      */
     public function addRecord($iblockId, array $data)
     {
@@ -53,5 +61,22 @@ class AjaxForm extends Form
             return false;
         }
         return true;
+    }
+
+    /**
+     * Send message (CEvent::Send) and add record to iblock
+     *
+     * @param $iblockId
+     * @param array $addParams
+     * @param $event
+     * @param array $messageParams
+     * @param string $siteId
+     * @return bool
+     *
+     * @access public
+     */
+    public function formActionFull($iblockId, array $addParams, $event, array $messageParams = array(), $siteId = 's1')
+    {
+        return $this->sendMessage($event, $messageParams, $siteId) && $this->addRecord($iblockId, $addParams);
     }
 }

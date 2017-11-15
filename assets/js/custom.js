@@ -188,5 +188,47 @@ $(document).ready(function () {
     //  datepicker окно выбора даты
     $('.filter__item__date__inp').datepicker($.datepicker.regional["ru"]);
 
+
+    $('form.js-add-review').on('submit', function (e) {
+
+        e.preventDefault();
+
+        var curForm = $(this),
+            waitElement = curForm.find('input[type="submit"], button[type="submit"]').get(0);
+
+        BX.showWait(waitElement);
+
+        $.post($(this).attr('action'), $(this).serialize(), function (ans) {
+
+            curForm.find('input:not([type="submit"]):not([type="button"]), textarea').css({'border': '1px solid #E9EBEE'});
+
+            console.log(ans.errors)
+            if (ans && ans.errors)
+            {
+                curForm.find('.form__comment__add__block__item__error').empty();
+                for(var inputName in ans.errors)
+                {
+                    curForm.find('[name="' + inputName + '"]').first().css({border: '1px solid red'})
+                        .closest('.form__comment__add__block__item').find('.form__comment__add__block__item__error').html(ans.errors[inputName]);
+                }
+            }
+            else
+            {
+                //ok
+                //set gtm event
+                if(ans.gtmObject)
+                {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push(ans.gtmObject);
+                }
+                //show message
+                $.fancybox.open(ans.message)
+            }
+
+            BX.closeWait(waitElement);
+        }, 'json');
+        return false;
+    });
+
     /** Конец скриптов **/
 });

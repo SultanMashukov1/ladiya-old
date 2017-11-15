@@ -24,7 +24,25 @@ class Form
     protected $errors = array();
 
     /**
+     * Form constructor.
+     *
+     * @param array $fields
+     * @param array $rules
+     *
+     * @access public
+     */
+    public function __construct(array $rules = array(), array $fields = array())
+    {
+        empty($fields) || $this->setFields($fields);
+        empty($rules)  || $this->setRules($rules);
+    }
+
+    /**
+     * Returns array of validation rules
+     *
      * @return array
+     *
+     * @access public
      */
     public function rules()
     {
@@ -32,8 +50,12 @@ class Form
     }
 
     /**
+     * Set validation rules
+     *
      * @param array $rules
      * @return $this
+     *
+     * @access public
      */
     public function setRules(array $rules = array())
     {
@@ -42,9 +64,13 @@ class Form
     }
 
     /**
+     * Set fields data for check (e.g., POST-data)
+     *
      * @param array $fields
      * @param bool $clean
      * @return $this
+     *
+     * @access public
      */
     public function setFields(array $fields = array(), $clean = true)
     {
@@ -57,7 +83,11 @@ class Form
     }
 
     /**
+     * Returns array of all fields
+     *
      * @return array of attributes
+     *
+     * @access public
      */
     public function getFields()
     {
@@ -65,23 +95,36 @@ class Form
     }
 
     /**
+     * Returns field value by name
+     *
      * @param $name
      * @return string|null
+     *
+     * @access public
      */
     public function getField($name)
     {
         return isset($this->fields[$name]) ? $this->fields[$name] : null;
     }
+
     /**
+     * Returns field value by name (in windows-1251 charset)
+     *
      * @param $name
      * @return string|null
+     *
+     * @access public
      */
     public function getFieldCP1251($name)
     {
         return isset($this->fields[$name]) ? iconv('UTF-8', 'Windows-1251', $this->fields[$name]) : null;
     }
     /**
+     * Check if form is valid
+     *
      * @return bool
+     *
+     * @access public
      */
     public function validate()
     {
@@ -106,8 +149,12 @@ class Form
     }
 
     /**
+     * Returns array of errors (errors of one field may be splitted by $splitSym)
+     *
      * @param null $splitSym
      * @return array
+     *
+     * @access public
      */
     public function getErrors($splitSym = null)
     {
@@ -122,9 +169,14 @@ class Form
         }
         return $this->errors;
     }
+
     /**
+     * Returns array of errors (errors of one field may be splitted by $splitSym) in windows-1251 charset
+     *
      * @param null $splitSym
      * @return array
+     *
+     * @access public
      */
     public function getErrorsCP1251($splitSym = null)
     {
@@ -144,12 +196,14 @@ class Form
     }
 
     /**
+     * Check given value with given validator
+     *
      * @param $name
      * @param Validators\Validator $validator
      *
-     * @access protected
-     *
      * @return bool
+     *
+     * @access protected
      */
     protected function checkValue($name, Validators\Validator $validator)
     {
@@ -162,13 +216,15 @@ class Form
     }
 
     /**
+     * Set error for given field
+     *
      * @param $name
      * @param $error
      * @param bool $showAllErrors
      *
-     * @access protected
-     *
      * @return void
+     *
+     * @access protected
      */
     protected function setError($name, $error, $showAllErrors = false)
     {
@@ -186,8 +242,12 @@ class Form
     }
 
     /**
+     * Array of exists validators
+     *
      * @TODO Make all validators
      * @return array
+     *
+     * @access public
      */
     public function validators()
     {

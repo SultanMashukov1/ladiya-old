@@ -34,7 +34,7 @@ $assets = Asset::getInstance();
     $assets->addJs("/assets/libs/SelectFx/classie.js");
     $assets->addJs("/assets/libs/SelectFx/selectFx.js");
     $assets->addJs("/assets/libs/jQRangeSlider/jQRangeSlider-min.js");
-    $assets->addCss("/assets/libs/fancybox/fancybox.js");
+    $assets->addJs("/assets/libs/fancybox/fancybox.js");
     $assets->addJs("/assets/js/custom.js");
 
     $APPLICATION->ShowHead();

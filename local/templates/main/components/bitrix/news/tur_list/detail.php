@@ -11,6 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+global $tourReviewFilter;
+$tourReviewFilter = array('=PROPERTY_TOUR.ID' => $arResult['VARIABLES']['ELEMENT_ID']);
 ?>
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
