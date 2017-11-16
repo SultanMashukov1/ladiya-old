@@ -56,3 +56,13 @@ if(!empty($arResult['PROPERTIES']['SIMILAR_TOURS']['VALUE']))
         $arResult['SIMILAR_TOURS'][$k]['PICTURE_SRC'] = empty($tour['PREVIEW_PICTURE']) ? null : \CFile::GetPath($tour['PREVIEW_PICTURE']);
     }
 }
+
+//set hotels list
+$arResult['HOTELS'] = \WM\IBlock\Element::getList(6, array(
+    'arSelect' => array('ID', 'NAME'),
+));
+
+$arResult['TRANSPORTS'] = array();
+$res = \CIBlockPropertyEnum::GetList(array(), array('CODE' => 'TRANSPORT'));
+while($row = $res->Fetch())
+    $arResult['TRANSPORTS'][$row['ID']] = $row;
