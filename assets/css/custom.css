@@ -1855,6 +1855,7 @@ font-size: 18px;
 }
 
 .page__program__detail__download {
+    margin-top: 10px;
     text-align: right;
 }
 .page__program__detail__download__btn {
@@ -1868,4 +1869,38 @@ font-size: 18px;
 .page__program__detail__download__btn:hover {
     background: #f15922;
     border-color: transparent;
+}
+
+
+/* core__price */
+
+.core__price {}
+.core__price {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+.core__price__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.core__price__item {
+    display: table;
+    width: 100%;
+}
+.core__price__item_l {
+    display: table-cell;
+}
+.core__price__item_r {
+    display: table-cell;
+}
+.core__price__item span {
+    font-size: 11px;
+    color: #CCCCCC;
+}
+.core__price__item input {
+    width: 110px;
+    margin-left: 10px;
+    padding: 2px 5px;
+    border: 1px solid #ddd;
 }

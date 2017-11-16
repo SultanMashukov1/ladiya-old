@@ -243,7 +243,6 @@ var coreJsSwitchElement = {
     },
     load: function () {
         // Обработка DATA
-        console.log(this.$arElements);
         this.$arElements.each(function () {
             var $this = $(this),
                 $name = $this.data('js-core-switch-element'),

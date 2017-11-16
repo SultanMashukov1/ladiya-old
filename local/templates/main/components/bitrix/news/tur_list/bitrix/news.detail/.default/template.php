@@ -269,22 +269,19 @@ $this->setFrameMode(true);
                                     </div>
 
                                 </div>
-
-                                <div class="range">
-
-                                    <h6>Цена</h6>
-
-                                    <span class="min_text">от 1200 р</span>
-                                    <span class="max_text">25000 р</span>
-
-                                    <div class="range__slider">
-                                        <div class="ui-slider-handle"><span class="min">7500</span></div>
-                                        <div class="ui-slider-handle"><span class="max">21000</span></div>
+                                <div class="core__price">
+                                    <div class="core__price__title">Цена</div>
+                                    <div class="core__price__item">
+                                        <div class="core__price__item_l">
+                                            <span>От</span>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="core__price__item_r">
+                                            <span>До</span>
+                                            <input type="text" placeholder="0">
+                                        </div>
                                     </div>
-                                    <input type="hidden" id="#range">
-
                                 </div>
-
                                 <button class="calculate">Рассчитать стоимость*</button>
 
                                 <div class="disclaimer">стоимость тура на 1 человека</div>
