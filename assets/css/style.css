@@ -1631,7 +1631,7 @@ PAGE hotel
 }
 .content-page{
     padding: 60px 0 50px;
-    margin-bottom: -60px;
+    /*margin-bottom: -60px;*/
     background-color: #F5F5F5;
 }
 .item-card{
