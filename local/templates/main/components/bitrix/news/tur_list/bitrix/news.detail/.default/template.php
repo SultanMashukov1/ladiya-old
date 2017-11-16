@@ -60,7 +60,11 @@ $this->setFrameMode(true);
 
         </div>
     </section>
-
+    <section class="container page__program__detail__download">
+        <div class="row">
+            <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать PDF" class="page__program__detail__download__btn">Скачать PDF</a>
+        </div>
+    </section>
     <section class="container tour-detail_tabs">
         <div class="row">
             <div class="tour-detail_tabs__wrapper">
@@ -80,6 +84,9 @@ $this->setFrameMode(true);
                     </li>
                     <li role="presentation">
                         <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab">Группам туристов</a>
                     </li>
                 </ul>
 
@@ -147,24 +154,52 @@ $this->setFrameMode(true);
                             <div class="row">
                                 <div class="col-xs-12">
                                     <? if(!empty($arResult['PROGRAMMS'])): ?>
+                                        <?
+                                            // Для правильной работы слайдера $i
+                                            $i = 1;
+                                        ?>
                                         <!-- TAB BUTTONS -->
                                         <ul class="tablist inner" role="tablist">
                                             <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
-                                                <li role="presentation">
+                                                <?
+                                                    if($i == 1) {$class = 'active';}else{ $class = '';}
+                                                    $i++;
+                                                ?>
+                                                <li role="presentation" class="<?=$class?>">
                                                     <a href="#p<?=$id;?>" aria-controls="p<?=$id;?>" role="tab"
                                                        data-toggle="tab"><?=$programm['NAME'];?></a>
                                                 </li>
                                             <? endforeach; ?>
                                         </ul>
 
+                                        <?
+                                            $i = 1;
+                                        ?>
+
                                         <!-- TAB CONTENT -->
                                         <div class="tab-content inner">
                                             <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
-                                                <div role="tabpanel" class="tab-pane" id="p<?=$id;?>">
+                                                <?
+                                                    if($i == 1) {$class = 'active';}else{ $class = '';}
+                                                    $i++;
+                                                ?>
+                                                <div role="tabpanel" class="tab-pane <?=$class?>" id="p<?=$id;?>">
                                                     <div class="img" style="background-image: url(<?=$programm['PICTURE_SRC'];?>);"></div>
-                                                    <div class="text">
-                                                        <h6><?=$programm['NAME'];?></h6>
-                                                        <?=$programm['PREVIEW_TEXT'];?>
+                                                    <div class="text page__program__detail__list__item">
+                                                        <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?> - Пятигорск </div>
+                                                        <div class="page__program__detail__list__item__text">
+                                                            <?=$programm['PREVIEW_TEXT'];?>
+
+                                                            <p class="core__switch__btn">
+                                                                <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
+                                                                      Обзорная экскурсия по культурному центру - г. Пятигорску
+                                                                </span>
+                                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_<?=$id?>_1">
+                                                                    Вы посетите Лермонтовские места, уникальное озеро Провал. Увидите памятник Остапу Бендеру, Эолову арфу, парк “Цветник”
+                                                                </span>
+                                                            </p>
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                             <? endforeach; ?>
@@ -361,7 +396,9 @@ $this->setFrameMode(true);
                                 'AJAX_OPTION_ADDITIONAL' => '',
                             ));?>
                         </div>
-
+                        <div role="tabpanel" class="tab-pane" id="group">
+                            text
+                        </div>
                     </div>
                 </div>
 

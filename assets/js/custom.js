@@ -1,5 +1,6 @@
 $(document).ready(function () {
     /** Место для скриптов **/
+    coreJsSwitchElement.init();
 
     /** Скрипт для Автоподкачки с инстаграмма **/
 
@@ -232,3 +233,44 @@ $(document).ready(function () {
 
     /** Конец скриптов **/
 });
+var coreJsSwitchElement = {
+    init: function () {
+        // Переменные
+        //...
+        this.$arElements = $('[data-js-core-switch-element]');
+        //...
+        this.load();
+    },
+    load: function () {
+        // Обработка DATA
+        console.log(this.$arElements);
+        this.$arElements.each(function () {
+            var $this = $(this),
+                $name = $this.data('js-core-switch-element'),
+                $text = $this.text();
+            $textSwitch = $this.data('js-core-switch-element-text');
+
+            $this.data({
+                element:     $('.' + $name),
+                text:        $text,
+                textSwitch:  $textSwitch
+            });
+        });
+        this.activation();
+    },
+    activation: function() {
+        this.$arElements.each(function () {
+            var $this = $(this);
+            $($this).on('click', function(){
+                $this.toggleClass('active');
+                $this.data('element').toggleClass('active');
+
+                if(!!$this.data('textSwitch') && $this.data('element').hasClass('active')){
+                    $this.text($this.data('textSwitch'));
+                }else {
+                    $this.text($this.data('text'));
+                }
+            });
+        });
+    }
+};
