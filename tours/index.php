@@ -8,7 +8,6 @@ $APPLICATION->SetTitle("Туры");
     '//maps.googleapis.com/maps/api/js?key=AIzaSyAYfOA-1ATF0mTT9Ms6u7qofcQaHzgesEk&sensor=false',
     '/assets/js/slick.js',
     '/assets/js/bootstrap.js',
-    '/assets/js/fancybox.js',
     '/assets/js/scripts.js',
 ));
 ?>
