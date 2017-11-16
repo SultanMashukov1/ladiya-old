@@ -218,6 +218,7 @@ $this->setFrameMode(true);
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
+                                            <label>Дата заезда</label>
                                             <input type="date" name="date">
                                         </div>
                                     </div>
@@ -235,6 +236,19 @@ $this->setFrameMode(true);
                                         </div>
                                     </div>
 
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="input">
+                                            <?if(!empty($arResult['ROOM_TYPES'])):?>
+                                                <select name="room_type">
+                                                    <option value="" disabled="disabled" selected="selected">Транспорт</option>
+                                                    <?foreach($arResult['ROOM_TYPES'] as $id => $roomType):?>
+                                                        <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
+                                                    <?endforeach;?>
+                                                </select>
+                                            <?endif;?>
+                                        </div>
+                                    </div>
+<?/*
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <select name="day_count">
@@ -276,7 +290,7 @@ $this->setFrameMode(true);
                                             <label for="styled-checkbox">Одноместное размещение</label>
                                         </div>
                                     </div>
-
+*/?>
                                 </div>
                                 <div class="core__price">
                                     <div class="core__price__title">Цена</div>

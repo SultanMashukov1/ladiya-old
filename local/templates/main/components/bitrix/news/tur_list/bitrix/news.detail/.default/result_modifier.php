@@ -57,12 +57,21 @@ if(!empty($arResult['PROPERTIES']['SIMILAR_TOURS']['VALUE']))
     }
 }
 
+/*
 //set hotels list
 $arResult['HOTELS'] = \WM\IBlock\Element::getList(6, array(
     'arSelect' => array('ID', 'NAME'),
 ));
 
+//set transports list
 $arResult['TRANSPORTS'] = array();
 $res = \CIBlockPropertyEnum::GetList(array(), array('CODE' => 'TRANSPORT'));
 while($row = $res->Fetch())
     $arResult['TRANSPORTS'][$row['ID']] = $row;
+*/
+
+//set room types list
+$arResult['ROOM_TYPES'] = array();
+$res = \CIBlockPropertyEnum::GetList(array(), array('CODE' => 'ROOM_TYPE'));
+while($row = $res->Fetch())
+    $arResult['ROOM_TYPE'][$row['ID']] = $row;
