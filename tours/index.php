@@ -53,6 +53,8 @@ $APPLICATION->SetTitle("Туры");
             9 => "COUNTRY",
             10 => "PRICE",
             11 => "PROGRAMMS",
+            12 => "SLIDER_PHOTO",
+            13 => "GALLERY_PHOTO",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
