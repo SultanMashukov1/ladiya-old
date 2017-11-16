@@ -1899,10 +1899,13 @@ font-size: 18px;
 .core__price__item span {
     font-size: 11px;
     color: #CCCCCC;
+    margin: 0 10px 0 5px;
 }
 .core__price__item input {
     width: 110px;
-    margin-left: 10px;
+
     padding: 2px 5px;
     border: 1px solid #ddd;
 }
+
+.filter__button {margin-top: 10px;}
