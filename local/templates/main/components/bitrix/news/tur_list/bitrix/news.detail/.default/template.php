@@ -47,10 +47,10 @@ $this->setFrameMode(true);
                     </div>
                 </div>
 
-                <? $first = true; if(!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
+                <? if(!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
                     <div class="carousel-inner" role="listbox">
                         <? foreach($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
-                            <div class="item<?if($first): $first = false;?> active<?endif;?>">
+                            <div class="item">
                                 <div class="img" style="background-image: url('<?=$src;?>');"></div>
                             </div>
                         <? endforeach; ?>
@@ -71,7 +71,7 @@ $this->setFrameMode(true);
 
                 <!-- TAB BUTTONS -->
                 <ul class="tablist main" role="tablist">
-                    <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
+                    <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
                     </li>
                     <li role="presentation">
                         <a href="#program" aria-controls="program" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PROGRAMM_TITLE');?></a>
@@ -131,7 +131,7 @@ $this->setFrameMode(true);
                     <!-- TAB CONTENT -->
                     <div class="tab-content main">
 
-                        <div role="tabpanel" class="tab-pane active" id="description">
+                        <div role="tabpanel" class="tab-pane" id="description">
                             <div class="row">
                                 <div class="col-xs-12 col-md-6 text">
 
@@ -218,7 +218,6 @@ $this->setFrameMode(true);
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
-                                            <input type="text" name="date">
                                             <select name="">
                                                 <option disabled="disabled" selected="selected">Дата заезда</option>
                                                 <option value="3">1</option>
