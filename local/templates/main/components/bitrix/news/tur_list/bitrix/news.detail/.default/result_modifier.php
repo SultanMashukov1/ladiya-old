@@ -2,6 +2,9 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     die();
 
+use \WM\IBlock\Element,
+    \WM\IBlock\Section;
+
 \Bitrix\Main\Loader::includeModule('iblock');
 
 //set top slider photo
@@ -34,7 +37,7 @@ if(!empty($arResult['PROPERTIES']['PROGRAMMS']['VALUE']))
 {
     $arResult['PROGRAMMS'] = \WM\IBlock\Element::getList($arResult['PROPERTIES']['PROGRAMMS']['LINK_IBLOCK_ID'], array(
         'arSelect' => array('ID', 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE'),
-        'filter' => array('ID' => $arResult['PROPERTIES']['PROGRAMMS']['VALUE']),
+        'filter' => array('ID' => $arResult['PROPERTIES']['PROGRAMMS']['VALUE'], 'ACTIVE' => 'Y'),
     ));
     foreach($arResult['PROGRAMMS'] as $k => $programm)
         $arResult['PROGRAMMS'][$k]['PICTURE_SRC'] = empty($programm['PREVIEW_PICTURE']) ? null : \CFile::GetPath($programm['PREVIEW_PICTURE']);
@@ -44,12 +47,12 @@ if(!empty($arResult['PROPERTIES']['PROGRAMMS']['VALUE']))
 $arResult['SIMILAR_TOURS'] = array();
 if(!empty($arResult['PROPERTIES']['SIMILAR_TOURS']['VALUE']))
 {
-    $arResult['SIMILAR_TOURS'] = \WM\IBlock\Element::getList($arResult['PROPERTIES']['SIMILAR_TOURS']['LINK_IBLOCK_ID'], array(
+    $arResult['SIMILAR_TOURS'] = Element::getList($arResult['PROPERTIES']['SIMILAR_TOURS']['LINK_IBLOCK_ID'], array(
         'arSelect' => array(
             'ID', 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PAGE_URL',
             'PROPERTY_PRICE', 'PROPERTY_DAY', 'PROPERTY_NIGHT', 'PROPERTY_DISCOUNT', 'PROPERTY_HEADER'
         ),
-        'filter' => array('ID' => $arResult['PROPERTIES']['SIMILAR_TOURS']['VALUE']),
+        'filter' => array('ID' => $arResult['PROPERTIES']['SIMILAR_TOURS']['VALUE'], 'ACTIVE' => 'Y'),
     ));
     foreach($arResult['SIMILAR_TOURS'] as $k => $tour)
     {
@@ -72,6 +75,22 @@ while($row = $res->Fetch())
 
 //set room types list
 $arResult['ROOM_TYPES'] = array();
-$res = \CIBlockPropertyEnum::GetList(array(), array('CODE' => 'ROOM_TYPE'));
+$res = \CIBlockPropertyEnum::GetList(array('ID' => 'ASC'), array('CODE' => 'ROOM_TYPE'));
 while($row = $res->Fetch())
-    $arResult['ROOM_TYPE'][$row['ID']] = $row;
+    $arResult['ROOM_TYPES'][$row['ID']] = $row;
+
+if(!empty($arResult['PROPERTIES']['ROOMS']['VALUE']))
+{
+    $rooms = Element::getList($arResult['PROPERTIES']['ROOMS']['LINK_IBLOCK_ID'], array(
+        'arSelect' => array('ID', 'IBLOCK_SECTION_ID'),
+        'filter' => array('ID' => $arResult['PROPERTIES']['ROOMS']['VALUE'], 'ACTIVE' => 'Y')
+    ));
+    $arResult['HOTELS'] = array();
+    foreach($rooms as $room)
+        $arResult['HOTELS'][$room['IBLOCK_SECTION_ID']] = array();
+
+    $arResult['HOTELS'] = Section::getList($arResult['PROPERTIES']['ROOMS']['LINK_IBLOCK_ID'], array(
+        'filter' => array('ID' => array_keys($arResult['HOTELS']), 'ACTIVE' => 'Y'),
+        'arSelect' => array('ID', 'NAME'),
+    ));
+}

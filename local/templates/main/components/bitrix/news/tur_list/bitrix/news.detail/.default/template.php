@@ -240,7 +240,7 @@ $this->setFrameMode(true);
                                         <div class="input">
                                             <?if(!empty($arResult['ROOM_TYPES'])):?>
                                                 <select name="room_type">
-                                                    <option value="" disabled="disabled" selected="selected">Транспорт</option>
+                                                    <option value="" disabled="disabled" selected="selected">Тип номера</option>
                                                     <?foreach($arResult['ROOM_TYPES'] as $id => $roomType):?>
                                                         <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
                                                     <?endforeach;?>
