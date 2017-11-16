@@ -93,11 +93,17 @@ $APPLICATION->SetTitle("Гостиница");
                                 <option value="business">Бизнес</option>
                             </select>
                         </div>
-                        <div class="filter__item">
-                            <div class="filter__item__slider" id="filter-slider">
-                                <div class="filter__item__slider__range filter__item__slider__range_from">от 1200 р
+                        <div class="core__price">
+                            <div class="core__price__title">Цена</div>
+                            <div class="core__price__item">
+                                <div class="core__price__item_l">
+                                    <span>От</span>
+                                    <input type="text" placeholder="0">
                                 </div>
-                                <div class="filter__item__slider__range filter__item__slider__range_to">25000 р</div>
+                                <div class="core__price__item_r">
+                                    <span>До</span>
+                                    <input type="text" placeholder="0">
+                                </div>
                             </div>
                         </div>
                         <a href="#" class="filter__button"><span>подробнее</span></a>
