@@ -188,8 +188,8 @@ font-size: 18px;
     border: none;
 }
 
-.results .head .buttons button.list {
-
+.results .head .buttons {
+    display: none;
 }
 
 .results .head .buttons button.list span {
