@@ -3,6 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 ?>
     <!-- SECTION 2 -->
+
     <section class="lad-slideshow">
         <div class="container-fluid">
             <div class="row">
