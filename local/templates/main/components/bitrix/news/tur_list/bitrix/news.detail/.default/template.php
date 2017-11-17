@@ -213,21 +213,23 @@ $this->setFrameMode(true);
 
                         <div role="tabpanel" class="tab-pane" id="price">
 
-                            <form class="filter js-ajax-filter" method="post">
+                            <form action="/ajax/find-tour-room.php" class="filter js-ajax-filter" method="post">
+                                <input type="hidden" name="tour_id" value="<?=$arResult['ID'];?>">
                                 <div class="row">
 
-                                    <div class="col-xs-12 col-sm-4">
+                                    <?/*<div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <label>Дата заезда</label>
                                             <input type="date" name="date">
                                         </div>
-                                    </div>
+                                    </div>*/?>
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <?if(!empty($arResult['HOTELS'])):?>
-                                                <select name="hotel">
-                                                    <option value="" disabled="disabled" selected="selected">Гостиница</option>
+                                                <label for="hotel">Гостиница</label>
+                                                <select name="hotel" id="hotel">
+                                                    <option value="" selected="selected">Не указано</option>
                                                     <?foreach($arResult['HOTELS'] as $id => $hotel):?>
                                                         <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
                                                     <?endforeach;?>
@@ -239,8 +241,9 @@ $this->setFrameMode(true);
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <?if(!empty($arResult['ROOM_TYPES'])):?>
-                                                <select name="room_type">
-                                                    <option value="" disabled="disabled" selected="selected">Тип номера</option>
+                                                <label for="room_type">Тип номера</label>
+                                                <select name="room_type" id="room_type">
+                                                    <option value="" selected="selected">Не указано</option>
                                                     <?foreach($arResult['ROOM_TYPES'] as $id => $roomType):?>
                                                         <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
                                                     <?endforeach;?>
@@ -305,18 +308,19 @@ $this->setFrameMode(true);
                                         </div>
                                     </div>
                                 </div>
-                                <button class="calculate" type="submit">Рассчитать стоимость*</button>
+                                <button class="calculate" type="submit">Подобрать номера*</button>
 
-                                <div class="disclaimer">стоимость тура на 1 человека</div>
+                                <div class="disclaimer">* стоимость тура на 1 человека</div>
 
                             </form>
 
+                            <div class="js-ajax-filter-search"></div>
 
-                            <table>
+                            <!--<table>
                                 <thead>
                                 <tr>
-                                    <th scope="col">Дата заезда</th>
                                     <th scope="col">Гостиница</th>
+                                    <th scope="col">Номер</th>
                                     <th scope="col">Кол-во дней</th>
                                     <th scope="col">Транспорт</th>
                                     <th scope="col">Кол-во людей</th>
@@ -349,7 +353,7 @@ $this->setFrameMode(true);
                                     <td data-label="Стоимость">7500</td>
                                 </tr>
                                 </tbody>
-                            </table>
+                            </table>-->
 
                         </div>
 
