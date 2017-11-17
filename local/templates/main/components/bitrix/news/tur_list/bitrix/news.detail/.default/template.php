@@ -213,50 +213,73 @@ $this->setFrameMode(true);
 
                         <div role="tabpanel" class="tab-pane" id="price">
 
-                            <form class="filter">
+                            <form class="filter js-ajax-filter" method="post">
                                 <div class="row">
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
-                                            <select name="">
-                                                <option disabled="disabled" selected="selected">Дата заезда</option>
-                                                <option value="3">1</option>
+                                            <label>Дата заезда</label>
+                                            <input type="date" name="date">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="input">
+                                            <?if(!empty($arResult['HOTELS'])):?>
+                                                <select name="hotel">
+                                                    <option value="" disabled="disabled" selected="selected">Гостиница</option>
+                                                    <?foreach($arResult['HOTELS'] as $id => $hotel):?>
+                                                        <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
+                                                    <?endforeach;?>
+                                                </select>
+                                            <?endif;?>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="input">
+                                            <?if(!empty($arResult['ROOM_TYPES'])):?>
+                                                <select name="room_type">
+                                                    <option value="" disabled="disabled" selected="selected">Тип номера</option>
+                                                    <?foreach($arResult['ROOM_TYPES'] as $id => $roomType):?>
+                                                        <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
+                                                    <?endforeach;?>
+                                                </select>
+                                            <?endif;?>
+                                        </div>
+                                    </div>
+<?/*
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="input">
+                                            <select name="day_count">
+                                                <option disabled="disabled" selected="selected">Продолжительность тура</option>
+                                                <?for($i = 1; $i <= 10; ++$i):?>
+                                                    <option value="<?=$i;?>"><?=$i;?></option>
+                                                <?endfor;?>
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
-                                            <select name="">
-                                                <option disabled="disabled" selected="selected">Гостиница</option>
-                                                <option value="1">1</option>
-                                            </select>
+                                            <?if(!empty($arResult['TRANSPORTS'])):?>
+                                                <select name="transport">
+                                                    <option value="" disabled="disabled" selected="selected">Транспорт</option>
+                                                    <?foreach($arResult['TRANSPORTS'] as $id => $transport):?>
+                                                        <option value="<?=$id;?>"><?=$transport['VALUE'];?></option>
+                                                    <?endforeach;?>
+                                                </select>
+                                            <?endif;?>
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
-                                            <select name="">
-                                                <option disabled="disabled" selected="selected">Кол-во дней</option>
-                                                <option value="2">1</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <select name="">
-                                                <option disabled="disabled" selected="selected">Транспорт</option>
-                                                <option value="3">1</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <select name="">
+                                            <select name="people_count">
                                                 <option disabled="disabled" selected="selected">Кол-во людей</option>
-                                                <option value="1">1</option>
+                                                <?for($i = 1; $i <= 10; ++$i):?>
+                                                    <option value="<?=$i;?>"><?=$i;?></option>
+                                                <?endfor;?>
                                             </select>
                                         </div>
                                     </div>
@@ -267,22 +290,22 @@ $this->setFrameMode(true);
                                             <label for="styled-checkbox">Одноместное размещение</label>
                                         </div>
                                     </div>
-
+*/?>
                                 </div>
                                 <div class="core__price">
                                     <div class="core__price__title">Цена</div>
                                     <div class="core__price__item">
                                         <div class="core__price__item_l">
                                             <span>От</span>
-                                            <input type="text" placeholder="0">
+                                            <input type="text" name="price_from" placeholder="0">
                                         </div>
                                         <div class="core__price__item_r">
                                             <span>До</span>
-                                            <input type="text" placeholder="0">
+                                            <input type="text" name="price_to" placeholder="0">
                                         </div>
                                     </div>
                                 </div>
-                                <button class="calculate">Рассчитать стоимость*</button>
+                                <button class="calculate" type="submit">Рассчитать стоимость*</button>
 
                                 <div class="disclaimer">стоимость тура на 1 человека</div>
 
