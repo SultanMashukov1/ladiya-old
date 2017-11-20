@@ -62,7 +62,8 @@ $this->setFrameMode(true);
     </section>
     <section class="container page__program__detail__download">
         <div class="row">
-            <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать PDF" class="page__program__detail__download__btn">Скачать PDF</a>
+            <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать PDF"
+               class="page__program__detail__download__btn">Скачать PDF</a>
         </div>
     </section>
     <section class="container tour-detail_tabs">
@@ -71,7 +72,8 @@ $this->setFrameMode(true);
 
                 <!-- TAB BUTTONS -->
                 <ul class="tablist main" role="tablist">
-                    <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
+                    <li role="presentation"><a href="#description" aria-controls="description" role="tab"
+                                               data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
                     </li>
                     <li role="presentation">
                         <a href="#program" aria-controls="program" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PROGRAMM_TITLE');?></a>
@@ -155,15 +157,19 @@ $this->setFrameMode(true);
                                 <div class="col-xs-12">
                                     <? if(!empty($arResult['PROGRAMMS'])): ?>
                                         <?
-                                            // Для правильной работы слайдера $i
-                                            $i = 1;
+                                        $first = true;
                                         ?>
                                         <!-- TAB BUTTONS -->
                                         <ul class="tablist inner" role="tablist">
                                             <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
                                                 <?
-                                                    if($i == 1) {$class = 'active';}else{ $class = '';}
-                                                    $i++;
+                                                if($first)
+                                                {
+                                                    $first = false;
+                                                    $class = 'active';
+                                                }
+                                                else
+                                                    $class = '';
                                                 ?>
                                                 <li role="presentation" class="<?=$class?>">
                                                     <a href="#p<?=$id;?>" aria-controls="p<?=$id;?>" role="tab"
@@ -173,40 +179,42 @@ $this->setFrameMode(true);
                                         </ul>
 
                                         <?
-                                            $first = true;
+                                        $first = true;
                                         ?>
 
                                         <!-- TAB CONTENT -->
                                         <div class="tab-content inner">
                                             <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
                                                 <?
-                                                    if($first) {
-                                                        $first = false;
-                                                        $class = ' active';
-                                                    }
-                                                    else
-                                                        $class = '';
+                                                if($first)
+                                                {
+                                                    $first = false;
+                                                    $class = ' active';
+                                                } else
+                                                    $class = '';
                                                 ?>
                                                 <div role="tabpanel" class="tab-pane<?=$class?>" id="p<?=$id;?>">
                                                     <div class="img" style="background-image: url(<?=$programm['PICTURE_SRC'];?>);"></div>
                                                     <div class="text page__program__detail__list__item">
-                                                        <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?> - Пятигорск </div>
+                                                        <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?> - Пятигорск
+                                                        </div>
                                                         <div class="page__program__detail__list__item__text">
                                                             <?=$programm['PREVIEW_TEXT'];?>
 
-                                                            <?if(
-                                                                    Helper::propFilled('ADDITIONAL_TITLE', $arResult) &&
-                                                                    Helper::propFilled('ADDITIONAL_TEXT', $arResult)
-                                                            ):?>
+                                                            <? if(
+                                                                Helper::propFilled('ADDITIONAL_TITLE', $arResult) &&
+                                                                Helper::propFilled('ADDITIONAL_TEXT', $arResult)
+                                                            ): ?>
                                                                 <p class="core__switch__btn">
-                                                                    <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
+                                                                    <span class="core__switch__btn__text"
+                                                                          data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
                                                                           <?=$arResult['PROPERTIES']['ADDITIONAL_TITLE']['VALUE'];?>
                                                                     </span>
                                                                     <span class="core__switch__btn__hidden core__switch__btn__hidden_<?=$id?>_1">
                                                                         <?=$arResult['PROPERTIES']['ADDITIONAL_TEXT']['VALUE'];?>
                                                                     </span>
                                                                 </p>
-                                                            <?endif;?>
+                                                            <? endif; ?>
 
                                                         </div>
                                                     </div>
@@ -226,41 +234,41 @@ $this->setFrameMode(true);
                                 <input type="hidden" name="tour_id" value="<?=$arResult['ID'];?>">
                                 <div class="row">
 
-                                    <?/*<div class="col-xs-12 col-sm-4">
+                                    <? /*<div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <label>Дата заезда</label>
                                             <input type="date" name="date">
                                         </div>
-                                    </div>*/?>
+                                    </div>*/ ?>
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
-                                            <?if(!empty($arResult['HOTELS'])):?>
+                                            <? if(!empty($arResult['HOTELS'])): ?>
                                                 <label for="hotel">Гостиница</label>
                                                 <select name="hotel" id="hotel">
                                                     <option value="" selected="selected">Не указано</option>
-                                                    <?foreach($arResult['HOTELS'] as $id => $hotel):?>
+                                                    <? foreach($arResult['HOTELS'] as $id => $hotel): ?>
                                                         <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
-                                                    <?endforeach;?>
+                                                    <? endforeach; ?>
                                                 </select>
-                                            <?endif;?>
+                                            <? endif; ?>
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
-                                            <?if(!empty($arResult['ROOM_TYPES'])):?>
+                                            <? if(!empty($arResult['ROOM_TYPES'])): ?>
                                                 <label for="room_type">Тип номера</label>
                                                 <select name="room_type" id="room_type">
                                                     <option value="" selected="selected">Не указано</option>
-                                                    <?foreach($arResult['ROOM_TYPES'] as $id => $roomType):?>
+                                                    <? foreach($arResult['ROOM_TYPES'] as $id => $roomType): ?>
                                                         <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
-                                                    <?endforeach;?>
+                                                    <? endforeach; ?>
                                                 </select>
-                                            <?endif;?>
+                                            <? endif; ?>
                                         </div>
                                     </div>
-<?/*
+                                    <? /*
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <select name="day_count">
@@ -302,7 +310,7 @@ $this->setFrameMode(true);
                                             <label for="styled-checkbox">Одноместное размещение</label>
                                         </div>
                                     </div>
-*/?>
+*/ ?>
                                 </div>
                                 <div class="core__price">
                                     <div class="core__price__title">Цена</div>
@@ -374,7 +382,7 @@ $this->setFrameMode(true);
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="reviews">
-                            <?$APPLICATION->IncludeComponent('bitrix:news.list', 'reviews', array(
+                            <? $APPLICATION->IncludeComponent('bitrix:news.list', 'reviews', array(
                                 'DISPLAY_DATE' => 'Y',
                                 'DISPLAY_NAME' => 'Y',
                                 'DISPLAY_PICTURE' => 'Y',
@@ -427,7 +435,7 @@ $this->setFrameMode(true);
                                 'AJAX_OPTION_STYLE' => 'Y',
                                 'AJAX_OPTION_HISTORY' => 'N',
                                 'AJAX_OPTION_ADDITIONAL' => '',
-                            ));?>
+                            )); ?>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="group">
                             text
@@ -439,13 +447,13 @@ $this->setFrameMode(true);
                     <div class="col-xs-12 col-sm-6">
                         <a href="#" class="booking"><?=Loc::getMessage('TOUR_ORDER_BTN_TITLE');?></a>
                     </div>
-                    <?if(!empty($arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'])):?>
+                    <? if(!empty($arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'])): ?>
                         <div class="col-xs-12 col-sm-6">
                             <a href="<?=$arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'];?>" class="full_program">
                                 <?=Loc::getMessage('TOUR_SHOW_FULL_PROGRAMM_TITLE');?>
                             </a>
                         </div>
-                    <?endif;?>
+                    <? endif; ?>
                 </div>
 
             </div>
@@ -490,12 +498,12 @@ $this->setFrameMode(true);
 
             <div class="row">
 
-                <?foreach($arResult['SIMILAR_TOURS'] as $tour):?>
+                <? foreach($arResult['SIMILAR_TOURS'] as $tour): ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 item">
                         <div class="img" style="background-image: url('<?=$tour['PICTURE_SRC'];?>')">
-                            <?if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])):?>
-                                <div class="discount">-<?=(int)$tour['PROPERTY_DISCOUNT_VALUE'];?>%</div>
-                            <?endif;?>
+                            <? if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])): ?>
+                                <div class="discount">-<?=(int) $tour['PROPERTY_DISCOUNT_VALUE'];?>%</div>
+                            <? endif; ?>
                             <h3><?=$tour['NAME'];?></h3>
 
                             <div class="text">
@@ -513,20 +521,20 @@ $this->setFrameMode(true);
                         <div class="info">
                             <div class="text">
 
-                                <?if(!empty($tour['PROPERTY_HEADER_VALUE'])):?>
+                                <? if(!empty($tour['PROPERTY_HEADER_VALUE'])): ?>
                                     <h5><?=$tour['PROPERTY_HEADER_VALUE'];?></h5>
-                                <?endif;?>
+                                <? endif; ?>
                                 <div>
-                                    <?if(!empty($tour['PROPERTY_DAY_VALUE'])):?>
-                                    <span>
+                                    <? if(!empty($tour['PROPERTY_DAY_VALUE'])): ?>
+                                        <span>
                                         <?=Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(
                                             Loc::getMessage('TOUR_DAY_ONE'),
                                             Loc::getMessage('TOUR_DAY_TWO'),
                                             Loc::getMessage('TOUR_DAY_MORE'),
                                         ));?>
                                     </span>
-                                    <?endif;?>
-                                    <?if(!empty($tour['PROPERTY_NIGHT_VALUE'])):?>
+                                    <? endif; ?>
+                                    <? if(!empty($tour['PROPERTY_NIGHT_VALUE'])): ?>
                                         <span>
                                             <?=Helper::pluralizeN($tour['PROPERTY_NIGHT_VALUE'], array(
                                                 Loc::getMessage('TOUR_NIGHT_ONE'),
@@ -534,27 +542,27 @@ $this->setFrameMode(true);
                                                 Loc::getMessage('TOUR_NIGHT_MORE'),
                                             ));?>
                                         </span>
-                                    <?endif;?>
+                                    <? endif; ?>
                                 </div>
 
                             </div>
 
                             <div class="price">
                                 <div>
-                                    <?if(!empty($tour['PROPERTY_PRICE_VALUE'])):?>
+                                    <? if(!empty($tour['PROPERTY_PRICE_VALUE'])): ?>
                                         <span>
                                             <bold>
                                                 <?=Loc::getMessage('TOUR_PRICE_FROM');?>
-                                                <?=number_format($tour['PROPERTY_PRICE_VALUE'], 0,'', ' ');?>
+                                                <?=number_format($tour['PROPERTY_PRICE_VALUE'], 0, '', ' ');?>
                                                 <?=Loc::getMessage('TOUR_PRICE_CURRENCY_1');?>
                                             </bold>
                                         </span>
-                                    <?endif;?>
+                                    <? endif; ?>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?endforeach;?>
+                <? endforeach; ?>
 
             </div>
         </section>
