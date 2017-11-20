@@ -39,7 +39,7 @@ if(!empty($_POST['hotel']))
 
 $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,
-    'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'),
+    'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'),
 ));
 $sections = array();
 foreach($rooms as $roomId => $room)
@@ -74,6 +74,7 @@ if(empty($rooms))
         <th scope="col">Номер</th>
         <th scope="col">Тип номера</th>
         <th scope="col">Стоимость</th>
+        <th scope="col">Доплата за 1-местное размещение</th>
     </tr>
     </thead>
     <tbody>
@@ -83,6 +84,7 @@ if(empty($rooms))
             <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
             <td data-label="Стоимость"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
+            <td data-label="Доплата за 1-местное размещение"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
         </tr>
     <? endforeach; ?>
     </tbody>
