@@ -438,7 +438,7 @@ $this->setFrameMode(true);
                             )); ?>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="group">
-                            text
+                            <?=$arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'];?>
                         </div>
                     </div>
                 </div>
