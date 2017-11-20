@@ -308,7 +308,7 @@ $this->setFrameMode(true);
                                         </div>
                                     </div>
                                 </div>
-                                <button class="calculate" type="submit">Подобрать номера*</button>
+                                <button class="calculate" type="submit">Подобрать гостиницу *</button>
 
                                 <div class="disclaimer">* стоимость тура на 1 человека</div>
 

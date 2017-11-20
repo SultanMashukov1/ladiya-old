@@ -124,7 +124,6 @@ $APPLICATION->SetTitle("Туры");
 			0 => "TYPE",
 			1 => "VIEW",
 			2 => "DATE",
-			3 => "COUNT",
 			4 => "DAYS_COUNT",
 			5 => "CITY",
 			11 => "",
