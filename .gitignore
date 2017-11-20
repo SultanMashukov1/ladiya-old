@@ -4,6 +4,7 @@
 /bitrix
 /upload
 /*.txt
+/inwidget/cache/*
 !/robots.txt
 /*.html
 ~*.php
