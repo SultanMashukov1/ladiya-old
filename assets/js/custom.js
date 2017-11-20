@@ -187,7 +187,7 @@ $(document).ready(function () {
         defaultValues:{min: 18, max: 36}
     });
     //  datepicker окно выбора даты
-    $('.filter__item__date__inp').datepicker($.datepicker.regional["ru"]);
+    $('.filter__item__date__inp, input[name*="DATE"]').datepicker($.datepicker.regional["ru"]);
 
 
     $('form.js-add-review').on('submit', function (e) {

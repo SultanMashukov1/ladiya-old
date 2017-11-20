@@ -74,6 +74,8 @@ $(document).ready(function(){
 (function(){
     var map;
     function initialize() {
+        if(!document.getElementById('map'))
+            return ;
         var myLatLng = {lat: 44.037287, lng: 43.074850};
 
         var mapOptions = {
