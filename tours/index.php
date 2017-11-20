@@ -4,10 +4,10 @@ $APPLICATION->SetTitle("Туры");
 
 //add js
 \WM\Common\AssetManager::get()->addJsArray(array(
-    '/assets/js/jquery-ui.js',
+    //'/assets/js/jquery-ui.js',
     '//maps.googleapis.com/maps/api/js?key=AIzaSyAYfOA-1ATF0mTT9Ms6u7qofcQaHzgesEk&sensor=false',
     '/assets/js/slick.js',
-    '/assets/js/bootstrap.js',
+    //'/assets/js/bootstrap.js',
     '/assets/js/scripts.js',
 ));
 ?>
