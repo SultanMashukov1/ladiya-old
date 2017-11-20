@@ -73,7 +73,6 @@ if(empty($rooms))
         <th scope="col">Гостиница</th>
         <th scope="col">Номер</th>
         <th scope="col">Тип номера</th>
-        <th scope="col">Тип размещения</th>
         <th scope="col">Стоимость</th>
     </tr>
     </thead>
@@ -83,7 +82,6 @@ if(empty($rooms))
             <td data-label="Гостиница"><?=$room['HOTEL_NAME'];?></td>
             <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
-            <td data-label="Тип размещения"><?=$room['PROPERTY_PEOPLE_COUNT_VALUE'];?></td>
             <td data-label="Стоимость"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
         </tr>
     <? endforeach; ?>
