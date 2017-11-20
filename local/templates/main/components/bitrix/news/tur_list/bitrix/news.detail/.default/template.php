@@ -173,31 +173,40 @@ $this->setFrameMode(true);
                                         </ul>
 
                                         <?
-                                            $i = 1;
+                                            $first = true;
                                         ?>
 
                                         <!-- TAB CONTENT -->
                                         <div class="tab-content inner">
                                             <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
                                                 <?
-                                                    if($i == 1) {$class = 'active';}else{ $class = '';}
-                                                    $i++;
+                                                    if($first) {
+                                                        $first = false;
+                                                        $class = ' active';
+                                                    }
+                                                    else
+                                                        $class = '';
                                                 ?>
-                                                <div role="tabpanel" class="tab-pane <?=$class?>" id="p<?=$id;?>">
+                                                <div role="tabpanel" class="tab-pane<?=$class?>" id="p<?=$id;?>">
                                                     <div class="img" style="background-image: url(<?=$programm['PICTURE_SRC'];?>);"></div>
                                                     <div class="text page__program__detail__list__item">
                                                         <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?> - Пятигорск </div>
                                                         <div class="page__program__detail__list__item__text">
                                                             <?=$programm['PREVIEW_TEXT'];?>
 
-                                                            <p class="core__switch__btn">
-                                                                <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
-                                                                      Обзорная экскурсия по культурному центру - г. Пятигорску
-                                                                </span>
-                                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_<?=$id?>_1">
-                                                                    Вы посетите Лермонтовские места, уникальное озеро Провал. Увидите памятник Остапу Бендеру, Эолову арфу, парк “Цветник”
-                                                                </span>
-                                                            </p>
+                                                            <?if(
+                                                                    Helper::propFilled('ADDITIONAL_TITLE', $arResult) &&
+                                                                    Helper::propFilled('ADDITIONAL_TEXT', $arResult)
+                                                            ):?>
+                                                                <p class="core__switch__btn">
+                                                                    <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
+                                                                          <?=$arResult['PROPERTIES']['ADDITIONAL_TITLE']['VALUE'];?>
+                                                                    </span>
+                                                                    <span class="core__switch__btn__hidden core__switch__btn__hidden_<?=$id?>_1">
+                                                                        <?=$arResult['PROPERTIES']['ADDITIONAL_TEXT']['VALUE'];?>
+                                                                    </span>
+                                                                </p>
+                                                            <?endif;?>
 
                                                         </div>
                                                     </div>
