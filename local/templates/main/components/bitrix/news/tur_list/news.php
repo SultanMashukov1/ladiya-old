@@ -41,7 +41,7 @@ $viewMode = $curView ? 'list' : '';
             <? if ($arParams["USE_FILTER"] == "Y"): ?>
                 <div class="col-xs-12 col-md-4 col-lg-4">
                     <? $APPLICATION->IncludeComponent(
-                        "bitrix:catalog.filter",
+                        "lema:catalog.filter",
                         "",
                         Array(
                             "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
