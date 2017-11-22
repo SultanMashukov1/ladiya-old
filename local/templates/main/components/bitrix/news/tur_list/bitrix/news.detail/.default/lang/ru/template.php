@@ -1,7 +1,7 @@
 <?
 $MESS['TOUR_DESCRIPTION_TITLE'] = 'Описание';
 $MESS['TOUR_PROGRAMM_TITLE'] = 'Программа';
-$MESS['TOUR_PRICE_TITLE'] = 'Стоимость';
+$MESS['TOUR_PRICE_TITLE'] = 'Стоимость сборные туры';
 $MESS['TOUR_MEMO_TITLE'] = 'Памятка тура';
 $MESS['TOUR_REVIEWS_TITLE'] = 'Отзывы';
 $MESS['TOUR_ROUTE_TITLE'] = 'Маршрут';

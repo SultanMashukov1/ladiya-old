@@ -736,6 +736,7 @@ font-size: 18px;
     border: 1px solid #f15922;
     border-bottom-width: 3px;
     border-radius: 2px 2px 0 0;
+    min-height: 74px;
 }
 
 .tour-detail_tabs__wrapper ul.tablist.main li a:hover {
@@ -905,6 +906,7 @@ font-size: 18px;
 }
 
 .tour-detail_tabs__wrapper .bg .tab-content.main #price .filter .input select {
+    margin-top: 5px;
     -webkit-appearance: none;
     display: block;
     width: 100%;
@@ -1814,6 +1816,7 @@ font-size: 18px;
 .page__program__detail__list__item__text {
     line-height: 16px;
     font-size: 13px;
+    text-align: justify;
 }
 .page__program__detail__list__item__text h3 {
     height: auto;

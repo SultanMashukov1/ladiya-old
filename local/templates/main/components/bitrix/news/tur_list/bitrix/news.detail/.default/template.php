@@ -88,7 +88,7 @@ $this->setFrameMode(true);
                         <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
                     </li>
                     <li role="presentation">
-                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab">Группам туристов</a>
+                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab">Стоимость группы туристов</a>
                     </li>
                 </ul>
 
@@ -268,6 +268,21 @@ $this->setFrameMode(true);
                                             <? endif; ?>
                                         </div>
                                     </div>
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="core__price">
+                                            <div class="core__price__title">Цена</div>
+                                            <div class="core__price__item">
+                                                <div class="core__price__item_l">
+                                                    <span>От</span>
+                                                    <input type="text" name="price_from" placeholder="0">
+                                                </div>
+                                                <div class="core__price__item_r">
+                                                    <span>До</span>
+                                                    <input type="text" name="price_to" placeholder="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <? /*
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
@@ -312,23 +327,24 @@ $this->setFrameMode(true);
                                     </div>
 */ ?>
                                 </div>
-                                <div class="core__price">
-                                    <div class="core__price__title">Цена</div>
-                                    <div class="core__price__item">
-                                        <div class="core__price__item_l">
-                                            <span>От</span>
-                                            <input type="text" name="price_from" placeholder="0">
-                                        </div>
-                                        <div class="core__price__item_r">
-                                            <span>До</span>
-                                            <input type="text" name="price_to" placeholder="0">
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="calculate" type="submit">Подобрать гостиницу *</button>
 
+                                <button class="calculate" type="submit">Подобрать гостиницу *</button>
                                 <div class="disclaimer">* стоимость тура на 1 человека</div>
 
+                                <div class="page__program__detail__list__item__text">
+                                    <p class="core__switch__btn">
+                                        <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_1">В стоимость входит</span>
+                                        <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
+                                            ...
+                                        </span>
+                                    </p>
+                                    <p class="core__switch__btn">
+                                        <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_2">Дополнительно оплачиваются</span>
+                                        <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
+                                            ...
+                                        </span>
+                                    </p>
+                                </div>
                             </form>
 
                             <div class="js-ajax-filter-search"></div>
