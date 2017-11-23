@@ -34,7 +34,7 @@ $viewMode = $curView ? 'list' : '';
 );?>
 <br />
 <?endif*/ ?>
-<section class="content-page">
+<section class="content-page" id="tours">
     <div class="container">
         <div class="row">
 

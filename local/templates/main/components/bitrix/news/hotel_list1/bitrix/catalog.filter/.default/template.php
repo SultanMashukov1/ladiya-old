@@ -12,24 +12,25 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<form name="<? echo $arResult["FILTER_NAME"] . "_form" ?>" action="<? echo $arResult["FORM_ACTION"] ?>" method="get">
+<form class="filter" name="search-hotel" action="<? echo $arResult["FORM_ACTION"] ?>" method="get">
     <? foreach ($arResult["ITEMS"] as $arItem):
         if (array_key_exists("HIDDEN", $arItem)):
             echo $arItem["INPUT"];
         endif;
     endforeach; ?>
-    <div class="fields">
+    <div class="filter__item fields">
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
+            <div class="input">
             <? if (!array_key_exists("HIDDEN", $arItem)): ?>
-                <div class="input">
-                    <label><?= $arItem["NAME"] ?>:</label>
-                    <?= $arItem["INPUT"] ?>
+                <div class="filter__item__name">
+                    <?= $arItem["NAME"]; ?>:
                 </div>
+                <?= $arItem["INPUT"]; ?>
             <? endif ?>
+            </div>
         <? endforeach; ?>
         <div class="submit">
-            <input type="submit" name="set_filter" value="Поисков туров"><input type="hidden" name="set_filter"
-                                                                                value="Y">
+            <input type="submit" class="filter__button" value="Поиск гостиниц"><input type="hidden" name="set_filter" value="Y">
         </div>
     </div>
 </form>

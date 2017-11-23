@@ -103,12 +103,12 @@ $APPLICATION->SetTitle("Гостиницы");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "PRICE",
-			1 => "TYPE",
-			2 => "VIEW",
-			3 => "DATE",
-			4 => "COUNT",
-			5 => "CITY",
+			0 => "CITY",
+			1 => "PRICE",
+			2 => "TYPE",
+			3 => "VIEW",
+			4 => "DATE",
+			5 => "COUNT",
 			6 => "HEADER",
 			7 => "DAY",
 			8 => "NIGHT",
@@ -136,13 +136,13 @@ $APPLICATION->SetTitle("Гостиницы");
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "PRICE",
-			1 => "TYPE",
-			2 => "VIEW",
-			3 => "DATE",
-			4 => "COUNT",
-			5 => "DAYS_COUNT",
-			6 => "CITY",
+			0 => "CITY",
+			1 => "PRICE",
+			2 => "TYPE",
+			3 => "VIEW",
+			4 => "DATE",
+			5 => "COUNT",
+			6 => "DAYS_COUNT",
 			7 => "HEADER",
 			8 => "NIGHT",
 			9 => "DISCOUNT",
@@ -185,13 +185,11 @@ $APPLICATION->SetTitle("Гостиницы");
 			1 => "",
 		),
 		"FILTER_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "TYPE",
-			2 => "VIEW",
-			3 => "DATE",
-			4 => "DAYS_COUNT",
-			5 => "CITY",
-			6 => "",
+			0 => "ADDRESS",
+			1 => "CITY",
+			2 => "ROOMS",
+			3 => "PRICE",
+			4 => "",
 		),
 		"SEF_FOLDER" => "/tours/",
 		"SEF_URL_TEMPLATES" => array(
@@ -202,7 +200,7 @@ $APPLICATION->SetTitle("Гостиницы");
 	),
 	false
 );?>
-    <section class="content-page">
+    <section class="content-page" >
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">

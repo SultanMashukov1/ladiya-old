@@ -125,6 +125,7 @@ font-size: 18px;
 
 
 
+
 .results {
 
 }
@@ -1912,3 +1913,4 @@ font-size: 18px;
 }
 
 .filter__button {margin-top: 10px;}
+input.filter__button {padding-bottom: 15px !important;}
