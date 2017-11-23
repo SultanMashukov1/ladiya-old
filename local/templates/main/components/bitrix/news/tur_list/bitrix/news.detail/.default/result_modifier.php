@@ -36,7 +36,7 @@ $arResult['PROGRAMMS'] = array();
 if(!empty($arResult['PROPERTIES']['PROGRAMMS']['VALUE']))
 {
     $arResult['PROGRAMMS'] = \WM\IBlock\Element::getList($arResult['PROPERTIES']['PROGRAMMS']['LINK_IBLOCK_ID'], array(
-        'arSelect' => array('ID', 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE'),
+        'arSelect' => array('ID', 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'PROPERTY_ADDITIONAL_TEXT', 'PROPERTY_ADDITIONAL_TITLE'),
         'filter' => array('ID' => $arResult['PROPERTIES']['PROGRAMMS']['VALUE'], 'ACTIVE' => 'Y'),
     ));
     foreach($arResult['PROGRAMMS'] as $k => $programm)

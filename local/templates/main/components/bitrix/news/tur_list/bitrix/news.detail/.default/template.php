@@ -43,7 +43,7 @@ $this->setFrameMode(true);
                         </p>
                     </div>
                     <div class="location">
-                        <p>Приэльбрусье</p>
+                        <p><?=$arResult['SECTION']['PATH'][0]['NAME'];?></p>
                     </div>
                 </div>
 
@@ -167,8 +167,7 @@ $this->setFrameMode(true);
                                                 {
                                                     $first = false;
                                                     $class = 'active';
-                                                }
-                                                else
+                                                } else
                                                     $class = '';
                                                 ?>
                                                 <li role="presentation" class="<?=$class?>">
@@ -196,22 +195,21 @@ $this->setFrameMode(true);
                                                 <div role="tabpanel" class="tab-pane<?=$class?>" id="p<?=$id;?>">
                                                     <div class="img" style="background-image: url(<?=$programm['PICTURE_SRC'];?>);"></div>
                                                     <div class="text page__program__detail__list__item">
-                                                        <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?> - Пятигорск
-                                                        </div>
+                                                        <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?></div>
                                                         <div class="page__program__detail__list__item__text">
                                                             <?=$programm['PREVIEW_TEXT'];?>
 
                                                             <? if(
-                                                                Helper::propFilled('ADDITIONAL_TITLE', $arResult) &&
-                                                                Helper::propFilled('ADDITIONAL_TEXT', $arResult)
+                                                                !empty($programm['PROPERTY_ADDITIONAL_TITLE_VALUE']) &&
+                                                                !empty($programm['PROPERTY_ADDITIONAL_TEXT_VALUE'])
                                                             ): ?>
                                                                 <p class="core__switch__btn">
                                                                     <span class="core__switch__btn__text"
                                                                           data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
-                                                                          <?=$arResult['PROPERTIES']['ADDITIONAL_TITLE']['VALUE'];?>
+                                                                          <?=$programm['PROPERTY_ADDITIONAL_TITLE_VALUE'];?>
                                                                     </span>
                                                                     <span class="core__switch__btn__hidden core__switch__btn__hidden_<?=$id?>_1">
-                                                                        <?=$arResult['PROPERTIES']['ADDITIONAL_TEXT']['VALUE'];?>
+                                                                        <?=$programm['PROPERTY_ADDITIONAL_TEXT_VALUE']['TEXT'];?>
                                                                     </span>
                                                                 </p>
                                                             <? endif; ?>
@@ -233,13 +231,6 @@ $this->setFrameMode(true);
                             <form action="/ajax/find-tour-room.php" class="filter js-ajax-filter" method="post">
                                 <input type="hidden" name="tour_id" value="<?=$arResult['ID'];?>">
                                 <div class="row">
-
-                                    <? /*<div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <label>Дата заезда</label>
-                                            <input type="date" name="date">
-                                        </div>
-                                    </div>*/ ?>
 
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
@@ -332,61 +323,26 @@ $this->setFrameMode(true);
                                 <div class="disclaimer">* стоимость тура на 1 человека</div>
 
                                 <div class="page__program__detail__list__item__text">
-                                    <p class="core__switch__btn">
-                                        <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_1">В стоимость входит</span>
-                                        <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
-                                            ...
+                                    <? if(!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
+                                        <p class="core__switch__btn">
+                                            <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_1">В стоимость входит</span>
+                                            <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
+                                                <?=$arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'];?>
+                                            </span>
+                                        </p>
+                                    <? endif; ?>
+                                    <? if(!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
+                                        <p class="core__switch__btn">
+                                            <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_2">Дополнительно оплачиваются</span>
+                                            <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
+                                            <?=$arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'];?>
                                         </span>
-                                    </p>
-                                    <p class="core__switch__btn">
-                                        <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_2">Дополнительно оплачиваются</span>
-                                        <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
-                                            ...
-                                        </span>
-                                    </p>
+                                        </p>
+                                    <? endif; ?>
                                 </div>
                             </form>
 
                             <div class="js-ajax-filter-search"></div>
-
-                            <!--<table>
-                                <thead>
-                                <tr>
-                                    <th scope="col">Гостиница</th>
-                                    <th scope="col">Номер</th>
-                                    <th scope="col">Кол-во дней</th>
-                                    <th scope="col">Транспорт</th>
-                                    <th scope="col">Кол-во людей</th>
-                                    <th scope="col">Стоимость</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td data-label="Дата заезда">7</td>
-                                    <td data-label="Гостиница">Бизнес-отель Бештау</td>
-                                    <td data-label="Кол-во дней">7</td>
-                                    <td data-label="Транспорт">Аренда автомобиля</td>
-                                    <td data-label="Кол-во людей">7</td>
-                                    <td data-label="Стоимость">7500</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Дата заезда">5</td>
-                                    <td data-label="Гостиница">Гостиница Бештау</td>
-                                    <td data-label="Кол-во дней">5</td>
-                                    <td data-label="Транспорт">Автобус</td>
-                                    <td data-label="Кол-во людей">1</td>
-                                    <td data-label="Стоимость">21000</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Дата заезда">10</td>
-                                    <td data-label="Гостиница">Пансионат Искра</td>
-                                    <td data-label="Кол-во дней">10</td>
-                                    <td data-label="Транспорт">Автобус</td>
-                                    <td data-label="Кол-во людей">10</td>
-                                    <td data-label="Стоимость">7500</td>
-                                </tr>
-                                </tbody>
-                            </table>-->
 
                         </div>
 
