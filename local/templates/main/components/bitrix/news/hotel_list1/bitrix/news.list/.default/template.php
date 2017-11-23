@@ -10,9 +10,15 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+
+use Bitrix\Main\Localization\Loc,
+    WM\Common\Helper;
+
 $this->setFrameMode(true);
-use Bitrix\Main\Localization\Loc;
+
 Loc::loadMessages(__FILE__);
+
+$foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
 ?>
 <div class="col-xs-12 col-md-8 col-lg-8 results">
     <div class="row">
@@ -21,8 +27,19 @@ Loc::loadMessages(__FILE__);
 
                 <div class="text">
                     <?
-                    if (count($arResult["ITEMS"])) : ?>
-                        <p><?=Loc::getMessage('CT_BNL_SEARCH');?><?= count($arResult["ITEMS"]) ?><?=Loc::getMessage('CT_BNL_SEARCH_HOTELS');?></p>
+                    if (!empty($arResult["ITEMS"])) : ?>
+                        <p>
+                            <?=Helper::pluralize($foundCnt, array(
+                                Loc::getMessage('CT_HOTEL_SEARCH_FOUND_ONE_TITLE'),
+                                Loc::getMessage('CT_HOTEL_SEARCH_FOUND_TWO_TITLE'),
+                                Loc::getMessage('CT_HOTEL_SEARCH_FOUND_MORE_TITLE'),
+                            ));?>
+                            <?=Helper::pluralizeN($foundCnt, array(
+                                Loc::getMessage('CT_HOTEL_ONE'),
+                                Loc::getMessage('CT_HOTEL_TWO'),
+                                Loc::getMessage('CT_HOTEL_MORE'),
+                            ));?>
+                        </p>
                     <? else: ?>
                         <p><?=Loc::getMessage('CT_BNL_SEARCH_DONT_HOTELS');?></p>
                     <? endif; ?>
