@@ -145,7 +145,7 @@ abstract class Helper
      */
     public static function propEmpty($code, array $data = array(), $propArrKey = 'PROPERTIES')
     {
-        return empty($data[$propArrKey][$code]);
+        return empty($data[$propArrKey][$code]['VALUE']);
     }
 
     /**
