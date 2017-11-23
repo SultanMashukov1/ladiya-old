@@ -63,7 +63,7 @@ $this->setFrameMode(true);
     <section class="container page__program__detail__download">
         <div class="row">
             <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать PDF"
-               class="page__program__detail__download__btn">Скачать PDF</a>
+               class="page__program__detail__download__btn"><?=Loc::getMessage('TOUR_DOWNLOAD_PDF');?></a>
         </div>
     </section>
     <section class="container tour-detail_tabs">
@@ -88,7 +88,7 @@ $this->setFrameMode(true);
                         <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
                     </li>
                     <li role="presentation">
-                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab">Стоимость группы туристов</a>
+                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
                     </li>
                 </ul>
 
@@ -235,9 +235,9 @@ $this->setFrameMode(true);
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <? if(!empty($arResult['HOTELS'])): ?>
-                                                <label for="hotel">Гостиница</label>
+                                                <label for="hotel"><?=Loc::getMessage('TOUR_HOTEL_TITLE');?></label>
                                                 <select name="hotel" id="hotel">
-                                                    <option value="" selected="selected">Не указано</option>
+                                                    <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
                                                     <? foreach($arResult['HOTELS'] as $id => $hotel): ?>
                                                         <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
                                                     <? endforeach; ?>
@@ -249,9 +249,9 @@ $this->setFrameMode(true);
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <? if(!empty($arResult['ROOM_TYPES'])): ?>
-                                                <label for="room_type">Тип номера</label>
+                                                <label for="room_type"><?=Loc::getMessage('TOUR_ROOM_TYPE_TITLE');?></label>
                                                 <select name="room_type" id="room_type">
-                                                    <option value="" selected="selected">Не указано</option>
+                                                    <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
                                                     <? foreach($arResult['ROOM_TYPES'] as $id => $roomType): ?>
                                                         <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
                                                     <? endforeach; ?>
@@ -261,14 +261,14 @@ $this->setFrameMode(true);
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="core__price">
-                                            <div class="core__price__title">Цена</div>
+                                            <div class="core__price__title"><?=Loc::getMessage('TOUR_SEARCH_PRICE_TITLE');?></div>
                                             <div class="core__price__item">
                                                 <div class="core__price__item_l">
-                                                    <span>От</span>
+                                                    <span><?=Loc::getMessage('TOUR_PRICE_FROM');?></span>
                                                     <input type="text" name="price_from" placeholder="0">
                                                 </div>
                                                 <div class="core__price__item_r">
-                                                    <span>До</span>
+                                                    <span><?=Loc::getMessage('TOUR_PRICE_TO');?></span>
                                                     <input type="text" name="price_to" placeholder="0">
                                                 </div>
                                             </div>
@@ -319,13 +319,16 @@ $this->setFrameMode(true);
 */ ?>
                                 </div>
 
-                                <button class="calculate" type="submit">Подобрать гостиницу *</button>
-                                <div class="disclaimer">* стоимость тура на 1 человека</div>
+                                <button class="calculate" type="submit"><?=Loc::getMessage('TOUR_SEARCH_BTN_TITLE');?></button>
+                                <div class="disclaimer"><?=Loc::getMessage('TOUR_SEARCH_HINT_TITLE');?></div>
 
                                 <div class="page__program__detail__list__item__text">
                                     <? if(!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
                                         <p class="core__switch__btn">
-                                            <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_1">В стоимость входит</span>
+                                            <span class="core__switch__btn__text"
+                                                  data-js-core-switch-element="core__switch__btn__hidden_price_1">
+                                                <?=Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE');?>
+                                            </span>
                                             <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
                                                 <?=$arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'];?>
                                             </span>
@@ -333,7 +336,10 @@ $this->setFrameMode(true);
                                     <? endif; ?>
                                     <? if(!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
                                         <p class="core__switch__btn">
-                                            <span class="core__switch__btn__text" data-js-core-switch-element="core__switch__btn__hidden_price_2">Дополнительно оплачиваются</span>
+                                            <span class="core__switch__btn__text"
+                                                  data-js-core-switch-element="core__switch__btn__hidden_price_2">
+                                                <?=Loc::getMessage('TOUR_ALSO_PAYS_TITLE');?>
+                                            </span>
                                             <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
                                             <?=$arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'];?>
                                         </span>
