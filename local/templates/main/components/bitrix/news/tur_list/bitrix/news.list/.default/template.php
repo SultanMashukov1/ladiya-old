@@ -21,7 +21,7 @@ $strEditLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_EDIT');
 $strDeleteLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE');
 $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'));
 
-$foundCnt = count($arResult['ITEMS']);
+$foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
 
 ?>
 <div class="col-xs-12 col-md-8 col-lg-8 results">
@@ -30,7 +30,7 @@ $foundCnt = count($arResult['ITEMS']);
             <div class="head">
 
                 <div class="text">
-                    <? if($foundCnt) : ?>
+                    <? if(!empty($arResult['ITEMS'])) : ?>
                         <p>
                             <?=Helper::pluralize($foundCnt, array(
                                 Loc::getMessage('TOUR_SEARCH_FOUND_ONE_TITLE'),
@@ -136,4 +136,7 @@ $foundCnt = count($arResult['ITEMS']);
         </div>
 
     </div>
+    <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+        <br /><?=$arResult["NAV_STRING"]?>
+    <?endif;?>
 </div>
