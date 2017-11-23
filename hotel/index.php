@@ -191,7 +191,7 @@ $APPLICATION->SetTitle("Гостиницы");
 			3 => "PRICE",
 			4 => "",
 		),
-		"SEF_FOLDER" => "/tours/",
+		"SEF_FOLDER" => "/hotel/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

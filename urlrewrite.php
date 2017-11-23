@@ -1,7 +1,7 @@
 <?
 $arUrlRewrite = array(
 	array(
-		"CONDITION" => "#^/tours/#",
+		"CONDITION" => "#^/hotel/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/hotel/index.php",
