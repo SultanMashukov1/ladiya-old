@@ -63,7 +63,7 @@ ${$FILTER_NAME} = array();
 
 $arParams["NUMBER_WIDTH"] = intval($arParams["NUMBER_WIDTH"]);
 if($arParams["NUMBER_WIDTH"]<=0)
-	$arParams["NUMBER_WIDTH"]=5;
+	$arParams["NUMBER_WIDTH"]=10;
 $arParams["TEXT_WIDTH"] = intval($arParams["TEXT_WIDTH"]);
 if($arParams["TEXT_WIDTH"]<=0)
 	$arParams["TEXT_WIDTH"]=20;
@@ -636,7 +636,7 @@ foreach($arResult["arrProp"] as $prop_id => $arProp)
 				$value_left = $value["LEFT"];
 			else
 				$value_left = "";
-			$res .= '<input type="text" name="'.$name_left.'" size="'.$arParams["NUMBER_WIDTH"].'" value="'.htmlspecialcharsbx($value_left).'" />&nbsp;'.GetMessage("CC_BCF_TILL").'&nbsp;';
+			$res .= '<div class="price"><p>'.GetMessage("CC_BCF_FROM").'</p><div class="left"><input type="text" name="'.$name_left.'" size="'.$arParams["NUMBER_WIDTH"].'" value="'.htmlspecialcharsbx($value_left).'" /></div>';
 
 			if (strlen($value_left) > 0)
 				${$FILTER_NAME}["PROPERTY"][">=".$arProp["CODE"]] = doubleval($value_left);
@@ -646,7 +646,7 @@ foreach($arResult["arrProp"] as $prop_id => $arProp)
 				$value_right = $value["RIGHT"];
 			else
 				$value_right = "";
-			$res .= '<input type="text" name="'.$name_right.'" size="'.$arParams["NUMBER_WIDTH"].'" value="'.htmlspecialcharsbx($value_right).'" />';
+			$res .= '<p>'.GetMessage("CC_BCF_BEFORE").'</p><div class="right"><input type="text" name="'.$name_right.'" size="'.$arParams["NUMBER_WIDTH"].'" value="'.htmlspecialcharsbx($value_right).'" /></div></div>';
 
 			if (strlen($value_right) > 0)
 				${$FILTER_NAME}["PROPERTY"]["<=".$arProp["CODE"]] = doubleval($value_right);
