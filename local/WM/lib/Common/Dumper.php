@@ -24,9 +24,12 @@ abstract class Dumper
      * @param integer $depth maximum depth that the dumper should go into the variable. Defaults to 10.
      * @param boolean $highlight whether the result should be syntax-highlighted
      */
-    public static function dump($var, $depth = 10, $highlight = true)
+    public static function dump($var, $depth = 10, $highlight = true, $alignToLeft = true)
     {
-        echo static::dumpAsString($var, $depth, $highlight);
+        if($alignToLeft)
+            echo '<div style="text-align:left">', static::dumpAsString($var, $depth, $highlight), '</div>';
+        else
+            echo static::dumpAsString($var, $depth, $highlight);
     }
 
     /**
