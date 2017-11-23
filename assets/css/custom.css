@@ -74,6 +74,9 @@ font-size: 18px;
 
 }
 
+#tours form .fields .input select{
+    background-image: url(/include/arrow.png);
+}
 #tours form .fields .input select,
 #tours form .fields .input input {
     -webkit-appearance: none;
@@ -88,7 +91,6 @@ font-size: 18px;
     border-radius: 0px;
     background-color: transparent;
 
-    background-image: url(/include/arrow.png);
     background-position: right 10px center;
     background-repeat: no-repeat;
 
@@ -1914,3 +1916,20 @@ font-size: 18px;
 
 .filter__button {margin-top: 10px;}
 input.filter__button {padding-bottom: 15px !important;}
+.hotels-filter .fields div.price{
+    display: inline-table;
+    width: 100%;
+}
+.hotels-filter .fields div.price div{
+    display: inline-block;
+}
+.hotels-filter .fields div.price p{
+    width: fit-content;
+    display: inline-block;
+    vertical-align: text-bottom;
+    text-align: right;
+    margin: 10px;
+}
+.hotels-filter .fields .input{
+    width: 100% !important;
+}
