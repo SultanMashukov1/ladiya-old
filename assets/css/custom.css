@@ -1933,3 +1933,14 @@ input.filter__button {padding-bottom: 15px !important;}
 .hotels-filter .fields .input{
     width: 100% !important;
 }
+
+@media (max-width: 1200px) {
+    .tour-detail_tabs__wrapper ul.tablist.main li a {
+        min-height: 100px!important;
+    }
+}
+@media (max-width: 776px) {
+    .tour-detail_tabs__wrapper ul.tablist.main li a {
+        min-height: auto!important;
+    }
+}
