@@ -1176,6 +1176,7 @@ font-size: 18px;
     background-color: #f15922;
     border: 1px solid #f15922;
     color: white;
+    display: inline-block;
 }
 
 .tour-detail_tabs__wrapper .full_program {
@@ -1934,6 +1935,10 @@ input.filter__button {padding-bottom: 15px !important;}
     width: 100% !important;
 }
 
+.tour-detail_tabs__wrapper ul.tablist__2.main li {
+    width: 50%!important;
+}
+
 @media (max-width: 1200px) {
     .tour-detail_tabs__wrapper ul.tablist.main li a {
         min-height: 100px!important;
@@ -1943,4 +1948,13 @@ input.filter__button {padding-bottom: 15px !important;}
     .tour-detail_tabs__wrapper ul.tablist.main li a {
         min-height: auto!important;
     }
+    .tour-detail_tabs__wrapper ul.tablist__2.main li {
+        width: 90%!important;
+    }
+}
+
+
+.tour-detail_tabs__wrapper ul.tablist__2.main li a {
+    min-height: auto!important;
+    height: auto!important;
 }
