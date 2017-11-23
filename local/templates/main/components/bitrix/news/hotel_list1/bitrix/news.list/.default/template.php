@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+use Bitrix\Main\Localization\Loc;
+Loc::loadMessages(__FILE__);
 ?>
 <div class="col-xs-12 col-md-8 col-lg-8 results">
     <div class="row">
@@ -18,10 +20,11 @@ $this->setFrameMode(true);
             <div class="head">
 
                 <div class="text">
-                    <? if (count($arResult["ITEMS"])) : ?>
-                        <p>Найдено: <?= count($arResult["ITEMS"]) ?> туров</p>
+                    <?
+                    if (count($arResult["ITEMS"])) : ?>
+                        <p><?=Loc::getMessage('CT_BNL_SEARCH');?><?= count($arResult["ITEMS"]) ?><?=Loc::getMessage('CT_BNL_SEARCH_HOTELS');?></p>
                     <? else: ?>
-                        <p>Туры не найдены</p>
+                        <p><?=Loc::getMessage('CT_BNL_SEARCH_DONT_HOTELS');?></p>
                     <? endif; ?>
                 </div>
 
@@ -71,9 +74,9 @@ $this->setFrameMode(true);
                 <? endif; ?>
                 <div class="clearfix">
                     <div class="item-card__content__price">
-                        <? if ($arItem['PROPERTIES']['PRICE']['VALUE']) : ?>от <?= $arItem['PROPERTIES']['PRICE']['VALUE'] ?> руб<? endif; ?>
+                        <? if ($arItem['PROPERTIES']['PRICE']['VALUE']) : ?><?=Loc::getMessage('CT_BNL_FROM');?><?= $arItem['PROPERTIES']['PRICE']['VALUE'] ?><?=Loc::getMessage('CT_BNL_RUB');?><? endif; ?>
                     </div>
-                    <a href="/verstka_o-gostinice/" class="item-card__content__more">подробнее</a>
+                    <a href="/verstka_o-gostinice/" class="item-card__content__more"><?=Loc::getMessage('CT_BNL_MORE_INFO');?></a>
                     <!--<a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="item-card__content__more">подробнее</a>-->
                 </div>
             </div>
