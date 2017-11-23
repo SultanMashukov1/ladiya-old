@@ -39,10 +39,10 @@ $viewMode = $curView ? 'list' : '';
         <div class="row">
 
             <? if ($arParams["USE_FILTER"] == "Y"): ?>
-                <div class="col-xs-12 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-md-4 col-lg-4 hotels-filter">
                     <? $APPLICATION->IncludeComponent(
-                        "bitrix:catalog.filter",
-                        "",
+                        "lema:catalog.filter",
+                        "hotels",
                         Array(
                             "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                             "IBLOCK_ID" => $arParams["IBLOCK_ID"],
