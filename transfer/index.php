@@ -69,6 +69,88 @@ $APPLICATION->SetTitle("Трансфер");
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">
+                    <div class="form__filter">
+                        <div class="form__filter__title">
+                            <span>Оставить заявку</span>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Имя</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input class="form__filter__input__control" type="text">
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Телефон</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input class="form__filter__input__control" type="text">
+                                <div class="form__filter__input__log">Вы не выбрали!</div>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>E-mail</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input class="form__filter__input__control" type="text">
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Место встречи</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">
+                                    <option value="1" selected="selected">Выбрать</option>
+                                    <option value="2">Белокуриха</option>
+                                    <option value="3">Бийск</option>
+                                    <option value="4">Новоалтайск</option>
+                                    <option value="5">Рубцовск</option>
+                                    <option value="6">Славгород</option>
+                                </select>
+                                <div class="form__filter__input__log">Вы не выбрали!</div>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Место назначения</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">
+                                    <option value="1" selected="selected">Выбрать</option>
+                                    <option value="2">Белокуриха</option>
+                                    <option value="3">Бийск</option>
+                                    <option value="4">Новоалтайск</option>
+                                    <option value="5">Рубцовск</option>
+                                    <option value="6">Славгород</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Дата встречи</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Комментарий</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <textarea class="form__filter__text__control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__btn">
+                                <button class="form__filter__btn__control">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
                     <form class="filter" name="choose-transfer" action="/hotel/" method="get">
                         <div class="filter__item">
                             <div class="filter__item__name">Место встречи</div>
@@ -102,7 +184,7 @@ $APPLICATION->SetTitle("Трансфер");
                         <div class="filter__item">
                             <div class="filter__item__name">Дата прибытия</div>
                             <div class="filter__item__date">
-                                <input type="text" class="filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать">
+                               <?/* <input type="text" class="filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать"> */?>
                             </div>
                         </div>
                         <div class="filter__item">
