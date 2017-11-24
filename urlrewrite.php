@@ -12,6 +12,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:news",
 		"PATH" => "/tours/index.php",
 	),
+    array(
+        'CONDITION' => '#^/transport/([^/]+)/?(?:\\?(.*))?$#',
+        'RULE' => 'CODE=$1&$2',
+        'ID' => '',
+        'PATH' => '/transport/detail.php',
+    ),
 );
 
 ?>
