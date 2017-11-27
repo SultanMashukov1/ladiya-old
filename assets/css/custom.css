@@ -2001,15 +2001,15 @@ input.filter__button {padding-bottom: 15px !important;}
     padding: 15px 10px 13px;
     background-color: #fff;
     color: #2A2A2A;
-    border: 2px solid #d9edf7;
+    border: 2px solid #f7ead9;
     font-size: 14px;
     line-height: 14px;
 }
 .form__filter__select__control:focus,
 .form__filter__input__control:focus,
 .form__filter__text__control:focus {
-    border-color: #0095ff;
-    box-shadow: inset 0 0 4px #eff0f1, 0 0 5px rgba(0, 149, 255, 0.5);
+    border-color: #ffb400;
+    box-shadow: inset 0 0 4px #eff0f1, 0 0 5px rgba(255, 207, 0, 0.5);
     outline: 0;
     transition: all 600ms cubic-bezier(.165, .84, .44, 1);
 }
@@ -2018,7 +2018,7 @@ input.filter__button {padding-bottom: 15px !important;}
     padding: 0;
     background-color: #fff;
     color: #2A2A2A;
-    border: 0px solid #d9edf7;
+    border: 0px solid #f7ead9;
     font-size: 14px;
     line-height: 14px;
     display: inline-block;
@@ -2039,7 +2039,7 @@ input.filter__button {padding-bottom: 15px !important;}
     content: '\25be';
     right: 10px;
     font-size: 2em;
-    color: #d9edf7;
+    color: #f7ead9;
 }
 .form__filter__select__control ul span {
     font-size: 14px;
@@ -2050,7 +2050,8 @@ input.filter__button {padding-bottom: 15px !important;}
 }
 .form__filter__select__control .cs-options {
     outline: 0;
-    box-shadow: inset 0 0 4px #eff0f1, 0 3px 5px rgba(0, 149, 255, 0.5);
+    /*box-shadow: inset 0 0 4px #eff0f1, 0 3px 5px rgba(0, 149, 255, 0.5);*/
+    box-shadow: inset 0 0 4px #eff0f1, 0 3px 5px rgba(255, 207, 0, 0.5);
     transition: all 600ms cubic-bezier(.165, .84, .44, 1);
 }
 
@@ -2059,7 +2060,7 @@ input.filter__button {padding-bottom: 15px !important;}
     padding: 10px 10px 13px;
     background-color: #fff;
     color: #2A2A2A;
-    border: 2px solid #d9edf7;
+    border: 2px solid #f7ead9;
     font-size: 14px;
     line-height: 18px;
     min-height: 70px;
@@ -2081,6 +2082,10 @@ input.filter__button {padding-bottom: 15px !important;}
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     transition: all 0.25s ease 0s;
+}
+.cs-skin-border.cs-active > span ,
+.cs-skin-border .cs-options {
+    color: #f15922;
 }
 .form__filter__btn__control:hover {
     background: #003D5D ;
