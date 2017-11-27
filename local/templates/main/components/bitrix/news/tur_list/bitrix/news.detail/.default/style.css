@@ -17,3 +17,9 @@ div.news-detail img.detail_picture
 .tour-detail_tabs__wrapper > .addtional-buttons a {
 	display: block;
 }
+
+@media screen and (min-width: 768px){
+	.tour-detail_tabs__wrapper ul.tablist.main.js-five-items li {
+		width: 20%;
+	}
+}

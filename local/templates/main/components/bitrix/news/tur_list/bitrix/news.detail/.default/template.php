@@ -71,7 +71,7 @@ $this->setFrameMode(true);
             <div class="tour-detail_tabs__wrapper">
 
                 <!-- TAB BUTTONS -->
-                <ul class="tablist main" role="tablist">
+                <ul class="tablist main<?if(empty($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'])){?> js-five-items<?}?>" role="tablist">
                     <li role="presentation"><a href="#description" aria-controls="description" role="tab"
                                                data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
                     </li>
