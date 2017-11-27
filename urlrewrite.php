@@ -18,6 +18,24 @@ $arUrlRewrite = array(
         'ID' => '',
         'PATH' => '/transport/detail.php',
     ),
+    array(
+        'CONDITION' => '#^/o-kompanii/([^/]+)/?(?:\\?(.*))?$#',
+        'RULE' => 'CODE=$1&$2',
+        'ID' => '',
+        'PATH' => '/o-kompanii/detail.php',
+    ),
+    array(
+        'CONDITION' => '#^/o-kavkaze/([^/]+)/?(?:\\?(.*))?$#',
+        'RULE' => 'CODE=$1&$2',
+        'ID' => '',
+        'PATH' => '/o-kavkaze/detail.php',
+    ),
+    array(
+        'CONDITION' => '#^/o-kmv/([^/]+)/?(?:\\?(.*))?$#',
+        'RULE' => 'CODE=$1&$2',
+        'ID' => '',
+        'PATH' => '/o-kmv/detail.php',
+    ),
 );
 
 ?>
