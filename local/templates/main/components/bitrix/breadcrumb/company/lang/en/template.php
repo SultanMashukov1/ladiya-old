@@ -1,0 +1,2 @@
+<?
+$MESS['BREADCRUMB_COMPANY_HOME'] ='Home';

@@ -21,8 +21,8 @@ if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
 {
 	$strReturn .= '<link href="'.CUtil::GetAdditionalFileURL("/bitrix/css/main/font-awesome.css").'" type="text/css" rel="stylesheet" />'."\n";
 }
-$strReturn .= '<ol class="text___block__breadcrumbs">';
-$strReturn .= '<li><a href="/">'.Loc::getmessage("BREADCRUMB_HOME").'</a></li>';
+$strReturn .= '<ul class="text___block__breadcrumbs">';
+$strReturn .= '<li><a href="/">'.Loc::getmessage("BREADCRUMB_COMPANY_HOME").'</a></li>';
 $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
 {
