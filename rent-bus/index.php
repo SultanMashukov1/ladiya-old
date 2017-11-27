@@ -23,48 +23,88 @@ $APPLICATION->SetTitle("Аренда автобусов");
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">
-                    <form class="filter" name="rent-bus" action="/hotel/" method="get">
-                        <div class="filter__item">
-                            <div class="filter__item__name">Тип поездки</div>
-                            <select class="cs-select cs-skin-border" name="place-meet">
-                                <option value="honey+round" selected>Медовые водопады + г.Кольцо</option>
-                                <option value="france">France</option>
-                                <option value="brazil">Brazil</option>
-                                <option value="argentina">Argentina</option>
-                                <option value="south-africa">South Africa</option>
-                            </select>
+                    <div class="form__filter">
+                        <div class="form__filter__title">
+                            <span>Оставить заявку</span>
                         </div>
-                        <div class="filter__item filter__item_mt">
-                            <div class="filter__item__name">колличество мест</div>
-                            <div class="filter__item__slider filter__item__slider_single" id="filter-slider_single">
-                                <div class="filter__item__slider__range filter__item__slider__range_from">от 12
-                                </div>
-                                <div class="filter__item__slider__range filter__item__slider__range_to">до 60</div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Имя</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input class="form__filter__input__control" type="text">
                             </div>
                         </div>
-                        <div class="filter__item">
-                            <div class="filter__item__name">класс поездки</div>
-                            <select class="cs-select cs-skin-border" name="transfer-tipe">
-                                <option value="comfort" selected>Комфорт</option>
-                                <option value="econom">Эконом</option>
-                                <option value="business">Бизнес</option>
-                            </select>
-                        </div>
-                        <div class="filter__item">
-                            <div class="filter__item__name">дата поездки</div>
-                            <div class="filter__item__date">
-                                <input type="text" class="filter__item__date__inp" id="date-trip" name="date-trip" placeholder="Выбрать">
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Телефон</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input class="form__filter__input__control" type="text">
+                                <div class="form__filter__input__log">Вы не выбрали!</div>
                             </div>
                         </div>
-                        <a href="#" class="filter__button filter__button_m"><span>Подобрать автобус</span></a>
-                        <div class="filter__info">
-                            <p class="filter__info__text">Все автобусы соответствуют стандартам
-                                безопасности и комфорта. Оснащены
-                                кондиционерами, аудио- и видео
-                                техникой, микрофонами.
-                                Эргономичные, удобные сиденья.</p>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>E-mail</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input class="form__filter__input__control" type="text">
+                            </div>
                         </div>
-                    </form>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Место встречи</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">
+                                    <option value="1" selected="selected">Выбрать</option>
+                                    <option value="2">Белокуриха</option>
+                                    <option value="3">Бийск</option>
+                                    <option value="4">Новоалтайск</option>
+                                    <option value="5">Рубцовск</option>
+                                    <option value="6">Славгород</option>
+                                </select>
+                                <div class="form__filter__input__log">Вы не выбрали!</div>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Место назначения</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">
+                                    <option value="1" selected="selected">Выбрать</option>
+                                    <option value="2">Белокуриха</option>
+                                    <option value="3">Бийск</option>
+                                    <option value="4">Новоалтайск</option>
+                                    <option value="5">Рубцовск</option>
+                                    <option value="6">Славгород</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Дата встречи</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Комментарий</span>
+                            </div>
+                            <div class="form__filter__input">
+                                <textarea class="form__filter__text__control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__btn">
+                                <button class="form__filter__btn__control">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">

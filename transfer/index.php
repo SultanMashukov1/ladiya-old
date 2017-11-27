@@ -151,6 +151,7 @@ $APPLICATION->SetTitle("Трансфер");
                             </div>
                         </div>
                     </div>
+                    <? /*
                     <form class="filter" name="choose-transfer" action="/hotel/" method="get">
                         <div class="filter__item">
                             <div class="filter__item__name">Место встречи</div>
@@ -181,12 +182,7 @@ $APPLICATION->SetTitle("Трансфер");
                                 <option value="business">Бизнес</option>
                             </select>
                         </div>
-                        <div class="filter__item">
-                            <div class="filter__item__name">Дата прибытия</div>
-                            <div class="filter__item__date">
-                               <?/* <input type="text" class="filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать"> */?>
-                            </div>
-                        </div>
+
                         <div class="filter__item">
                             <div class="filter__item__name">Дополнительные услуги</div>
                             <input type="checkbox" class="filter__item__check" id="child-seat" checked>
@@ -200,6 +196,8 @@ $APPLICATION->SetTitle("Трансфер");
                                 на аренду автобусов</p>
                         </div>
                     </form>
+                    */
+                    ?>
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
                     <div class="row">
