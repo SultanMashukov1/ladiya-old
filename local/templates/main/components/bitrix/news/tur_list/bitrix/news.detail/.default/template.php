@@ -87,9 +87,11 @@ $this->setFrameMode(true);
                     <li role="presentation">
                         <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
                     </li>
-                    <li role="presentation">
-                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
-                    </li>
+                    <? if(!empty($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'])): ?>
+                        <li role="presentation">
+                            <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
+                        </li>
+                    <? endif; ?>
                 </ul>
 
                 <div class="bg">
@@ -415,9 +417,11 @@ $this->setFrameMode(true);
                                 'AJAX_OPTION_ADDITIONAL' => '',
                             )); ?>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="group">
-                            <?=$arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'];?>
-                        </div>
+                        <? if(!empty($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'])): ?>
+                            <div role="tabpanel" class="tab-pane" id="group">
+                                <?=$arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'];?>
+                            </div>
+                        <? endif; ?>
                     </div>
                 </div>
 
