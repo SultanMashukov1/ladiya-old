@@ -71,23 +71,25 @@ $this->setFrameMode(true);
             <div class="tour-detail_tabs__wrapper">
 
                 <!-- TAB BUTTONS -->
-                <ul class="tablist main<?if(empty($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'])){?> js-five-items<?}?>" role="tablist">
+                <ul class="tablist main<? if($arResult['TABS_FIVE_ITEMS']) { ?> js-five-items<? } ?>" role="tablist">
                     <li role="presentation"><a href="#description" aria-controls="description" role="tab"
                                                data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
                     </li>
                     <li role="presentation">
                         <a href="#program" aria-controls="program" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PROGRAMM_TITLE');?></a>
                     </li>
-                    <li role="presentation">
-                        <a href="#price" aria-controls="price" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PRICE_TITLE');?></a>
-                    </li>
+                    <? if($arResult['SHOW_PRICE_TAB']): ?>
+                        <li role="presentation">
+                            <a href="#price" aria-controls="price" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PRICE_TITLE');?></a>
+                        </li>
+                    <? endif; ?>
                     <li role="presentation">
                         <a href="#jotting" aria-controls="jotting" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_MEMO_TITLE');?></a>
                     </li>
                     <li role="presentation">
                         <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
                     </li>
-                    <? if(!empty($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'])): ?>
+                    <? if($arResult['SHOW_GROUP_TAB']): ?>
                         <li role="presentation">
                             <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
                         </li>
@@ -228,55 +230,56 @@ $this->setFrameMode(true);
                             </div>
                         </div>
 
-                        <div role="tabpanel" class="tab-pane" id="price">
+                        <? if($arResult['SHOW_PRICE_TAB']): ?>
+                            <div role="tabpanel" class="tab-pane" id="price">
 
-                            <form action="/ajax/find-tour-room.php" class="filter js-ajax-filter" method="post">
-                                <input type="hidden" name="tour_id" value="<?=$arResult['ID'];?>">
-                                <div class="row">
+                                <form action="/ajax/find-tour-room.php" class="filter js-ajax-filter" method="post">
+                                    <input type="hidden" name="tour_id" value="<?=$arResult['ID'];?>">
+                                    <div class="row">
 
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <? if(!empty($arResult['HOTELS'])): ?>
-                                                <label for="hotel"><?=Loc::getMessage('TOUR_HOTEL_TITLE');?></label>
-                                                <select name="hotel" id="hotel">
-                                                    <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
-                                                    <? foreach($arResult['HOTELS'] as $id => $hotel): ?>
-                                                        <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
-                                                    <? endforeach; ?>
-                                                </select>
-                                            <? endif; ?>
+                                        <div class="col-xs-12 col-sm-4">
+                                            <div class="input">
+                                                <? if(!empty($arResult['HOTELS'])): ?>
+                                                    <label for="hotel"><?=Loc::getMessage('TOUR_HOTEL_TITLE');?></label>
+                                                    <select name="hotel" id="hotel">
+                                                        <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
+                                                        <? foreach($arResult['HOTELS'] as $id => $hotel): ?>
+                                                            <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
+                                                        <? endforeach; ?>
+                                                    </select>
+                                                <? endif; ?>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <? if(!empty($arResult['ROOM_TYPES'])): ?>
-                                                <label for="room_type"><?=Loc::getMessage('TOUR_ROOM_TYPE_TITLE');?></label>
-                                                <select name="room_type" id="room_type">
-                                                    <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
-                                                    <? foreach($arResult['ROOM_TYPES'] as $id => $roomType): ?>
-                                                        <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
-                                                    <? endforeach; ?>
-                                                </select>
-                                            <? endif; ?>
+                                        <div class="col-xs-12 col-sm-4">
+                                            <div class="input">
+                                                <? if(!empty($arResult['ROOM_TYPES'])): ?>
+                                                    <label for="room_type"><?=Loc::getMessage('TOUR_ROOM_TYPE_TITLE');?></label>
+                                                    <select name="room_type" id="room_type">
+                                                        <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
+                                                        <? foreach($arResult['ROOM_TYPES'] as $id => $roomType): ?>
+                                                            <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
+                                                        <? endforeach; ?>
+                                                    </select>
+                                                <? endif; ?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="core__price">
-                                            <div class="core__price__title"><?=Loc::getMessage('TOUR_SEARCH_PRICE_TITLE');?></div>
-                                            <div class="core__price__item">
-                                                <div class="core__price__item_l">
-                                                    <span><?=Loc::getMessage('TOUR_PRICE_FROM');?></span>
-                                                    <input type="text" name="price_from" placeholder="0">
-                                                </div>
-                                                <div class="core__price__item_r">
-                                                    <span><?=Loc::getMessage('TOUR_PRICE_TO');?></span>
-                                                    <input type="text" name="price_to" placeholder="0">
+                                        <div class="col-xs-12 col-sm-4">
+                                            <div class="core__price">
+                                                <div class="core__price__title"><?=Loc::getMessage('TOUR_SEARCH_PRICE_TITLE');?></div>
+                                                <div class="core__price__item">
+                                                    <div class="core__price__item_l">
+                                                        <span><?=Loc::getMessage('TOUR_PRICE_FROM');?></span>
+                                                        <input type="text" name="price_from" placeholder="0">
+                                                    </div>
+                                                    <div class="core__price__item_r">
+                                                        <span><?=Loc::getMessage('TOUR_PRICE_TO');?></span>
+                                                        <input type="text" name="price_to" placeholder="0">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <? /*
+                                        <? /*
                                     <div class="col-xs-12 col-sm-4">
                                         <div class="input">
                                             <select name="day_count">
@@ -319,40 +322,41 @@ $this->setFrameMode(true);
                                         </div>
                                     </div>
 */ ?>
-                                </div>
+                                    </div>
 
-                                <button class="calculate" type="submit"><?=Loc::getMessage('TOUR_SEARCH_BTN_TITLE');?></button>
-                                <div class="disclaimer"><?=Loc::getMessage('TOUR_SEARCH_HINT_TITLE');?></div>
+                                    <button class="calculate" type="submit"><?=Loc::getMessage('TOUR_SEARCH_BTN_TITLE');?></button>
+                                    <div class="disclaimer"><?=Loc::getMessage('TOUR_SEARCH_HINT_TITLE');?></div>
 
-                                <div class="page__program__detail__list__item__text">
-                                    <? if(!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
-                                        <p class="core__switch__btn">
+                                    <div class="page__program__detail__list__item__text">
+                                        <? if(!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
+                                            <p class="core__switch__btn">
                                             <span class="core__switch__btn__text"
                                                   data-js-core-switch-element="core__switch__btn__hidden_price_1">
                                                 <?=Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE');?>
                                             </span>
-                                            <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
+                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
                                                 <?=$arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'];?>
                                             </span>
-                                        </p>
-                                    <? endif; ?>
-                                    <? if(!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
-                                        <p class="core__switch__btn">
+                                            </p>
+                                        <? endif; ?>
+                                        <? if(!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
+                                            <p class="core__switch__btn">
                                             <span class="core__switch__btn__text"
                                                   data-js-core-switch-element="core__switch__btn__hidden_price_2">
                                                 <?=Loc::getMessage('TOUR_ALSO_PAYS_TITLE');?>
                                             </span>
-                                            <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
+                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
                                             <?=$arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'];?>
                                         </span>
-                                        </p>
-                                    <? endif; ?>
-                                </div>
-                            </form>
+                                            </p>
+                                        <? endif; ?>
+                                    </div>
+                                </form>
 
-                            <div class="js-ajax-filter-search"></div>
+                                <div class="js-ajax-filter-search"></div>
 
-                        </div>
+                            </div>
+                        <? endif; ?>
 
                         <div role="tabpanel" class="tab-pane" id="jotting">
                             <div class="row">
@@ -417,7 +421,7 @@ $this->setFrameMode(true);
                                 'AJAX_OPTION_ADDITIONAL' => '',
                             )); ?>
                         </div>
-                        <? if(!empty($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'])): ?>
+                        <? if($arResult['SHOW_GROUP_TAB']): ?>
                             <div role="tabpanel" class="tab-pane" id="group">
                                 <?=$arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'];?>
                             </div>
