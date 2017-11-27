@@ -107,7 +107,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 3 -->
 <? // TODO как будет каталог ?>
-    <section class="lad-search" style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/slide1.jpg');">
+    <section class="lad-search" style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/bg/img_1.jpg');">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

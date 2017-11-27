@@ -932,7 +932,7 @@ a:after {
     text-transform: uppercase;
 }
 
-.nav > li:hover > a,
+.nav > a:hover,
 .nav > li:focus > a,
 .nav > li > a:hover,
 .nav > li > a:focus,
@@ -1115,11 +1115,11 @@ a:after {
 }
 
 .line .item .item-block .icon-4 {
-    background-position: -348px 0 !important;;
+    background-position: -464px 0 !important;;
 }
 
 .line .item .item-block .icon-5 {
-    background-position: -464px 0 !important;;
+    background-position: -348px 0 !important;;
 }
 
 .lad-why {
@@ -1340,6 +1340,7 @@ a:after {
 
 .footer-menu .nav > li > a {
     padding: 20px 0;
+    text-transform: uppercase;
 }
 
 .footer-menu .submenu > li {
