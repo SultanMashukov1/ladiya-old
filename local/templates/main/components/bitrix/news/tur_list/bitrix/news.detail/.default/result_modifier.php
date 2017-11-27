@@ -94,3 +94,6 @@ if(!empty($arResult['PROPERTIES']['ROOMS']['VALUE']))
         'arSelect' => array('ID', 'NAME'),
     ));
 }
+$arResult['SHOW_PRICE_TAB'] = in_array('b91548713cbe4fa84982a865986f14bc', $arResult['PROPERTIES']['VIEW']['VALUE_XML_ID']);
+$arResult['SHOW_GROUP_TAB'] = in_array('e87bc94a378315b528f42eacd270304a', $arResult['PROPERTIES']['VIEW']['VALUE_XML_ID']);
+$arResult['TABS_FIVE_ITEMS'] = !($arResult['SHOW_PRICE_TAB'] && $arResult['SHOW_GROUP_TAB']);
