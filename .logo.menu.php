@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Транспорт", 
-		"#", 
+		"/transport/", 
 		Array(), 
 		Array(), 
 		"" 
