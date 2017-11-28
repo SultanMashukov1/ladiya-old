@@ -48,7 +48,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			2 => "DETAIL_PICTURE",
 			3 => "",
 		),
-		"IBLOCK_ID" => "12",
+		"IBLOCK_ID" => "15",
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_URL" => "",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
