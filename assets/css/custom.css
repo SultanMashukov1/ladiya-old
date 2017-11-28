@@ -2149,3 +2149,9 @@ input.filter__button {padding-bottom: 15px !important;}
     padding-top: 14px;
     padding-bottom: 14px;
 }
+
+/**/
+
+.page__program__detail__list__item__text {
+    font-size: 15px;
+}
