@@ -1,8 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:search.page",
-	"",
+?>
+<div class="container search">
+<?$APPLICATION->IncludeComponent(
+    "bitrix:search.page",
+    "",
 Array()
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+</div>
+<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

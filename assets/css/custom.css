@@ -2092,3 +2092,7 @@ input.filter__button {padding-bottom: 15px !important;}
 }
 
 #ui-datepicker-div {z-index: 100!important;}
+
+
+.search {padding: 20px 0;
+    text-align: left;}

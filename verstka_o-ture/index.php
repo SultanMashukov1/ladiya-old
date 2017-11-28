@@ -87,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
 
                             <div class="backpack">
                                 <h5>Тип тура</h5>
-                                <p>Экскурсионный</p>
+                                <p>экскурсионный</p>
                             </div>
 
                             <div class="calendar">
