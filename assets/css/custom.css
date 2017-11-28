@@ -2120,3 +2120,32 @@ input.filter__button {padding-bottom: 15px !important;}
     border-color: #f15922;
     color: #f15922;
 }
+
+/* price */
+.tour-detail_interest .item .info {
+    position: relative;
+}
+.tour-detail_interest .item .info .price {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.tour-detail_interest .item .info .text {
+    width: 100%;
+    text-align: left;
+}
+.tour-detail_interest .item .info .data-type {
+    padding-right: 120px;
+}
+
+/**/
+
+.tour-detail_interest .item .img h3,
+#items.list .tour .img h3
+{
+    height: auto;
+    line-height: 1.2em;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}

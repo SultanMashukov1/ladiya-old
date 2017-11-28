@@ -62,7 +62,7 @@ $this->setFrameMode(true);
     </section>
     <section class="container page__program__detail__download">
         <div class="row">
-            <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать PDF"
+            <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать программу тура"
                class="page__program__detail__download__btn"><?=Loc::getMessage('TOUR_DOWNLOAD_PDF');?></a>
         </div>
     </section>
@@ -147,7 +147,7 @@ $this->setFrameMode(true);
                                 <div class="col-xs-12 col-md-6">
 
                                     <? if(Helper::propFilled('ROUTE', $arResult)): ?>
-                                        <h5><?=Loc::getMessage('TOUR_ROUTE_TITLE');?>: <?=Helper::escPropValue('ROUTE', $arResult);?></h5>
+                                        <h5><b><?=Loc::getMessage('TOUR_ROUTE_TITLE');?>: <?=Helper::escPropValue('ROUTE', $arResult);?></b></h5>
                                     <? endif; ?>
 
                                     <div id="map"></div>
@@ -510,7 +510,7 @@ $this->setFrameMode(true);
                                 <? if(!empty($tour['PROPERTY_HEADER_VALUE'])): ?>
                                     <h5><?=$tour['PROPERTY_HEADER_VALUE'];?></h5>
                                 <? endif; ?>
-                                <div>
+                                <div class="data-type">
                                     <? if(!empty($tour['PROPERTY_DAY_VALUE'])): ?>
                                         <span>
                                         <?=Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(

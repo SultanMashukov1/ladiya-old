@@ -83,7 +83,7 @@ $APPLICATION->SetTitle("Гостиницы");
         <section class="container page__program__detail__download">
 
                 <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank"
-                   title="Скачать PDF" class="page__program__detail__download__btn">Скачать PDF</a>
+                   title="Скачать PDF" class="page__program__detail__download__btn">Скачать программу тура</a>
 
         </section>
         <section class="container tour-detail_tabs">
