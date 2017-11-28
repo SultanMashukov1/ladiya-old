@@ -118,11 +118,15 @@ font-size: 18px;
 
     color: white;
     text-transform: uppercase;
+    border: 2px solid transparent;
 
 }
 
 #tours form .submit input[type="submit"]:hover {
     text-decoration: underline;
+    background: transparent;
+    border: 2px solid #f15922;
+    color: #f15922;
 }
 
 
@@ -2096,3 +2100,23 @@ input.filter__button {padding-bottom: 15px !important;}
 
 .search {padding: 20px 0;
     text-align: left;}
+
+
+/* button */
+#tours form .submit input[type="submit"],
+#items.list .tour .info a
+{
+    border: 2px solid transparent;
+}
+
+#tours form .submit input[type="submit"]:hover ,
+#items.list .tour .info a:hover ,
+.offer .button:hover ,
+.why .outline:hover ,
+.footer-address .button:hover
+{
+    text-decoration: underline;
+    background: transparent;
+    border-color: #f15922;
+    color: #f15922;
+}

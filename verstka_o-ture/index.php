@@ -267,7 +267,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="input">
                                                 <select name="">
-                                                    <option disabled="disabled" selected="selected">Кол-во дней</option>
+                                                    <option disabled="disabled" selected="selected">Продолжительность</option>
                                                     <option value="2">1</option>
                                                 </select>
                                             </div>
@@ -328,7 +328,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
                                     <tr>
                                         <th scope="col">Дата заезда</th>
                                         <th scope="col">Гостиница</th>
-                                        <th scope="col">Кол-во дней</th>
+                                        <th scope="col">Продолжительность</th>
                                         <th scope="col">Транспорт</th>
                                         <th scope="col">Кол-во людей</th>
                                         <th scope="col">Стоимость</th>
@@ -338,7 +338,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
                                     <tr>
                                         <td data-label="Дата заезда">7</td>
                                         <td data-label="Гостиница">Бизнес-отель Бештау</td>
-                                        <td data-label="Кол-во дней">7</td>
+                                        <td data-label="Продолжительность">7</td>
                                         <td data-label="Транспорт">Аренда автомобиля</td>
                                         <td data-label="Кол-во людей">7</td>
                                         <td data-label="Стоимость">7500</td>
@@ -346,7 +346,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
                                     <tr>
                                         <td scope="row" data-label="Дата заезда">5</td>
                                         <td data-label="Гостиница">Гостиница Бештау</td>
-                                        <td data-label="Кол-во дней">5</td>
+                                        <td data-label="Продолжительность">5</td>
                                         <td data-label="Транспорт">Автобус</td>
                                         <td data-label="Кол-во людей">1</td>
                                         <td data-label="Стоимость">21000</td>
@@ -354,7 +354,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
                                     <tr>
                                         <td scope="row" data-label="Дата заезда">10</td>
                                         <td data-label="Гостиница">Пансионат Искра</td>
-                                        <td data-label="Кол-во дней">10</td>
+                                        <td data-label="Продолжительность">10</td>
                                         <td data-label="Транспорт">Автобус</td>
                                         <td data-label="Кол-во людей">10</td>
                                         <td data-label="Стоимость">7500</td>

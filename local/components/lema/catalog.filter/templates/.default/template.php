@@ -28,7 +28,7 @@ $this->setFrameMode(true);
             <? endif ?>
         <? endforeach; ?>
         <div class="submit">
-            <input type="submit" name="set_filter" value="Поисков туров"><input type="hidden" name="set_filter"
+            <input type="submit" name="set_filter" value="Подобрать тур"><input type="hidden" name="set_filter"
                                                                                 value="Y">
         </div>
     </div>

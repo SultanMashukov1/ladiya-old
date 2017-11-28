@@ -107,7 +107,7 @@ $APPLICATION->SetTitle("Гостиницы");
                             </div>
                             <div class="backpack">
                                 <h5>Тип тура</h5>
-                                <p>экскурсионные</p>
+                                <p>экскурсионный</p>
                             </div>
                             <div class="calendar">
                                 <h5>Количество дней</h5>
@@ -362,7 +362,7 @@ $APPLICATION->SetTitle("Гостиницы");
                                         <tr>
                                             <th scope="col">Дата заезда</th>
                                             <th scope="col">Гостиница</th>
-                                            <th scope="col">Кол-во дней</th>
+                                            <th scope="col">Продолжительность</th>
                                             <th scope="col">Транспорт</th>
                                             <th scope="col">Кол-во людей</th>
                                             <th scope="col">Стоимость</th>
@@ -372,7 +372,7 @@ $APPLICATION->SetTitle("Гостиницы");
                                         <tr>
                                             <td data-label="Дата заезда">7</td>
                                             <td data-label="Гостиница">Бизнес-отель Бештау</td>
-                                            <td data-label="Кол-во дней">7</td>
+                                            <td data-label="Продолжительность">7</td>
                                             <td data-label="Транспорт">Аренда автомобиля</td>
                                             <td data-label="Кол-во людей">7</td>
                                             <td data-label="Стоимость">7500</td>
@@ -380,7 +380,7 @@ $APPLICATION->SetTitle("Гостиницы");
                                         <tr>
                                             <td scope="row" data-label="Дата заезда">5</td>
                                             <td data-label="Гостиница">Гостиница Бештау</td>
-                                            <td data-label="Кол-во дней">5</td>
+                                            <td data-label="Продолжительность">5</td>
                                             <td data-label="Транспорт">Автобус</td>
                                             <td data-label="Кол-во людей">1</td>
                                             <td data-label="Стоимость">21000</td>
@@ -388,7 +388,7 @@ $APPLICATION->SetTitle("Гостиницы");
                                         <tr>
                                             <td scope="row" data-label="Дата заезда">10</td>
                                             <td data-label="Гостиница">Пансионат Искра</td>
-                                            <td data-label="Кол-во дней">10</td>
+                                            <td data-label="Продолжительность">10</td>
                                             <td data-label="Транспорт">Автобус</td>
                                             <td data-label="Кол-во людей">10</td>
                                             <td data-label="Стоимость">7500</td>
