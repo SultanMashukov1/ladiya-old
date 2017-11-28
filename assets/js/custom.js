@@ -223,7 +223,9 @@ $(document).ready(function () {
                     window.dataLayer.push(ans.gtmObject);
                 }
                 //show message
-                $.fancybox.open(ans.message)
+                $.fancybox.open(ans.message);
+                //clear input value
+                curForm.find('input:not([type="submit"]):not([type="button"]), textarea').val('');
             }
 
             BX.closeWait(waitElement);
