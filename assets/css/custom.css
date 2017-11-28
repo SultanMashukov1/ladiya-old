@@ -2155,3 +2155,7 @@ input.filter__button {padding-bottom: 15px !important;}
 .page__program__detail__list__item__text {
     font-size: 15px;
 }
+.detail-container{
+    margin: 20px 5%;
+    text-align: justify;
+}

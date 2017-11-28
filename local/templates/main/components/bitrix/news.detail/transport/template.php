@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <div class="news-detail">
-    <div class="container">
+    <div class="detail-container">
         <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["DETAIL_PICTURE"])): ?>
             <img
                     class="detail_picture"
