@@ -11,8 +11,8 @@ empty($_POST) && exit;
 //set rules & fields for form
 $form = new \WM\Forms\AjaxForm(array(
     array('name', 'required', array('message' => 'Имя обязательно к заполнению')),
-    array('email', 'email', array('message' => 'Неверный формат E-mail')),
     array('email', 'required', array('message' => 'E-mail обязателен к заполнению')),
+    array('email', 'email', array('message' => 'Неверный формат E-mail')),
     array('text', 'required', array('message' => 'Комментарий обязателен к заполнению')),
 ),
     $_POST
