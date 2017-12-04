@@ -2160,10 +2160,15 @@ input.filter__button {padding-bottom: 15px !important;}
 #items.list .tour .info a:hover ,
 .offer .button:hover ,
 .why .outline:hover ,
-.footer-address .button:hover
+.footer-address .button:hover,
+
+.tour-detail_tabs__wrapper .booking:hover,
+.tour-detail_tabs__wrapper .full_program, .button:hover,
+.form__comment__add button:hover,
+.tour-detail_interest .item .img .text .table .cell a:hover
 {
-    text-decoration: underline;
-    background: transparent;
+    text-decoration: none;
+    background: #fff;
     border-color: #f15922;
     color: #f15922;
 }
@@ -2396,4 +2401,12 @@ input.filter__button {padding-bottom: 15px !important;}
     margin-left: 10px;
     width: 40px;
     border-color: #f15922;
+}
+
+
+/* button radius */
+.tour-detail_tabs__wrapper .booking,
+.tour-detail_tabs__wrapper .full_program,
+.button {
+    border-radius: 2px!important;
 }
