@@ -456,8 +456,7 @@ $this->setFrameMode(true);
             </div>
         </div>
 
-        <div class="row slider">
-
+        <div class="row gallery__photo__slider">
             <? if(!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
                 <? foreach($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 item">
@@ -467,7 +466,12 @@ $this->setFrameMode(true);
                     </div>
                 <? endforeach; ?>
             <? endif; ?>
-
+        </div>
+        <div class="line__bred">
+            <div class="line__bred__point"></div>
+            <div class="line__bred__point"></div>
+            <div class="line__bred__point"></div>
+            <div class="line__bred__point"></div>
         </div>
     </section>
 
@@ -481,9 +485,7 @@ $this->setFrameMode(true);
                     </div>
                 </div>
             </div>
-
             <div class="row">
-
                 <? foreach($arResult['SIMILAR_TOURS'] as $tour): ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 item">
                         <div class="img" style="background-image: url('<?=$tour['PICTURE_SRC'];?>')">
@@ -549,7 +551,6 @@ $this->setFrameMode(true);
                         </div>
                     </div>
                 <? endforeach; ?>
-
             </div>
         </section>
     <? endif; ?>
