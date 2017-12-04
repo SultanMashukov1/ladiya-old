@@ -1,5 +1,5 @@
 <?
-$MESS ['CC_BCF_ALL'] = "(все)";
+$MESS ['CC_BCF_ALL'] = "все";
 $MESS ['CC_BCF_FROM'] = "от";
 $MESS ['CC_BCF_BEFORE'] = "до";
 $MESS ['CC_BCF_TILL'] = "по";
