@@ -1,6 +1,7 @@
 $(document).ready(function () {
     /** Место для скриптов **/
     coreJsSwitchElement.init();
+    Seacrch.init();
 
     $('.gallery__photo__slider').slick({
         infinite: true,
@@ -307,5 +308,17 @@ var coreJsSwitchElement = {
                 }
             });
         });
+    }
+};
+var Seacrch = {
+    init: function () {
+        // Переменные
+        //...
+        var $this = $('.search__btn__close');
+        //...
+        $this.on('click', function(){
+            $('.search__header').removeClass('active');
+        });
+
     }
 };
