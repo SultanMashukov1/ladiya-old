@@ -2216,7 +2216,33 @@ input.filter__button {padding-bottom: 15px !important;}
 
 .catalog__list {
     width: 100%;
+    display: table;
 }
+    /* one */
+.catalog__list_one .catalog__list__item {
+    width: 100%;
+    background: #fff;
+    padding: 0!important;
+}
+.catalog__list_one .catalog__list__item:hover .catalog__list__item__img__wrap{
+    display: none;
+}
+.catalog__list_one .catalog__list__item:hover .catalog__list__item__img__title{
+    display: block;
+}
+.catalog__list_one  .catalog__list__item__inf__footer {
+    margin-top: 5px;
+    float: right;
+    width: auto;
+}
+.catalog__list_one .catalog__list__item__inf__day,
+.catalog__list_one .catalog__list__item__inf__price {
+    float: none;
+    width: auto;
+    text-align: right;
+}
+
+/* 3 */
 .catalog__list_3 .catalog__list__item {
     width: 33.33333%;
 }
@@ -2238,7 +2264,7 @@ input.filter__button {padding-bottom: 15px !important;}
     padding-right: 0;
     padding-left: 5px;
 }
-
+/* END*/
 
 .catalog__list__item:hover .catalog__list__item__img__wrap{
     display: block;
@@ -2280,7 +2306,6 @@ input.filter__button {padding-bottom: 15px !important;}
     line-height: 20px;
     /*padding: 50px 50px;*/
 }
-
 .catalog__list__item__img__wrap__table {
     display: table;
     width: 100%;
@@ -2318,6 +2343,12 @@ input.filter__button {padding-bottom: 15px !important;}
     text-transform: uppercase;
     text-shadow: 0 0 0.2px rgba(0, 0, 0, 0.7);
 }
+.catalog__list__item__inf__descriptions {
+    margin-top: 10px;
+    line-height: 22px;
+    display: block;
+    width: 100%;
+}
 .catalog__list__item__inf__footer {
     width: 100%;
     margin-top: 5px;
@@ -2335,6 +2366,17 @@ input.filter__button {padding-bottom: 15px !important;}
     text-align: right;
     font-size: 18px;
     font-weight: bold;
+}
+.catalog__list__item__inf__btn {
+
+}
+.catalog__list__item__inf__btn .button {
+    margin: 10px 0 0;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 2px solid #F15922;
 }
 
 @media (max-width: 1000px) {
@@ -2354,6 +2396,9 @@ input.filter__button {padding-bottom: 15px !important;}
     .catalog__list__item {
         width: 100%!important;
         padding: 0!important;
+    }
+    .catalog__list__item__inf__btn {
+        text-align: center;
     }
 }
 

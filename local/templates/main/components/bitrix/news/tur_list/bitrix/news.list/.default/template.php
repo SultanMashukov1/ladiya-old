@@ -134,7 +134,58 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
             </div>
         </div>
     </div>
-
+    <div class="catalog__list catalog__list_one">
+        <div class="catalog__list__item">
+            <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
+                <div class="catalog__list__item__img__title">Кавказская мозаика</div>
+            </div>
+            <div class="catalog__list__item__inf">
+                <div class="catalog__list__item__inf__text">
+                    Экскурсионный тур
+                </div>
+                <span class="catalog__list__item__inf__descriptions">
+                    В стоимость тура входит: проживание, питание по программе (для организованных групп), и экскурсионное обслуживание, страховка, услуги гидов.
+                </span>
+                <div class="catalog__list__item__inf__footer">
+                    <div class="catalog__list__item__inf__day">
+                        <span>5 дней</span>
+                        <span>4 ночи</span>
+                    </div>
+                    <div class="catalog__list__item__inf__price">
+                        от 30 000 руб
+                    </div>
+                </div>
+                <div class="catalog__list__item__inf__btn">
+                    <a href="" title="" class="button">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__list__item">
+            <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
+                <div class="catalog__list__item__img__title">Кавказская мозаика</div>
+            </div>
+            <div class="catalog__list__item__inf">
+                <div class="catalog__list__item__inf__text">
+                    Экскурсионный тур
+                </div>
+                <span class="catalog__list__item__inf__descriptions">
+                    В стоимость тура входит: проживание, питание по программе (для организованных групп), и экскурсионное обслуживание, страховка, услуги гидов.
+                </span>
+                <div class="catalog__list__item__inf__footer">
+                    <div class="catalog__list__item__inf__day">
+                        <span>5 дней</span>
+                        <span>4 ночи</span>
+                    </div>
+                    <div class="catalog__list__item__inf__price">
+                        от 30 000 руб
+                    </div>
+                </div>
+                <div class="catalog__list__item__inf__btn">
+                    <a href="" title="" class="button">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="catalog__list">
         <a href="" title="" class="catalog__list__item">
             <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">

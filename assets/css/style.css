@@ -69,7 +69,8 @@ a:hover {
 }
 
 .lad-search {
-    background-position-y: 100%;
+    background-position: top;
+    /*background-position-y: 100%;*/
 }
 
 .lad-search .container-fluid {
