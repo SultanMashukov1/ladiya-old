@@ -194,7 +194,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
             </div>
         <? endforeach; ?>
     </div>
-    <div class="catalog__list catalog__list_one">
+    <!--<div class="catalog__list catalog__list_one">
         <div class="catalog__list__item">
             <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
                 <div class="catalog__list__item__img__title">Кавказская мозаика</div>
@@ -383,13 +383,13 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 </div>
             </div>
         </a>
-    </div>
+    </div>-->
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"]?>
     <?endif;?>
 </div>
 
-<div class="catalog__list catalog__list_3">
+<!--<div class="catalog__list catalog__list_3">
     <a href="" title="" class="catalog__list__item">
         <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
             <div class="catalog__list__item__img__title">Кавказская мозаика</div>
@@ -526,4 +526,4 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
             </div>
         </div>
     </a>
-</div>
+</div>-->
