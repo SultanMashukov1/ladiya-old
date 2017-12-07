@@ -195,10 +195,6 @@ font-size: 18px;
     border: none;
 }
 
-.results .head .buttons {
-    display: none;
-}
-
 .results .head .buttons button.list span {
     display: block;
     width: 22px;
@@ -729,27 +725,32 @@ font-size: 18px;
     float: left;
 }
 
-.tour-detail_tabs__wrapper ul.tablist.main li.active a {
+.tour-detail_tabs__wrapper ul.tablist.main li.active {
     background-color: #f15922;
+}
+.tour-detail_tabs__wrapper ul.tablist.main li.active a {
     color: white;
 }
 
-.tour-detail_tabs__wrapper ul.tablist.main li a {
+.tour-detail_tabs__wrapper ul.tablist.main li {
     display: block;
     padding: 15px;
     text-align: center;
     text-transform: uppercase;
-    color: black;
     border: 1px solid #f15922;
     border-bottom-width: 3px;
     border-radius: 2px 2px 0 0;
-    min-height: 74px;
+}
+.tour-detail_tabs__wrapper ul.tablist.main li a {
+    color: black;
 }
 
-.tour-detail_tabs__wrapper ul.tablist.main li a:hover {
+.tour-detail_tabs__wrapper ul.tablist.main li:hover {
     background-color: #f15922;
-    color: white;
     text-decoration: none;
+}
+.tour-detail_tabs__wrapper ul.tablist.main li:hover a {
+    color: white;
 }
 
 .tour-detail_tabs__wrapper .bg {
@@ -766,6 +767,7 @@ font-size: 18px;
 
 .tour-detail_tabs__wrapper .bg .icons div {
     float: left;
+    text-align: left;
     margin: 15px 0;
     padding: 5px 0 5px 65px;
     background-position: center left;
@@ -1191,13 +1193,15 @@ font-size: 18px;
 
 .tour-detail_gallery .title {
     text-align: center;
-    margin: 60px 0;
+    margin: 20px 0;
 }
 
 .tour-detail_gallery .title h3 {
     margin: 0;
     text-transform: uppercase;
     font-weight: normal;
+    font-size: 27px;
+    color: #2b2b2b;
 }
 
 .tour-detail_gallery .title h3:before {
@@ -1258,13 +1262,15 @@ font-size: 18px;
 
 .tour-detail_interest .title {
     text-align: center;
-    margin: 60px 0;
+    margin: 20px 0;
 }
 
 .tour-detail_interest .title h3 {
     margin: 0;
     text-transform: uppercase;
     font-weight: normal;
+    font-size: 27px;
+    color: #2b2b2b;
 }
 
 .tour-detail_interest .title h3:before {
@@ -1556,7 +1562,9 @@ font-size: 18px;
     background: #fff;
     text-align: justify;
     border: 5px solid #f0f1f3;
-    border-width: 0 5px;}
+    border-width: 0 5px;
+}
+
 
 .text___block__images {
     height: 250px;
@@ -1629,12 +1637,51 @@ font-size: 18px;
     border-radius: 50%;
     background-color: #fff;
 }
-
 .text__block {}
-.text__block h2 {
-    margin: 20px 0 40px;
+
+.text__block h1 ,
+.text__block h2 ,
+.text__block h3 ,
+.text__block h4 ,
+.text__block h5 ,
+.text__block h6
+{
+    margin: 0;
+    padding: 0;
     font-weight: bold;
+    text-align: left;
 }
+.text__block h2:before,
+.text__block h2:after {
+    display: none;
+}
+.text__block h1 {
+    text-transform: uppercase;
+}
+.text__block h2 {
+    margin: 10px 0 10px;
+    font-size: 25px;
+    color: #f15922;
+}
+.text__block h3 {
+    margin: 10px 0 10px;
+    font-size: 22px;
+    line-height: 25px;
+    height: auto;
+    color: #f15922;
+}
+.text__block p {
+    text-align: justify;
+    font-size: 15px;
+}
+.text__block img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.text__block small {
+    color: #f15922;
+}
+
 .text__block__table {
     display: table;
     width: 100%;
@@ -2113,10 +2160,15 @@ input.filter__button {padding-bottom: 15px !important;}
 #items.list .tour .info a:hover ,
 .offer .button:hover ,
 .why .outline:hover ,
-.footer-address .button:hover
+.footer-address .button:hover,
+
+.tour-detail_tabs__wrapper .booking:hover,
+.tour-detail_tabs__wrapper .full_program, .button:hover,
+.form__comment__add button:hover,
+.tour-detail_interest .item .img .text .table .cell a:hover
 {
-    text-decoration: underline;
-    background: transparent;
+    text-decoration: none;
+    background: #fff;
     border-color: #f15922;
     color: #f15922;
 }
@@ -2158,4 +2210,312 @@ input.filter__button {padding-bottom: 15px !important;}
 .detail-container{
     margin: 20px 5%;
     text-align: justify;
+}
+
+/* catalog__list */
+
+.catalog__list {
+    width: 100%;
+    display: table;
+}
+    /* one */
+.catalog__list_one .catalog__list__item {
+    width: 100%;
+    background: #fff;
+    padding: 0!important;
+}
+.catalog__list_one .catalog__list__item:hover .catalog__list__item__img__wrap{
+    display: none;
+}
+.catalog__list_one .catalog__list__item:hover .catalog__list__item__img__title{
+    display: block;
+}
+.catalog__list_one  .catalog__list__item__inf__footer {
+    margin-top: 5px;
+    float: right;
+    width: auto;
+}
+.catalog__list_one .catalog__list__item__inf__day,
+.catalog__list_one .catalog__list__item__inf__price {
+    float: none;
+    width: auto;
+    text-align: right;
+}
+
+/* 3 */
+.catalog__list_3 .catalog__list__item {
+    width: 33.33333%;
+}
+.catalog__list__item {
+    display: block;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+    margin-bottom: 50px;
+}
+.catalog__list__item:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 5px;
+}
+.catalog__list_3 .catalog__list__item:nth-child(2n) {
+    padding-right: 5px;
+}
+.catalog__list_3 .catalog__list__item:nth-child(3n) {
+    padding-right: 0;
+    padding-left: 5px;
+}
+/* END*/
+
+.catalog__list__item:hover .catalog__list__item__img__wrap{
+    display: block;
+}
+.catalog__list__item:hover .catalog__list__item__img__title{
+    display: none;
+}
+
+.catalog__list__item__img {
+    position: relative;
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+.catalog__list__item__img__title {
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    margin: 0;
+    padding: 10px 15px 7px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 0.2px rgba(0, 0, 0, 0.5);
+}
+
+.catalog__list__item__img__wrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 61, 93, 0.75);
+    color: white;
+    font-weight: 300;
+    line-height: 20px;
+    /*padding: 50px 50px;*/
+}
+.catalog__list__item__img__wrap__table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 61, 93, 0.75);
+    color: white;
+    font-weight: 300;
+    line-height: 20px;
+}
+.catalog__list__item__img__wrap__table__cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 40px;
+}
+.catalog__list__item__img__wrap__title {
+    color: #f15922;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.catalog__list__item__img__wrap__btn {
+    margin-top: 10px;
+    color: #f15922;
+    text-align: right;
+    font-weight: 400;
+}
+
+.catalog__list__item__inf {
+    padding: 15px;
+    text-align: left;
+    color: #484848;
+}
+.catalog__list__item__inf__text {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.2px rgba(0, 0, 0, 0.7);
+}
+.catalog__list__item__inf__descriptions {
+    margin-top: 10px;
+    line-height: 22px;
+    display: block;
+    width: 100%;
+}
+.catalog__list__item__inf__footer {
+    width: 100%;
+    margin-top: 5px;
+}
+.catalog__list__item__inf__day ,
+.catalog__list__item__inf__price {
+    width: 50%;
+    float: left;
+}
+.catalog__list__item__inf__day {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.catalog__list__item__inf__price {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+.catalog__list__item__inf__btn {
+
+}
+.catalog__list__item__inf__btn .button {
+    margin: 10px 0 0;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 2px solid #F15922;
+}
+
+@media (max-width: 1000px) {
+    .catalog__list_3 .catalog__list__item {
+        width: 50%;
+    }
+    .catalog__list_3 .catalog__list__item:nth-child(2n) {
+        padding-right: 0;
+        padding-left: 5px;
+    }
+    .catalog__list_3 .catalog__list__item:nth-child(3n) {
+        padding-left: 0;
+        padding-right: 5px;
+    }
+}
+@media (max-width: 600px) {
+    .catalog__list__item {
+        width: 100%!important;
+        padding: 0!important;
+    }
+    .catalog__list__item__inf__btn {
+        text-align: center;
+    }
+}
+
+
+/* Adaptive */
+
+@media (min-width: 768px) {
+    .tour-detail_tabs__wrapper ul.tablist.main {
+        width: 100% !important;
+        display: table!important;
+    }
+    .tour-detail_tabs__wrapper ul.tablist.main li {
+        float: none!important;
+        display: table-cell!important;
+        vertical-align: middle;
+    }
+    .tour-detail_tabs__wrapper ul.tablist.main li a {
+        min-height: auto!important;
+    }
+}
+
+
+.dots {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    content: '';
+    padding-left: 30px;
+}
+.dots li {
+    cursor: pointer;
+    display: inline-block;
+    padding-top: 5px;
+    margin-right: 4px;
+    width: 8px;
+    border-bottom: 2px solid #828282;
+}
+.dots li button {
+    display: none;
+}
+
+.dots li.slick-active {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 40px;
+    border-color: #f15922;
+}
+
+
+/* button radius */
+.tour-detail_tabs__wrapper .booking,
+.tour-detail_tabs__wrapper .full_program,
+.button {
+    border-radius: 2px!important;
+}
+
+/* search */
+.search__header {
+    position: relative;
+    min-height: 54px;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+.search__pole {
+    opacity: 0;
+    position: absolute;
+    z-index: -999;
+    top: 13px;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
+.search__input__control {
+    padding: 5px 40px 5px 10px;
+    border-radius: 2px;
+    border: 0 solid #ccc;
+}
+.search__btn {
+    position: absolute;
+    right: 1px;
+    top: 5px;
+    background: transparent;
+    border: 0;
+}
+.search__btn__close {
+    position: absolute;
+    right: -35px;
+    top: 1px;
+}
+.search__btn__close svg {
+    width: 28px;
+    height: auto;
+    fill: #F15922;
+    display: inline-block!important;
+}
+
+.search__header.active .search-button {
+    display: none;
+}
+.search__header.active .search__pole {
+    z-index: 1;
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 990px) {
+    .search__header.active .search__btn {
+        right: 5%
+    }
+    .search__header.active .search__pole,
+    .search__header.active .search__input__control {
+        width: 90%;
+        position: relative;
+    }
 }

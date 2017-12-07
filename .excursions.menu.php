@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Online-экскурсии", 
+		"Online бронирование", 
 		"#", 
 		Array(), 
 		Array(), 

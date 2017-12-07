@@ -69,7 +69,8 @@ a:hover {
 }
 
 .lad-search {
-    background-position-y: 100%;
+    background-position: top;
+    /*background-position-y: 100%;*/
 }
 
 .lad-search .container-fluid {
@@ -892,7 +893,7 @@ a:after {
 
 .nav > li > a {
     padding: 18px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
