@@ -1,8 +1,8 @@
 <?
 $MESS['CT_BNL_ELEMENT_DELETE_CONFIRM'] = 'Будет удалена вся информация, связанная с этой записью. Продолжить?';
-$MESS['TOUR_DAY_ONE'] = 'день';
-$MESS['TOUR_DAY_TWO'] = 'дня';
-$MESS['TOUR_DAY_MORE'] = 'дней';
+$MESS['TOUR_DAY_ONE'] = 'день /';
+$MESS['TOUR_DAY_TWO'] = 'дня /';
+$MESS['TOUR_DAY_MORE'] = 'дней /';
 $MESS['TOUR_NIGHT_ONE'] = 'ночь';
 $MESS['TOUR_NIGHT_TWO'] = 'ночи';
 $MESS['TOUR_NIGHT_MORE'] = 'ночей';
