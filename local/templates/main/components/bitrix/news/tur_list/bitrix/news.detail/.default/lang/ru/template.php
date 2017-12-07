@@ -12,6 +12,7 @@ $MESS['TOUR_PRICE_FROM'] = 'от';
 $MESS['TOUR_PRICE_TO'] = 'до';
 $MESS['TOUR_PRICE_CURRENCY_1'] = 'руб';
 $MESS['TOUR_PRICE_CURRENCY_2'] = 'рублей';
+$MESS['TOUR_DAYS_/'] = '/';
 $MESS['TOUR_DAY_ONE'] = 'день';
 $MESS['TOUR_DAY_TWO'] = 'дня';
 $MESS['TOUR_DAY_MORE'] = 'дней';

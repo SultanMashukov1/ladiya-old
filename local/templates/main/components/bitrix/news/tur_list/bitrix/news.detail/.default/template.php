@@ -35,6 +35,7 @@ $this->setFrameMode(true);
                                 Loc::getMessage('TOUR_DAY_TWO'),
                                 Loc::getMessage('TOUR_DAY_MORE'),
                             ));?>
+                            <?=Loc::getMessage('TOUR_DAYS_/');?>
                             <?=Helper::pluralizeN(Helper::propValue('NIGHT', $arResult), array(
                                 Loc::getMessage('TOUR_NIGHT_ONE'),
                                 Loc::getMessage('TOUR_NIGHT_TWO'),
