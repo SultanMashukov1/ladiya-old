@@ -162,21 +162,21 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                         <div class="catalog__list__item__inf__day">
                             <? if(Helper::propFilled('DAY', $arItem)) : ?>
                                 <span>
-                                            <?=Helper::pluralizeN(Helper::escPropValue('DAY', $arItem), array(
-                                                Loc::getMessage('TOUR_DAY_ONE'),
-                                                Loc::getMessage('TOUR_DAY_TWO'),
-                                                Loc::getMessage('TOUR_DAY_MORE'),
-                                            ));?>
-                                        </span>
+                                    <?=Helper::pluralizeN(Helper::escPropValue('DAY', $arItem), array(
+                                        Loc::getMessage('TOUR_DAY_ONE'),
+                                        Loc::getMessage('TOUR_DAY_TWO'),
+                                        Loc::getMessage('TOUR_DAY_MORE'),
+                                    ));?>
+                                </span>
                             <? endif; ?>
                             <? if(Helper::propFilled('NIGHT', $arItem)) : ?>
                                 <span>
-                                            <?=Helper::pluralizeN(Helper::escPropValue('NIGHT', $arItem), array(
-                                                Loc::getMessage('TOUR_NIGHT_ONE'),
-                                                Loc::getMessage('TOUR_NIGHT_TWO'),
-                                                Loc::getMessage('TOUR_NIGHT_MORE'),
-                                            ));?>
-                                        </span>
+                                    <?=Helper::pluralizeN(Helper::escPropValue('NIGHT', $arItem), array(
+                                        Loc::getMessage('TOUR_NIGHT_ONE'),
+                                        Loc::getMessage('TOUR_NIGHT_TWO'),
+                                        Loc::getMessage('TOUR_NIGHT_MORE'),
+                                    ));?>
+                                </span>
                             <? endif; ?>
                         </div>
                         <div class="catalog__list__item__inf__price">
