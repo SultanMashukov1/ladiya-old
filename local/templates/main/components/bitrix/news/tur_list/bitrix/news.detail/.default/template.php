@@ -84,17 +84,17 @@ $this->setFrameMode(true);
                             <a href="#price" aria-controls="price" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PRICE_TITLE');?></a>
                         </li>
                     <? endif; ?>
+                    <? if($arResult['SHOW_GROUP_TAB']): ?>
+                        <li role="presentation">
+                            <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
+                        </li>
+                    <? endif; ?>
                     <li role="presentation">
                         <a href="#jotting" aria-controls="jotting" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_MEMO_TITLE');?></a>
                     </li>
                     <li role="presentation">
                         <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
                     </li>
-                    <? if($arResult['SHOW_GROUP_TAB']): ?>
-                        <li role="presentation">
-                            <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
-                        </li>
-                    <? endif; ?>
                 </ul>
 
                 <div class="bg">
@@ -116,9 +116,9 @@ $this->setFrameMode(true);
 
                         <? if(Helper::propFilled('DAY', $arResult)): ?>
                             <div class="calendar">
-                                <h5><?=$arResult['PROPERTIES']['DAY']['NAME'];?></h5>
+                                <h5><?=$arResult['PROPERTIES']['DAYS_COUNT']['NAME'];?></h5>
                                 <p>
-                                    <?=Helper::pluralizeN(Helper::propValue('DAY', $arResult), array(
+                                    <?=Helper::pluralizeN(Helper::propValue('DAYS_COUNT', $arResult), array(
                                         Loc::getMessage('TOUR_DAY_ONE'),
                                         Loc::getMessage('TOUR_DAY_TWO'),
                                         Loc::getMessage('TOUR_DAY_MORE'),
