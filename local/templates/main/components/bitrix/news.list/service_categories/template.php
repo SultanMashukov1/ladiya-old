@@ -37,11 +37,13 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
                                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
                                 ?>
                                 <li class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                                    <div class="item-block">
-                                        <span class="image"
-                                              style="background-image: url('<?=$arItem['PREVIEW_PICTURE']['SRC'];?>');"></span>
-                                        <span class="name"><?=$arItem['NAME'];?></span>
-                                    </div>
+                                    <a href="<?=$arSection['URL'],$arItem['PROPERTIES']['LINK']['VALUE'];?>">
+                                        <div class="item-block">
+                                            <span class="image"
+                                                  style="background-image: url('<?=$arItem['PREVIEW_PICTURE']['SRC'];?>');"></span>
+                                            <span class="name"><?=$arItem['NAME'];?></span>
+                                        </div>
+                                    </a>
                                 </li>
                             <? endforeach; ?>
 
