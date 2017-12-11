@@ -450,8 +450,7 @@ $APPLICATION->IncludeComponent(
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="banner invert">
-                            <h2>Надежно! Комфортно! Без переплаты!</h2>
-                            <a class="button" href="#">Забронировать трансфер</a>
+                            <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/home/book_it_transfer.php'));?>
                         </div>
                     </div>
                 </div>
@@ -573,8 +572,7 @@ $APPLICATION->IncludeComponent(
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="banner invert">
-                            <h2>Выбрал - оплатил - уехал!</h2>
-                            <a class="button" href="#">забронируй экскурсию онлайн!</a>
+                            <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/home/book_it_excursion.php'));?>
                         </div>
                     </div>
                 </div>
