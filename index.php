@@ -19,70 +19,70 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                              **/
                             ?>
                             <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"main_slider", 
-	array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"FILTER_NAME" => "",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "1",
-		"IBLOCK_TYPE" => "content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "20",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"SET_BROWSER_TITLE" => "Y",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "ID",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "ASC",
-		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "main_slider"
-	),
-	false
-); ?>
+                                "bitrix:news.list",
+                                "main_slider",
+                                array(
+                                    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                                    "ADD_SECTIONS_CHAIN" => "Y",
+                                    "AJAX_MODE" => "N",
+                                    "AJAX_OPTION_ADDITIONAL" => "",
+                                    "AJAX_OPTION_HISTORY" => "N",
+                                    "AJAX_OPTION_JUMP" => "N",
+                                    "AJAX_OPTION_STYLE" => "Y",
+                                    "CACHE_FILTER" => "N",
+                                    "CACHE_GROUPS" => "Y",
+                                    "CACHE_TIME" => "36000000",
+                                    "CACHE_TYPE" => "A",
+                                    "CHECK_DATES" => "Y",
+                                    "DETAIL_URL" => "",
+                                    "DISPLAY_BOTTOM_PAGER" => "Y",
+                                    "DISPLAY_DATE" => "Y",
+                                    "DISPLAY_NAME" => "Y",
+                                    "DISPLAY_PICTURE" => "Y",
+                                    "DISPLAY_PREVIEW_TEXT" => "Y",
+                                    "DISPLAY_TOP_PAGER" => "N",
+                                    "FIELD_CODE" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "FILTER_NAME" => "",
+                                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                                    "IBLOCK_ID" => "1",
+                                    "IBLOCK_TYPE" => "content",
+                                    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                                    "INCLUDE_SUBSECTIONS" => "Y",
+                                    "MESSAGE_404" => "",
+                                    "NEWS_COUNT" => "20",
+                                    "PAGER_BASE_LINK_ENABLE" => "N",
+                                    "PAGER_DESC_NUMBERING" => "N",
+                                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                                    "PAGER_SHOW_ALL" => "N",
+                                    "PAGER_SHOW_ALWAYS" => "N",
+                                    "PAGER_TEMPLATE" => ".default",
+                                    "PAGER_TITLE" => "Новости",
+                                    "PARENT_SECTION" => "",
+                                    "PARENT_SECTION_CODE" => "",
+                                    "PREVIEW_TRUNCATE_LEN" => "",
+                                    "PROPERTY_CODE" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SET_BROWSER_TITLE" => "Y",
+                                    "SET_LAST_MODIFIED" => "N",
+                                    "SET_META_DESCRIPTION" => "Y",
+                                    "SET_META_KEYWORDS" => "Y",
+                                    "SET_STATUS_404" => "N",
+                                    "SET_TITLE" => "Y",
+                                    "SHOW_404" => "N",
+                                    "SORT_BY1" => "ID",
+                                    "SORT_BY2" => "SORT",
+                                    "SORT_ORDER1" => "ASC",
+                                    "SORT_ORDER2" => "ASC",
+                                    "STRICT_SECTION_CHECK" => "N",
+                                    "COMPONENT_TEMPLATE" => "main_slider"
+                                ),
+                                false
+                            ); ?>
                             <div class="offer">
                                 <div class="outer">
                                     <div class="inner">
@@ -140,7 +140,9 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
         </div>
-        <script>$(function(){$("#datepicker").datepicker();});</script>
+        <script>$(function () {
+                $("#datepicker").datepicker();
+            });</script>
     </section>
 
     <!-- SECTION 4 -->
@@ -152,67 +154,89 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     <div class="wrapper">
                         <div class="best">
                             <h2><? includeArea('best-offer'); ?></h2>
-                            <ul class="grid-3">
-                                <li class="item">
-                                    <h3>Кавказская мозаика</h3>
-                                    <div class="item-block">
-                                        <div class="image"
-                                             style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/best1.jpg');"></div>
-                                        <div class="item-hover">
-                                            <h3>Кавказская мозаика</h3>
-                                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                                сосредоточиться.</p>
-                                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                                сосредоточиться.</p>
-                                        </div>
-                                        <span class="sell">-20%</span>
-                                    </div>
-                                    <div class="item-data">
-                                        <span class="days">5 дней</span>
-                                        <span class="nights">4 ночи</span>
-                                        <span class="price">от 15 400 руб</span>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <h3>Встречи с чудесами Кавказа</h3>
-                                    <div class="item-block">
-                                        <div class="image"
-                                             style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/best2.jpg');"></div>
-                                        <div class="item-hover">
-                                            <h3>Встречи с чудесами Кавказа</h3>
-                                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                                сосредоточиться.</p>
-                                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                                сосредоточиться.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item-data">
-                                        <span class="days">5 дней</span>
-                                        <span class="nights">4 ночи</span>
-                                        <span class="price">от 15 400 руб</span>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <h3>В сердце гор</h3>
-                                    <div class="item-block">
-                                        <div class="image"
-                                             style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/best3.jpg');"></div>
-                                        <div class="item-hover">
-                                            <h3>В сердце гор</h3>
-                                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                                сосредоточиться.</p>
-                                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                                сосредоточиться.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item-data">
-                                        <span class="days">5 дней</span>
-                                        <span class="nights">4 ночи</span>
-                                        <span class="price">от 15 400 руб</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a class="reload" href="#">Все предложения</a>
+                            <?
+                            $GLOBALS['arrBestOffer'] = array("PROPERTY_BEST_OFFER_VALUE" => 'Y');
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:news.list",
+                                "best_offer",
+                                array(
+                                    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                                    "ADD_SECTIONS_CHAIN" => "N",
+                                    "AJAX_MODE" => "N",
+                                    "AJAX_OPTION_ADDITIONAL" => "",
+                                    "AJAX_OPTION_HISTORY" => "N",
+                                    "AJAX_OPTION_JUMP" => "N",
+                                    "AJAX_OPTION_STYLE" => "Y",
+                                    "CACHE_FILTER" => "N",
+                                    "CACHE_GROUPS" => "Y",
+                                    "CACHE_TIME" => "36000000",
+                                    "CACHE_TYPE" => "A",
+                                    "CHECK_DATES" => "Y",
+                                    "DETAIL_URL" => "",
+                                    "DISPLAY_BOTTOM_PAGER" => "Y",
+                                    "DISPLAY_DATE" => "N",
+                                    "DISPLAY_NAME" => "Y",
+                                    "DISPLAY_PICTURE" => "Y",
+                                    "DISPLAY_PREVIEW_TEXT" => "Y",
+                                    "DISPLAY_TOP_PAGER" => "N",
+                                    "FIELD_CODE" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "FILTER_NAME" => "arrBestOffer",
+                                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                                    "IBLOCK_ID" => "4",
+                                    "IBLOCK_TYPE" => "content",
+                                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                    "INCLUDE_SUBSECTIONS" => "N",
+                                    "MESSAGE_404" => "",
+                                    "NEWS_COUNT" => "20",
+                                    "PAGER_BASE_LINK_ENABLE" => "N",
+                                    "PAGER_DESC_NUMBERING" => "N",
+                                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                                    "PAGER_SHOW_ALL" => "N",
+                                    "PAGER_SHOW_ALWAYS" => "N",
+                                    "PAGER_TEMPLATE" => ".default",
+                                    "PAGER_TITLE" => "Новости",
+                                    "PARENT_SECTION" => "",
+                                    "PARENT_SECTION_CODE" => "",
+                                    "PREVIEW_TRUNCATE_LEN" => "",
+                                    "PROPERTY_CODE" => array(
+                                        0 => "TYPE",
+                                        1 => "VIEW",
+                                        2 => "DATE",
+                                        3 => "COUNT",
+                                        4 => "DAYS_COUNT",
+                                        5 => "IN_PRICE_CONTAINS",
+                                        6 => "GROUP_TEXT",
+                                        7 => "ALSO_PAYS",
+                                        8 => "HEADER",
+                                        9 => "DAY",
+                                        10 => "NIGHT",
+                                        11 => "BEST_OFFER",
+                                        12 => "ROUTE",
+                                        13 => "TOUR_MEMO",
+                                        14 => "DISCOUNT",
+                                        15 => "TRANSPORT",
+                                        16 => "PRICE",
+                                        17 => "",
+                                    ),
+                                    "SET_BROWSER_TITLE" => "N",
+                                    "SET_LAST_MODIFIED" => "N",
+                                    "SET_META_DESCRIPTION" => "N",
+                                    "SET_META_KEYWORDS" => "N",
+                                    "SET_STATUS_404" => "N",
+                                    "SET_TITLE" => "N",
+                                    "SHOW_404" => "N",
+                                    "SORT_BY1" => "ACTIVE_FROM",
+                                    "SORT_BY2" => "SORT",
+                                    "SORT_ORDER1" => "DESC",
+                                    "SORT_ORDER2" => "ASC",
+                                    "STRICT_SECTION_CHECK" => "N",
+                                    "COMPONENT_TEMPLATE" => "best_offer"
+                                ),
+                                false
+                            ); ?>
                         </div>
                     </div>
                 </div>
@@ -589,7 +613,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                              * Инфоблок : Контент->Слайдер отзывов.
                              * IBlockID = 3.
                              *
-                             **/?>
+                             **/ ?>
                             <? $APPLICATION->IncludeComponent(
                                 "bitrix:news.list",
                                 "review",
