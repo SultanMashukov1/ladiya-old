@@ -338,7 +338,66 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 6 -->
 <? // TODO как будет каталог ?>
-    <section class="lad-ourtours">
+<?
+$GLOBALS['arrOurTours'] = array("SECTION_ID" => 9);
+$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "service_categories",
+    Array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array("", ""),
+        "FILTER_NAME" => "arrOurTours",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "16",
+        "IBLOCK_TYPE" => "content",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "20",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Новости",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array("LINK", ""),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "N"
+    )
+);?>
+    <!--<section class="lad-ourtours">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -349,28 +408,28 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourtours1.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours1.jpg');"></span>
                                         <span class="name">Экскурсионные</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourtours2.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours2.jpg');"></span>
                                         <span class="name">Для школьников</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourtours3.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours3.jpg');"></span>
                                         <span class="name">Туры выходного дня</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourtours4.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours4.jpg');"></span>
                                         <span class="name">Активные</span>
                                     </div>
                                 </li>
@@ -381,7 +440,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- SECTION 7 -->
 <? // TODO как будет каталог ?>
@@ -402,7 +461,66 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 8 -->
 <? // TODO как будет каталог ?>
-    <section class="lad-ourexcurs">
+<?
+$GLOBALS['arrOurExcurs'] = array("SECTION_ID" => 10);
+$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "service_categories",
+    Array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array("", ""),
+        "FILTER_NAME" => "arrOurExcurs",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "16",
+        "IBLOCK_TYPE" => "content",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "20",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Новости",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array("LINK", ""),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "N"
+    )
+);?>
+    <!--<section class="lad-ourexcurs">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -413,28 +531,28 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourexcurs1.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs1.jpg');"></span>
                                         <span class="name">Медовые водопады</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourexcurs2.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs2.jpg');"></span>
                                         <span class="name">Эльбрус</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourexcurs3.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs3.jpg');"></span>
                                         <span class="name">Терский конезавод</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/ourexcurs4.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs4.jpg');"></span>
                                         <span class="name">Грозный</span>
                                     </div>
                                 </li>
@@ -445,7 +563,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- SECTION 9 -->
 <? // TODO как будет каталог ?>
@@ -466,7 +584,66 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 10 -->
 <? // TODO как будет каталог ?>
-    <section class="lad-russiatours">
+<?
+$GLOBALS['arrRussiaTours'] = array("SECTION_ID" => 11);
+$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "service_categories",
+    Array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array("", ""),
+        "FILTER_NAME" => "arrRussiaTours",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "16",
+        "IBLOCK_TYPE" => "content",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "20",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Новости",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array("LINK", ""),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "N"
+    )
+);?>
+   <!-- <section class="lad-russiatours">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -477,28 +654,28 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/russiatours1.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours1.jpg');"></span>
                                         <span class="name">Золотое кольцо</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/russiatours2.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours2.jpg');"></span>
                                         <span class="name">Туры по России</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/russiatours3.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours3.jpg');"></span>
                                         <span class="name">Крым</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/russiatours4.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours4.jpg');"></span>
                                         <span class="name">Карелия</span>
                                     </div>
                                 </li>
@@ -509,7 +686,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- SECTION 11 -->
 <? // TODO ожидаю перевестывания ?>
@@ -553,7 +730,66 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 12 -->
 <? // TODO как будет каталог ?>
-    <section class="lad-otherservices">
+<?
+$GLOBALS['arrOtherServices'] = array("SECTION_ID" => 12);
+$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "service_categories",
+    Array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array("", ""),
+        "FILTER_NAME" => "arrOtherServices",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "16",
+        "IBLOCK_TYPE" => "content",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "20",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Новости",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array("LINK", ""),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "N"
+    )
+);?>
+    <!--<section class="lad-otherservices">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -564,28 +800,28 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/otherservices1.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices1.jpg');"></span>
                                         <span class="name">Джиппинг</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/otherservices2.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices2.jpg');"></span>
                                         <span class="name">Транспортные услуги</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/otherservices3.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices3.jpg');"></span>
                                         <span class="name">Параплан</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/otherservices4.jpg');"></span>
+                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices4.jpg');"></span>
                                         <span class="name">Речные круизы</span>
                                     </div>
                                 </li>
@@ -596,7 +832,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- SECTION 13 -->
 
