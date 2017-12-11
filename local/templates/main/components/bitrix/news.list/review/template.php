@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+if(empty($arResult['ITEMS']))
+    return;
 ?>
 <ul class="slider carousel-inner">
     <?
@@ -31,16 +33,18 @@ $this->setFrameMode(true);
         <? $count++;?>
     <?endforeach;?>
 </ul>
-<a class="slider-control left" href="#reviews" data-slide="prev">
-    <span class="fa fa-angle-left"></span>
-</a>
-<a class="slider-control right" href="#reviews" data-slide="next">
-    <span class="fa fa-angle-right"></span>
-</a>
+<?if($count>1):?>
+    <a class="slider-control left" href="#reviews" data-slide="prev">
+        <span class="fa fa-angle-left"></span>
+    </a>
+    <a class="slider-control right" href="#reviews" data-slide="next">
+        <span class="fa fa-angle-right"></span>
+    </a>
+<?endif;?>
 <ul class="carousel-indicators">
     <?
     $first = true;
     for ($i = 0 ; $i < $count ; $i++) { ?>
-    <li data-target="#reviews" data-slide-to="<?= $i ?>" <?if($first){$first=false;?>class="active"<?}?>></li>
+        <li data-target="#reviews" data-slide-to="<?= $i ?>" <?if($first){$first=false;?>class="active"<?}?>></li>
     <? } ?>
 </ul>
