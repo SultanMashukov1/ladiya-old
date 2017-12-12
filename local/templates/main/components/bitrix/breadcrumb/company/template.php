@@ -33,7 +33,7 @@ for($index = 0; $index < $itemSize; $index++)
 	$arrow = ($index > 0? '<i class="fa fa-angle-right"></i>' : '');
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
 	{
-		$strReturn .= '<li><a href="'.$arResult[$index]["LINK"].'" title="'.$title.'">'.$title.'</a></li>';
+		$strReturn .= '<li><span><a href="'.$arResult[$index]["LINK"].'" title="'.$title.'">'.$title.'</a></span></li>';
 	}
 	else
 	{
