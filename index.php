@@ -107,13 +107,13 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 3 -->
 <? // TODO как будет каталог ?>
-    <section class="lad-search" style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/bg/img_1.jpg');">
+    <!--<section class="lad-search" style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/bg/img_1.jpg');">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="search">
-                            <h2><? includeArea('search_tour'); ?></h2>
+                            <h2><?/* includeArea('search_tour'); */?></h2>
                             <form>
                                 <div class="group">
                                     <div class="cell seltour">
@@ -143,7 +143,38 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         <script>$(function () {
                 $("#datepicker").datepicker();
             });</script>
-    </section>
+    </section>-->
+<?$APPLICATION->IncludeComponent(
+	"lema:catalog.filter", 
+	"home", 
+	array(
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "arrFilter",
+		"IBLOCK_ID" => "4",
+		"IBLOCK_TYPE" => "content",
+		"LIST_HEIGHT" => "5",
+		"NUMBER_WIDTH" => "5",
+		"PAGER_PARAMS_NAME" => "arrPager",
+		"PRICE_CODE" => array(
+		),
+		"PROPERTY_CODE" => array(
+			0 => "TYPE",
+			1 => "DATE",
+			2 => "CITY",
+			3 => "",
+		),
+		"SAVE_IN_SESSION" => "N",
+		"TEXT_WIDTH" => "20",
+		"COMPONENT_TEMPLATE" => "home"
+	),
+	false
+);?>
 
     <!-- SECTION 4 -->
 <? // TODO как будет каталог ?>
