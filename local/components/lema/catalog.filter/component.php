@@ -591,11 +591,17 @@ foreach($arResult["arrProp"] as $prop_id => $arProp)
 			else
 			{
 				$type = 'SELECT';
+				$sClass="";
+                if($APPLICATION->GetCurDir() == '/')
+                    $sClass='class="select" ';
 				if ($arProp["MULTIPLE"]=="Y")
-					$res .= '<select multiple name="'.$name.'[]" size="'.$arParams["LIST_HEIGHT"].'">';
+					$res .= '<select '.$sClass.'multiple name="'.$name.'[]" size="'.$arParams["LIST_HEIGHT"].'">';
 				else
-					$res .= '<select name="'.$name.'">';
-				$res .= '<option value="">'.GetMessage("CC_BCF_ALL").'</option>';
+					$res .= '<select '.$sClass.'name="'.$name.'">';
+				if($APPLICATION->GetCurDir() == '/')
+                    $res .= '<option value="">'.$arProp["NAME"].'</option>';
+                else
+				    $res .= '<option value="">'.GetMessage("CC_BCF_ALL").'</option>';
 				$list[""] = GetMessage("CC_BCF_ALL");
 				foreach($arProp["VALUE_LIST"] as $key=>$val)
 				{
@@ -662,7 +668,10 @@ foreach($arResult["arrProp"] as $prop_id => $arProp)
 			$value = $arrPFV[$arProp["CODE"]];
 			if(!is_array($value))
 			{
-				$res .= '<input type="text" name="'.$name.'" size="'.$arParams["TEXT_WIDTH"].'" value="'.htmlspecialcharsbx($value).'" />';
+			    if($APPLICATION->GetCurDir() == "/")
+				$res .= '<input class="select" type="text" name="'.$name.'" placeholder="'.$arProp['NAME'].'" size="'.$arParams["TEXT_WIDTH"].'" value="'.htmlspecialcharsbx($value).'" />';
+			    else
+			    $res .= '<input type="text" name="'.$name.'" size="'.$arParams["TEXT_WIDTH"].'" value="'.htmlspecialcharsbx($value).'" />';
 
 				if (strlen($value) > 0)
 					${$FILTER_NAME}["PROPERTY"]["?".$arProp["CODE"]] = $value;
