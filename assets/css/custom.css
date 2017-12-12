@@ -44,8 +44,8 @@ font-size: 18px;
     margin-bottom: 20px;
 }
 
-#tours form .fields .input:nth-child(4),
-#tours form .fields .input:nth-child(5) {
+#tours form .fields .input:nth-child(3),
+#tours form .fields .input:nth-child(4) {
     width: 48%;
 }
 
