@@ -40,8 +40,8 @@ $assets = Asset::getInstance();
     $APPLICATION->ShowHead();
     ?>
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -64,8 +64,8 @@ $assets = Asset::getInstance();
                 <div class="wrapper">
                     <div class="header icon-menu">
                         <ul class="nav navbar-nav">
-                            <li><a href="#" class="icon-point i-camera"><? includeArea("photo"); ?></a></li>
-                            <li><a href="#" class="icon-point i-play"><? includeArea("video"); ?></a></li>
+                            <li><a href="/photo/" class="icon-point i-camera"><? includeArea("photo"); ?></a></li>
+                            <li><a href="/video/" class="icon-point i-play"><? includeArea("video"); ?></a></li>
                         </ul>
                     </div>
                 </div>
