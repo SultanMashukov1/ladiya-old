@@ -45,7 +45,4 @@ $this->setFrameMode(true);
             </div>
         </div>
     </div>
-    <script>$(function () {
-            $("#datepicker").datepicker();
-        });</script>
 </section>
