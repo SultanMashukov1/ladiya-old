@@ -761,8 +761,17 @@ h3 {
 .seltour:before {
     content: '\f041';
 }
+.selCITY:before {
+    content: '\f041';
+}
+.selTYPE:before {
+    content: '\f009';
+}
 
 .seldate:before {
+    content: '\f073';
+}
+.selDATE:before {
     content: '\f073';
 }
 
