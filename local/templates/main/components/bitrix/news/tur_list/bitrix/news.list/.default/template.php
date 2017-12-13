@@ -147,6 +147,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                     <? if(Helper::propFilled('DISCOUNT', $arItem)) : ?>
                         <div class="discount">-<?=Helper::escPropValue('DISCOUNT', $arItem);?>%</div>
                     <? endif; ?>
+                    <div class="catalog__list__item__img__discount">20%</div>
                     <div class="catalog__list__item__img__title"><?=$arItem['NAME']?></div>
                 </div>
 
