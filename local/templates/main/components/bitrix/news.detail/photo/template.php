@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <div class="container">
     <div class="text__block">
-    <section class="container tour-detail_gallery">
+    <section class="tour-detail_gallery">
 
         <div class="row slider">
             <? foreach ($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $arImg):
