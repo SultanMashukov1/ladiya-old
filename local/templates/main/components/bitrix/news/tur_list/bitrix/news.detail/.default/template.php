@@ -240,6 +240,13 @@ $this->setFrameMode(true);
 
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="input">
+                                                <label for="room_type">Дата</label><br>
+                                                <input class="input" name="DATE" placeholder="Дата начала тура"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-4">
+                                            <div class="input">
                                                 <? if(!empty($arResult['HOTELS'])): ?>
                                                     <label for="hotel"><?=Loc::getMessage('TOUR_HOTEL_TITLE');?></label>
                                                     <select name="hotel" id="hotel">
