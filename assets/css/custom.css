@@ -2517,3 +2517,23 @@ input.filter__button {padding-bottom: 15px !important;}
         position: relative;
     }
 }
+
+
+
+/* adapriv */
+@media (max-width: 800px) {
+    .line .item,
+    .footer-menu .nav > li {
+        width: 50%;
+    }
+
+    .grid-3 .item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .line .item {
+        width: 100%;
+    }
+}
