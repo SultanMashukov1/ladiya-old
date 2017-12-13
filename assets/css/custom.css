@@ -2266,10 +2266,11 @@ input.filter__button {padding-bottom: 15px !important;}
 }
 /* END*/
 
-.catalog__list__item:hover .catalog__list__item__img__wrap{
+.catalog__list__item:hover .catalog__list__item__img__wrap {
     display: block;
 }
-.catalog__list__item:hover .catalog__list__item__img__title{
+.catalog__list__item:hover .catalog__list__item__img__title,
+.catalog__list_3 .catalog__list__item:hover .catalog__list__item__img__discount {
     display: none;
 }
 
@@ -2290,6 +2291,19 @@ input.filter__button {padding-bottom: 15px !important;}
     text-transform: uppercase;
     color: #000;
     background-color: rgba(255, 255, 255, 0.6);
+}
+.catalog__list__item__img__discount {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 0;
+    margin: 0;
+    padding: 10px 15px 7px;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #F15922;
+    font-weight: 100;
 }
 
 .catalog__list__item__img__wrap {
