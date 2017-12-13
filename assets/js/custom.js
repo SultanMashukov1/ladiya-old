@@ -3,6 +3,7 @@ $(document).ready(function () {
     coreJsSwitchElement.init();
     Seacrch.init();
 
+    if(typeof $().slick !== 'undefined')
     $('.gallery__photo__slider').slick({
         infinite: true,
         slidesToShow: 3,
