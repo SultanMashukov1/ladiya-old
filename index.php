@@ -718,7 +718,7 @@ $APPLICATION->IncludeComponent(
 
     <!-- SECTION 11 -->
 <? // TODO ожидаю перевестывания ?>
-    <section class="lad-videoreviews">
+    <!--<section class="lad-videoreviews">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -729,21 +729,21 @@ $APPLICATION->IncludeComponent(
                                 <li class="item">
                                     <div class="item-block" data-youtube="pGCKeotT4mM">
                                         <span class="image"
-                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/video1.jpg');"></span>
+                                              style="background-image: url('<?/* /*= SITE_TEMPLATE_PATH */ */?>/images/video1.jpg');"></span>
                                         <span class="time">4:34</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/video2.jpg');"></span>
+                                              style="background-image: url('<?/* /*= SITE_TEMPLATE_PATH */ */?>/images/video2.jpg');"></span>
                                         <span class="time">4:34</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/video3.jpg');"></span>
+                                              style="background-image: url('<?/* /*= SITE_TEMPLATE_PATH */ */?>/images/video3.jpg');"></span>
                                         <span class="time">4:34</span>
                                     </div>
                                 </li>
@@ -754,7 +754,7 @@ $APPLICATION->IncludeComponent(
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 <? $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"video_reviews", 
