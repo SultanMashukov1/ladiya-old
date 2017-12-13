@@ -17,7 +17,7 @@ $this->setFrameMode(true);
         <section class="tour-detail_gallery">
             <div class="row slider">
                 <? foreach ($arResult['PROPERTIES']['LINK_TO_VIDEO']['VALUE'] as $arLinkVideo): ?>
-
+                    <?$iCodeYoutubeVideo='';?>
                     <?if(stristr($arLinkVideo,'youtu.be')){
                         $iCodeYoutubeVideo = str_replace('/','',strrchr($arLinkVideo,'/'));
                         }
@@ -35,7 +35,6 @@ $this->setFrameMode(true);
                             <?}?>
                         </a>
                     </div>
-                    <?$iCodeYoutubeVideo='';?>
                 <? endforeach; ?>
             </div>
         </section>
