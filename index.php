@@ -107,13 +107,13 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
     <!-- SECTION 3 -->
 <? // TODO как будет каталог ?>
-    <!--<section class="lad-search" style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/bg/img_1.jpg');">
+    <!--<section class="lad-search" style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/bg/img_1.jpg');">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="search">
-                            <h2><?/* includeArea('search_tour'); */?></h2>
+                            <h2><? /* includeArea('search_tour'); */ ?></h2>
                             <form>
                                 <div class="group">
                                     <div class="cell seltour">
@@ -144,37 +144,36 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 $("#datepicker").datepicker();
             });</script>
     </section>-->
-<?$APPLICATION->IncludeComponent(
-	"lema:catalog.filter", 
-	"home", 
-	array(
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"FILTER_NAME" => "arrFilter",
-		"IBLOCK_ID" => "4",
-		"IBLOCK_TYPE" => "content",
-		"LIST_HEIGHT" => "5",
-		"NUMBER_WIDTH" => "5",
-		"PAGER_PARAMS_NAME" => "arrPager",
-		"PRICE_CODE" => array(
-		),
-		"PROPERTY_CODE" => array(
-			0 => "TYPE",
-			1 => "DATE",
-			2 => "CITY",
-			3 => "",
-		),
-		"SAVE_IN_SESSION" => "N",
-		"TEXT_WIDTH" => "20",
-		"COMPONENT_TEMPLATE" => "home"
-	),
-	false
-);?>
+<? $APPLICATION->IncludeComponent(
+    "lema:catalog.filter",
+    "home",
+    array(
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "FIELD_CODE" => array(
+            0 => "",
+            1 => "",
+        ),
+        "FILTER_NAME" => "arrFilter",
+        "IBLOCK_ID" => "4",
+        "IBLOCK_TYPE" => "content",
+        "LIST_HEIGHT" => "5",
+        "NUMBER_WIDTH" => "5",
+        "PAGER_PARAMS_NAME" => "arrPager",
+        "PRICE_CODE" => array(),
+        "PROPERTY_CODE" => array(
+            0 => "TYPE",
+            1 => "DATE",
+            2 => "CITY",
+            3 => "",
+        ),
+        "SAVE_IN_SESSION" => "N",
+        "TEXT_WIDTH" => "20",
+        "COMPONENT_TEMPLATE" => "home"
+    ),
+    false
+); ?>
 
     <!-- SECTION 4 -->
 <? // TODO как будет каталог ?>
@@ -427,7 +426,7 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
-);?>
+); ?>
     <!--<section class="lad-ourtours">
         <div class="container">
             <div class="row">
@@ -439,28 +438,28 @@ $APPLICATION->IncludeComponent(
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours1.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourtours1.jpg');"></span>
                                         <span class="name">Экскурсионные</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours2.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourtours2.jpg');"></span>
                                         <span class="name">Для школьников</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours3.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourtours3.jpg');"></span>
                                         <span class="name">Туры выходного дня</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourtours4.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourtours4.jpg');"></span>
                                         <span class="name">Активные</span>
                                     </div>
                                 </li>
@@ -481,7 +480,7 @@ $APPLICATION->IncludeComponent(
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="banner invert">
-                            <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/home/book_it_transfer.php'));?>
+                            <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/home/book_it_transfer.php')); ?>
                         </div>
                     </div>
                 </div>
@@ -549,7 +548,7 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
-);?>
+); ?>
     <!--<section class="lad-ourexcurs">
         <div class="container">
             <div class="row">
@@ -561,28 +560,28 @@ $APPLICATION->IncludeComponent(
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs1.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourexcurs1.jpg');"></span>
                                         <span class="name">Медовые водопады</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs2.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourexcurs2.jpg');"></span>
                                         <span class="name">Эльбрус</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs3.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourexcurs3.jpg');"></span>
                                         <span class="name">Терский конезавод</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/ourexcurs4.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/ourexcurs4.jpg');"></span>
                                         <span class="name">Грозный</span>
                                     </div>
                                 </li>
@@ -603,7 +602,7 @@ $APPLICATION->IncludeComponent(
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="banner invert">
-                            <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/home/book_it_excursion.php'));?>
+                            <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/home/book_it_excursion.php')); ?>
                         </div>
                     </div>
                 </div>
@@ -671,8 +670,8 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
-);?>
-   <!-- <section class="lad-russiatours">
+); ?>
+    <!-- <section class="lad-russiatours">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -683,28 +682,28 @@ $APPLICATION->IncludeComponent(
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours1.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/russiatours1.jpg');"></span>
                                         <span class="name">Золотое кольцо</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours2.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/russiatours2.jpg');"></span>
                                         <span class="name">Туры по России</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours3.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/russiatours3.jpg');"></span>
                                         <span class="name">Крым</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/russiatours4.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/russiatours4.jpg');"></span>
                                         <span class="name">Карелия</span>
                                     </div>
                                 </li>
@@ -730,21 +729,21 @@ $APPLICATION->IncludeComponent(
                                 <li class="item">
                                     <div class="item-block" data-youtube="pGCKeotT4mM">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/video1.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/video1.jpg');"></span>
                                         <span class="time">4:34</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/video2.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/video2.jpg');"></span>
                                         <span class="time">4:34</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/images/video3.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/video3.jpg');"></span>
                                         <span class="time">4:34</span>
                                     </div>
                                 </li>
@@ -756,7 +755,71 @@ $APPLICATION->IncludeComponent(
             </div>
         </div>
     </section>
-
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"video_reviews", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "arrOtherServices",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "19",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "LINK",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "video_reviews"
+	),
+	false
+); ?>
     <!-- SECTION 12 -->
 <? // TODO как будет каталог ?>
 <?
@@ -817,7 +880,7 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
-);?>
+); ?>
     <!--<section class="lad-otherservices">
         <div class="container">
             <div class="row">
@@ -829,28 +892,28 @@ $APPLICATION->IncludeComponent(
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices1.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/otherservices1.jpg');"></span>
                                         <span class="name">Джиппинг</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices2.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/otherservices2.jpg');"></span>
                                         <span class="name">Транспортные услуги</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices3.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/otherservices3.jpg');"></span>
                                         <span class="name">Параплан</span>
                                     </div>
                                 </li>
                                 <li class="item">
                                     <div class="item-block">
                                         <span class="image"
-                                              style="background-image: url('<?/*= SITE_TEMPLATE_PATH */?>/images/otherservices4.jpg');"></span>
+                                              style="background-image: url('<? /*= SITE_TEMPLATE_PATH */ ?>/images/otherservices4.jpg');"></span>
                                         <span class="name">Речные круизы</span>
                                     </div>
                                 </li>
