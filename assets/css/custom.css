@@ -734,7 +734,6 @@ font-size: 18px;
 
 .tour-detail_tabs__wrapper ul.tablist.main li {
     display: block;
-    padding: 15px;
     text-align: center;
     text-transform: uppercase;
     border: 1px solid #f15922;
@@ -743,6 +742,8 @@ font-size: 18px;
 }
 .tour-detail_tabs__wrapper ul.tablist.main li a {
     color: black;
+    padding: 15px;
+    display: block;
 }
 
 .tour-detail_tabs__wrapper ul.tablist.main li:hover {
