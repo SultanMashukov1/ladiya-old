@@ -9,7 +9,6 @@
 /** @var string $templateFile */
 /** @var string $templateFolder */
 /** @var string $componentPath */
-
 /** @var CBitrixComponent $component */
 
 use \Bitrix\Main\Localization\Loc,
