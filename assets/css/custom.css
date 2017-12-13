@@ -2290,7 +2290,6 @@ input.filter__button {padding-bottom: 15px !important;}
     text-transform: uppercase;
     color: #000;
     background-color: rgba(255, 255, 255, 0.6);
-    text-shadow: 0 0 0.2px rgba(0, 0, 0, 0.5);
 }
 
 .catalog__list__item__img__wrap {
@@ -2341,7 +2340,6 @@ input.filter__button {padding-bottom: 15px !important;}
 .catalog__list__item__inf__text {
     font-size: 12px;
     text-transform: uppercase;
-    text-shadow: 0 0 0.2px rgba(0, 0, 0, 0.7);
 }
 .catalog__list__item__inf__descriptions {
     margin-top: 10px;
@@ -2509,7 +2507,7 @@ input.filter__button {padding-bottom: 15px !important;}
     opacity: 1;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1200px) {
     .search__header.active .search__btn {
         right: 5%
     }
