@@ -2471,6 +2471,8 @@ input.filter__button {padding-bottom: 15px !important;}
 
 /* search */
 .search__header {
+    display: inline-block;
+    float: left;
     position: relative;
     min-height: 54px;
     transition: opacity .5s ease-out;
@@ -2505,6 +2507,7 @@ input.filter__button {padding-bottom: 15px !important;}
     position: absolute;
     right: -35px;
     top: 1px;
+    cursor: pointer;
 }
 .search__btn__close svg {
     width: 28px;
