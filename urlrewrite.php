@@ -19,6 +19,12 @@ $arUrlRewrite = array(
         'PATH' => '/transport/detail.php',
     ),
     array(
+        'CONDITION' => '#^/tours-in-russia/([^/]+)/?(?:\\?(.*))?$#',
+        'RULE' => 'CODE=$1&$2',
+        'ID' => '',
+        'PATH' => '/tours-in-russia/detail.php',
+    ),
+    array(
         'CONDITION' => '#^/photo/([^/]+)/?(?:\\?(.*))?$#',
         'RULE' => 'CODE=$1&$2',
         'ID' => '',
