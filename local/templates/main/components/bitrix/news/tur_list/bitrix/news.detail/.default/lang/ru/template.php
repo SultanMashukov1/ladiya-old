@@ -31,5 +31,5 @@ $MESS['TOUR_SEARCH_HINT_TITLE'] = '* стоимость тура на 1 чело
 $MESS['TOUR_SEARCH_BTN_TITLE'] = 'Подобрать тур';
 $MESS['TOUR_IN_PRICE_CONTAINS_TITLE'] = 'В стоимость входит';
 $MESS['TOUR_ALSO_PAYS_TITLE'] = 'Дополнительно оплачиваются';
-$MESS['TOUR_ADDITIONAL_INFO_TITLE'] = 'Дополнительно оплачиваются';
+$MESS['TOUR_ADDITIONAL_INFO_TITLE'] = 'Дополнительная информация';
 $MESS['TOUR_SELECT_EMPTY_VALUE'] = 'Не указано';
