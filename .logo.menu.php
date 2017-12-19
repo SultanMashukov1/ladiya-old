@@ -8,13 +8,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Туры по России", 
-		"/tours-in-russia/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Экскурсии", 
 		"#", 
 		Array(), 

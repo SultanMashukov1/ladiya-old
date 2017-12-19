@@ -2,21 +2,23 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Фото");
 ?>
+
     <div class="text__block__wrap">
         <div class="text___block__images" style="background-image: url('/assets/img/carousel/5.png')">
             <div class="container">
                 <span class="text___block__images__title"><?= $APPLICATION->ShowTitle(); ?></span>
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:breadcrumb",
-                    "company",
-                    Array(
-                        "PATH" => "",
-                        "SITE_ID" => "s1",
-                        "START_FROM" => "0"
-                    )
-                ); ?>
             </div>
         </div>
+    </div>
+    <section class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li class="active">Туры по России</li>
+            </ol>
+        </div>
+    </section>
+    <div class="text__block__wrap">
         <? $APPLICATION->IncludeComponent("bitrix:news.list", "photo", Array(
             "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
             "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
