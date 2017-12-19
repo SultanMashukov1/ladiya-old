@@ -935,7 +935,8 @@ a:after {
     }
 }
 
-.main-menu .nav > li > a {
+.main-menu .nav > li > a,
+.main-menu .nav > li > span {
     padding: 30px 10px;
     font-size: 15px;
     color: #2A2A2A;

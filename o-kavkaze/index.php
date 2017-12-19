@@ -6,18 +6,18 @@ $APPLICATION->SetTitle("О Кавказе");
         <div class="text___block__images" style="background-image: url('/assets/img/carousel/5.png')">
             <div class="container">
                 <span class="text___block__images__title"><?= $APPLICATION->ShowTitle(); ?></span>
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:breadcrumb",
-                    "company",
-                    Array(
-                        "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-                        "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-                        "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
-                    ),
-                    false
-                ); ?>
             </div>
         </div>
+    </div>
+    <section class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li class="active">Туры по России</li>
+            </ol>
+        </div>
+    </section>
+    <div class="text__block__wrap">
         <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"transport", 
