@@ -361,10 +361,10 @@ $this->setFrameMode(true);
                                         <? if(!empty($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
                                             <span class="core__switch__btn__text"
-                                                  data-js-core-switch-element="core__switch__btn__hidden_price_2">
+                                                  data-js-core-switch-element="core__switch__btn__hidden_price_3">
                                                 <?=Loc::getMessage('TOUR_ADDITIONAL_INFO_TITLE');?>
                                             </span>
-                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
+                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_price_3">
                                             <?=$arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT'];?>
                                         </span>
                                             </p>
