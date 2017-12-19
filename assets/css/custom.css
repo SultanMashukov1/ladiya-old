@@ -2479,13 +2479,16 @@ input.filter__button {padding-bottom: 15px !important;}
 /* search */
 .search__header {
     display: inline-block;
-    float: left;
+    float: right;
     position: relative;
     min-height: 54px;
     transition: opacity .5s ease-out;
     -moz-transition: opacity .5s ease-out;
     -webkit-transition: opacity .5s ease-out;
     -o-transition: opacity .5s ease-out;
+}
+.search__header.active {
+    float: left;
 }
 .search__pole {
     opacity: 0;
@@ -2527,12 +2530,15 @@ input.filter__button {padding-bottom: 15px !important;}
     display: none;
 }
 .search__header.active .search__pole {
-    z-index: 1;
+    z-index: 100;
     display: block;
     opacity: 1;
 }
 
 @media (max-width: 1200px) {
+    .search__header.active {
+        width: 100%;
+    }
     .search__header.active .search__btn {
         right: 5%
     }
