@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_be
 use \WM\Common\Helper;
 
 //Is POST data sent ?
-isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to']) || exit;
+isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to'],$_POST['DATE']) || exit;
 
 \Bitrix\Main\Loader::includeModule('iblock');
 
@@ -81,7 +81,7 @@ if(empty($rooms))
     <tbody>
     <? foreach($rooms as $room): ?>
         <tr>
-            <td data-label="Дата"><?=$_POST["DATE"];?></td>
+            <td data-label="Дата"><?=Helper::enc($_POST["DATE"]);?></td>
             <td data-label="Гостиница"><?=$room['HOTEL_NAME'];?></td>
             <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
