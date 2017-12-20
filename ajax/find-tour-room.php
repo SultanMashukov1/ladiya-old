@@ -36,12 +36,13 @@ if(!empty($_POST['price_to']))
 //filter by section
 if(!empty($_POST['hotel']))
     $filter['IBLOCK_SECTION_ID'] = (int) $_POST['hotel'];
+//filter by date
 if(!empty($_POST['DATE']))
     $filter['PROPERTY_DATE_VALUE'] = $_POST['DATE'];
 
 $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,
-    'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID','PROPERTY_DATE_VALUE'),
+    'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'),
 ));
 $sections = array();
 foreach($rooms as $roomId => $room)
@@ -69,6 +70,7 @@ if(empty($rooms))
     exit;
 }
 ?>
+<? var_dump($res)?>
 <table>
     <thead>
     <tr>
