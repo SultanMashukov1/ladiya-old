@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_be
 use \WM\Common\Helper;
 
 //Is POST data sent ?
-isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to'],$_POST['DATE']) || exit;
+isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to'],$_POST['date']) || exit;
 
 \Bitrix\Main\Loader::includeModule('iblock');
 
@@ -36,9 +36,6 @@ if(!empty($_POST['price_to']))
 //filter by section
 if(!empty($_POST['hotel']))
     $filter['IBLOCK_SECTION_ID'] = (int) $_POST['hotel'];
-//filter by date
-if(!empty($_POST['DATE']))
-    $filter['PROPERTY_DATE_VALUE'] = $_POST['DATE'];
 
 $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,
