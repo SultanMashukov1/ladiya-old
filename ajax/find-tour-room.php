@@ -81,7 +81,7 @@ if(empty($rooms))
     <tbody>
     <? foreach($rooms as $room): ?>
         <tr>
-            <td data-label="Дата"><?=$_POST["date"];?></td>
+            <td data-label="Дата"><?=$_POST["DATE"];?></td>
             <td data-label="Гостиница"><?=$room['HOTEL_NAME'];?></td>
             <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
