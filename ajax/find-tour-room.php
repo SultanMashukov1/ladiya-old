@@ -37,7 +37,7 @@ if(!empty($_POST['price_to']))
 if(!empty($_POST['hotel']))
     $filter['IBLOCK_SECTION_ID'] = (int) $_POST['hotel'];
 if(!empty($_POST['DATE']))
-    $filter['PROPERTY_DATE_VALUE '] = $_POST['DATE'];
+    $filter['PROPERTY_DATE_VALUE'] = $_POST['DATE'];
 
 $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,

@@ -19,7 +19,7 @@ Loc::loadMessages(__FILE__);
 
 $this->setFrameMode(true);
 ?>
-<? var_dump($arResult["PROPERTIES"]["DATE"])?>
+<? var_dump($arResult["PROPERTIES"]["DATE"]["VALUE"])?>
 <div class="tour-detail">
 
     <section class="container-fluid tour-detail_photos">
