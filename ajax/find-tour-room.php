@@ -87,7 +87,7 @@ if(empty($rooms))
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
             <td data-label="Стоимость"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
             <td data-label="Доплата за 1-местное размещение"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
-            <td data-label="dfed"><?=$room['PROPERTY_DATE_VALUE'];?></td>
+            <td data-label="dfed"><?=$room['PROPERTY_DATE'];?></td>
         </tr>
     <? endforeach; ?>
     </tbody>
