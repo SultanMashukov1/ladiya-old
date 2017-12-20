@@ -70,7 +70,6 @@ if(empty($rooms))
     exit;
 }
 ?>
-<? var_dump($roomsIds)?>
 <table>
     <thead>
     <tr>
