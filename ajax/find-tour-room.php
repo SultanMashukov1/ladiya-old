@@ -70,7 +70,6 @@ if(empty($rooms))
     exit;
 }
 ?>
-<? var_dump($res)?>
 <table>
     <thead>
     <tr>
