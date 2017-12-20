@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_be
 use \WM\Common\Helper;
 
 //Is POST data sent ?
-isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to']) || exit;
+isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to'],$_POST['DATE']) || exit;
 
 \Bitrix\Main\Loader::includeModule('iblock');
 
@@ -36,10 +36,12 @@ if(!empty($_POST['price_to']))
 //filter by section
 if(!empty($_POST['hotel']))
     $filter['IBLOCK_SECTION_ID'] = (int) $_POST['hotel'];
+if(!empty($_POST['DATE']))
+    $filter['PROPERTY_DATE_VALUE '] = $_POST['DATE'];
 
 $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,
-    'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'),
+    'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID','PROPERTY_DATE_VALUE'),
 ));
 $sections = array();
 foreach($rooms as $roomId => $room)
@@ -70,6 +72,7 @@ if(empty($rooms))
 <table>
     <thead>
     <tr>
+        <th scope="col">Дата</th>
         <th scope="col">Гостиница</th>
         <th scope="col">Номер</th>
         <th scope="col">Тип номера</th>
@@ -80,6 +83,7 @@ if(empty($rooms))
     <tbody>
     <? foreach($rooms as $room): ?>
         <tr>
+            <td data-label="Гостиница"><?=$room['PROPERTY_DATE_VALUE'];?></td>
             <td data-label="Гостиница"><?=$room['HOTEL_NAME'];?></td>
             <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
