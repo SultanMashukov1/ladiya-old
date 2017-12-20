@@ -72,7 +72,6 @@ if(empty($rooms))
 <table>
     <thead>
     <tr>
-        <th scope="col">Дата</th>
         <th scope="col">Гостиница</th>
         <th scope="col">Номер</th>
         <th scope="col">Тип номера</th>
@@ -83,7 +82,6 @@ if(empty($rooms))
     <tbody>
     <? foreach($rooms as $room): ?>
         <tr>
-            <td data-label="Гостиница"><?=$room['PROPERTY_DATE_VALUE'];?></td>
             <td data-label="Гостиница"><?=$room['HOTEL_NAME'];?></td>
             <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
