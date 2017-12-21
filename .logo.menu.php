@@ -1,8 +1,15 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Туры", 
+		"Туры по Кавказу", 
 		"/tours/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Туры по России", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
@@ -24,13 +31,6 @@ $aMenuLinks = Array(
 	Array(
 		"Гостиницы", 
 		"/hotel/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Санатории", 
-		"/sanatorium/", 
 		Array(), 
 		Array(), 
 		"" 
