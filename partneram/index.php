@@ -20,7 +20,6 @@ $APPLICATION->SetTitle("Партнерам");
 <div class="text__block__wrap">
     <div class="container">
         <div class="text__block">
-            <p>Текст</p>
         </div>
     </div>
 </div>
