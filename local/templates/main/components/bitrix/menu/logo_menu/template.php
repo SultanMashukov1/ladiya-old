@@ -17,8 +17,9 @@
         <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Еще</a>
             <ul class="dropdown-menu">
-                <li><a href="/tours-in-russia/">Туры по России</a></li>
-                <li><a href="">Другие услуги</a></li>
+                <? $APPLICATION->IncludeFile(
+                    SITE_DIR."include/logo_menu/logo_menu-more.php"
+                ); ?>
             </ul>
         </li>
     </ul>
