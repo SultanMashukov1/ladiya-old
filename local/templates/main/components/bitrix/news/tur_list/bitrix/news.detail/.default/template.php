@@ -1,4 +1,4 @@
-<? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -28,31 +28,31 @@ $this->setFrameMode(true);
 
                 <div class="container">
                     <div class="title">
-                        <h3><?=$arResult['NAME']?></h3>
+                        <h3><?= $arResult['NAME'] ?></h3>
                         <p>
-                            <?=Helper::pluralizeN(Helper::propValue('DAY', $arResult), array(
+                            <?= Helper::pluralizeN(Helper::propValue('DAY', $arResult), array(
                                 Loc::getMessage('TOUR_DAY_ONE'),
                                 Loc::getMessage('TOUR_DAY_TWO'),
                                 Loc::getMessage('TOUR_DAY_MORE'),
-                            ));?>
-                            <?=Loc::getMessage('TOUR_DAYS_/');?>
-                            <?=Helper::pluralizeN(Helper::propValue('NIGHT', $arResult), array(
+                            )); ?>
+                            <?= Loc::getMessage('TOUR_DAYS_/'); ?>
+                            <?= Helper::pluralizeN(Helper::propValue('NIGHT', $arResult), array(
                                 Loc::getMessage('TOUR_NIGHT_ONE'),
                                 Loc::getMessage('TOUR_NIGHT_TWO'),
                                 Loc::getMessage('TOUR_NIGHT_MORE'),
-                            ));?>
+                            )); ?>
                         </p>
                     </div>
                     <div class="location">
-                        <p><?=$arResult['SECTION']['PATH'][0]['NAME'];?></p>
+                        <p><?= $arResult['SECTION']['PATH'][0]['NAME']; ?></p>
                     </div>
                 </div>
 
-                <? if(!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
+                <? if (!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
                     <div class="carousel-inner" role="listbox">
-                        <? foreach($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
+                        <? foreach ($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
                             <div class="item">
-                                <div class="img" style="background-image: url('<?=$src;?>');"></div>
+                                <div class="img" style="background-image: url('<?= $src; ?>');"></div>
                             </div>
                         <? endforeach; ?>
                     </div>
@@ -64,7 +64,7 @@ $this->setFrameMode(true);
     <section class="container page__program__detail__download">
         <div class="row">
             <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать программу тура"
-               class="page__program__detail__download__btn"><?=Loc::getMessage('TOUR_DOWNLOAD_PDF');?></a>
+               class="page__program__detail__download__btn"><?= Loc::getMessage('TOUR_DOWNLOAD_PDF'); ?></a>
         </div>
     </section>
     <section class="container tour-detail_tabs">
@@ -72,65 +72,65 @@ $this->setFrameMode(true);
             <div class="tour-detail_tabs__wrapper">
 
                 <!-- TAB BUTTONS -->
-                <ul class="tablist main<? if($arResult['TABS_FIVE_ITEMS']) { ?> js-five-items<? } ?>" role="tablist">
+                <ul class="tablist main<? if ($arResult['TABS_FIVE_ITEMS']) { ?> js-five-items<? } ?>" role="tablist">
                     <li role="presentation"><a href="#description" aria-controls="description" role="tab"
-                                               data-toggle="tab"><?=Loc::getMessage('TOUR_DESCRIPTION_TITLE');?></a>
+                                               data-toggle="tab"><?= Loc::getMessage('TOUR_DESCRIPTION_TITLE'); ?></a>
                     </li>
                     <li role="presentation">
-                        <a href="#program" aria-controls="program" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PROGRAMM_TITLE');?></a>
+                        <a href="#program" aria-controls="program" role="tab" data-toggle="tab"><?= Loc::getMessage('TOUR_PROGRAMM_TITLE'); ?></a>
                     </li>
-                    <? if($arResult['SHOW_PRICE_TAB']): ?>
+                    <? if ($arResult['SHOW_PRICE_TAB']): ?>
                         <li role="presentation">
-                            <a href="#price" aria-controls="price" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_PRICE_TITLE');?></a>
+                            <a href="#price" aria-controls="price" role="tab" data-toggle="tab"><?= Loc::getMessage('TOUR_PRICE_TITLE'); ?></a>
                         </li>
                     <? endif; ?>
-                    <? if($arResult['SHOW_GROUP_TAB']): ?>
+                    <? if ($arResult['SHOW_GROUP_TAB']): ?>
                         <li role="presentation">
-                            <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_GROUP_TITLE');?></a>
+                            <a href="#group" aria-controls="group" role="tab" data-toggle="tab"><?= Loc::getMessage('TOUR_GROUP_TITLE'); ?></a>
                         </li>
                     <? endif; ?>
                     <li role="presentation">
-                        <a href="#jotting" aria-controls="jotting" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_MEMO_TITLE');?></a>
+                        <a href="#jotting" aria-controls="jotting" role="tab" data-toggle="tab"><?= Loc::getMessage('TOUR_MEMO_TITLE'); ?></a>
                     </li>
                     <li role="presentation">
-                        <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?=Loc::getMessage('TOUR_REVIEWS_TITLE');?></a>
+                        <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab"><?= Loc::getMessage('TOUR_REVIEWS_TITLE'); ?></a>
                     </li>
                 </ul>
 
                 <div class="bg">
                     <!-- ICONS -->
                     <div class="icons">
-                        <? if(Helper::propFilled('PRICE', $arResult)): ?>
+                        <? if (Helper::propFilled('PRICE', $arResult)): ?>
                             <div class="ruble">
-                                <h5><?=$arResult['PROPERTIES']['PRICE']['NAME'];?></h5>
-                                <p><?=Loc::getMessage('TOUR_PRICE_FROM');?> <?=Helper::escPropValue('PRICE', $arResult);?> <?=Loc::getMessage('TOUR_PRICE_CURRENCY_2');?></p>
+                                <h5><?= $arResult['PROPERTIES']['PRICE']['NAME']; ?></h5>
+                                <p><?= Loc::getMessage('TOUR_PRICE_FROM'); ?> <?= Helper::escPropValue('PRICE', $arResult); ?> <?= Loc::getMessage('TOUR_PRICE_CURRENCY_2'); ?></p>
                             </div>
                         <? endif; ?>
 
-                        <? if(Helper::propFilled('TYPE', $arResult)): ?>
+                        <? if (Helper::propFilled('TYPE', $arResult)): ?>
                             <div class="backpack">
-                                <h5><?=$arResult['PROPERTIES']['TYPE']['NAME'];?></h5>
-                                <p><?=Helper::escPropValue('TYPE', $arResult);?></p>
+                                <h5><?= $arResult['PROPERTIES']['TYPE']['NAME']; ?></h5>
+                                <p><?= Helper::escPropValue('TYPE', $arResult); ?></p>
                             </div>
                         <? endif; ?>
 
-                        <? if(Helper::propFilled('DAY', $arResult)): ?>
+                        <? if (Helper::propFilled('DAY', $arResult)): ?>
                             <div class="calendar">
-                                <h5><?=$arResult['PROPERTIES']['DAYS_COUNT']['NAME'];?></h5>
+                                <h5><?= $arResult['PROPERTIES']['DAYS_COUNT']['NAME']; ?></h5>
                                 <p>
-                                    <?=Helper::pluralizeN(Helper::propValue('DAYS_COUNT', $arResult), array(
+                                    <?= Helper::pluralizeN(Helper::propValue('DAYS_COUNT', $arResult), array(
                                         Loc::getMessage('TOUR_DAY_ONE'),
                                         Loc::getMessage('TOUR_DAY_TWO'),
                                         Loc::getMessage('TOUR_DAY_MORE'),
-                                    ));?>
+                                    )); ?>
                                 </p>
                             </div>
                         <? endif; ?>
 
-                        <? if(Helper::propFilled('TRANSPORT', $arResult)): ?>
+                        <? if (Helper::propFilled('TRANSPORT', $arResult)): ?>
                             <div class="bus">
-                                <h5><?=$arResult['PROPERTIES']['TRANSPORT']['NAME'];?></h5>
-                                <p><?=Helper::escPropValue('TRANSPORT', $arResult);?></p>
+                                <h5><?= $arResult['PROPERTIES']['TRANSPORT']['NAME']; ?></h5>
+                                <p><?= Helper::escPropValue('TRANSPORT', $arResult); ?></p>
                             </div>
                         <? endif; ?>
                     </div>
@@ -142,13 +142,13 @@ $this->setFrameMode(true);
                             <div class="row">
                                 <div class="col-xs-12 col-md-6 text">
 
-                                    <?=$arResult['DETAIL_TEXT'];?>
+                                    <?= $arResult['DETAIL_TEXT']; ?>
 
                                 </div>
                                 <div class="col-xs-12 col-md-6">
 
-                                    <? if(Helper::propFilled('ROUTE', $arResult)): ?>
-                                        <h5><b><?=Loc::getMessage('TOUR_ROUTE_TITLE');?>: <?=Helper::escPropValue('ROUTE', $arResult);?></b></h5>
+                                    <? if (Helper::propFilled('ROUTE', $arResult)): ?>
+                                        <h5><b><?= Loc::getMessage('TOUR_ROUTE_TITLE'); ?>: <?= Helper::escPropValue('ROUTE', $arResult); ?></b></h5>
                                     <? endif; ?>
 
                                     <div id="map"></div>
@@ -160,24 +160,23 @@ $this->setFrameMode(true);
                         <div role="tabpanel" class="tab-pane" id="program">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <? if(!empty($arResult['PROGRAMMS'])): ?>
+                                    <? if (!empty($arResult['PROGRAMMS'])): ?>
                                         <?
                                         $first = true;
                                         ?>
                                         <!-- TAB BUTTONS -->
                                         <ul class="tablist inner" role="tablist">
-                                            <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
+                                            <? foreach ($arResult['PROGRAMMS'] as $id => $programm): ?>
                                                 <?
-                                                if($first)
-                                                {
+                                                if ($first) {
                                                     $first = false;
                                                     $class = 'active';
                                                 } else
                                                     $class = '';
                                                 ?>
-                                                <li role="presentation" class="<?=$class?>">
-                                                    <a href="#p<?=$id;?>" aria-controls="p<?=$id;?>" role="tab"
-                                                       data-toggle="tab"><?=$programm['NAME'];?></a>
+                                                <li role="presentation" class="<?= $class ?>">
+                                                    <a href="#p<?= $id; ?>" aria-controls="p<?= $id; ?>" role="tab"
+                                                       data-toggle="tab"><?= $programm['NAME']; ?></a>
                                                 </li>
                                             <? endforeach; ?>
                                         </ul>
@@ -188,35 +187,50 @@ $this->setFrameMode(true);
 
                                         <!-- TAB CONTENT -->
                                         <div class="tab-content inner">
-                                            <? foreach($arResult['PROGRAMMS'] as $id => $programm): ?>
+                                            <? foreach ($arResult['PROGRAMMS'] as $id => $programm): ?>
                                                 <?
-                                                if($first)
-                                                {
+                                                if ($first) {
                                                     $first = false;
                                                     $class = ' active';
                                                 } else
                                                     $class = '';
                                                 ?>
-                                                <div role="tabpanel" class="tab-pane<?=$class?>" id="p<?=$id;?>">
-                                                    <div class="img" style="background-image: url(<?=$programm['PICTURE_SRC'];?>);"></div>
+                                                <div role="tabpanel" class="tab-pane<?= $class ?>" id="p<?= $id; ?>">
+                                                    <div class="img" style="background-image: url(<?= $programm['PICTURE_SRC']; ?>);"></div>
                                                     <div class="text page__program__detail__list__item">
-                                                        <div class="page__program__detail__list__item__title"><?=$programm['NAME'];?></div>
+                                                        <div class="page__program__detail__list__item__title"><?= $programm['NAME']; ?></div>
                                                         <div class="page__program__detail__list__item__text">
-                                                            <?=$programm['PREVIEW_TEXT'];?>
+                                                            <?= $programm['PREVIEW_TEXT']; ?>
 
-                                                            <? if(
-                                                                !empty($programm['PROPERTY_ADDITIONAL_TITLE_VALUE']) &&
-                                                                !empty($programm['PROPERTY_ADDITIONAL_TEXT_VALUE'])
-                                                            ): ?>
-                                                                <p class="core__switch__btn">
-                                                                    <span class="core__switch__btn__text"
-                                                                          data-js-core-switch-element="core__switch__btn__hidden_<?=$id?>_1">
-                                                                          <?=$programm['PROPERTY_ADDITIONAL_TITLE_VALUE'];?>
-                                                                    </span>
-                                                                    <span class="core__switch__btn__hidden core__switch__btn__hidden_<?=$id?>_1">
-                                                                        <?=$programm['PROPERTY_ADDITIONAL_TEXT_VALUE']['TEXT'];?>
-                                                                    </span>
-                                                                </p>
+                                                            <? $arSpoilerText = $arResult['SPOILER_TEXT'][$id];
+                                                            if ($arSpoilerText): ?>
+                                                                <? $iCount = count($arSpoilerText['ADDITIONAL_TITLE']);
+                                                                for ($i = 0; $i <= $iCount; $i++):?>
+                                                                    <? if (
+                                                                        !empty($arSpoilerText['ADDITIONAL_TITLE'][$i]) &&
+                                                                        !empty($arSpoilerText['ADDITIONAL_TEXT'][$i])
+                                                                    ): ?>
+                                                                        <? if ($arSpoilerText['TEXT_BEFORE'][$i]): ?>
+                                                                            <p>
+                                                                                <?= $arSpoilerText['TEXT_BEFORE'][$i]; ?>
+                                                                            </p>
+                                                                        <? endif; ?>
+                                                                        <p class="core__switch__btn">
+                                                                        <span class="core__switch__btn__text"
+                                                                              data-js-core-switch-element="core__switch__btn__hidden_<?= $i ?>_1">
+                                                                              <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
+                                                                        </span>
+                                                                            <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $i ?>_1">
+                                                                            <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
+                                                                        </span>
+                                                                        </p>
+                                                                    <? endif; ?>
+                                                                    <? if ($arSpoilerText['TEXT_AFTER'][$i]): ?>
+                                                                        <p>
+                                                                            <?= $arSpoilerText['TEXT_AFTER'][$i]; ?>
+                                                                        </p>
+                                                                    <? endif; ?>
+                                                                <? endfor; ?>
                                                             <? endif; ?>
 
                                                         </div>
@@ -231,11 +245,11 @@ $this->setFrameMode(true);
                             </div>
                         </div>
 
-                        <? if($arResult['SHOW_PRICE_TAB']): ?>
+                        <? if ($arResult['SHOW_PRICE_TAB']): ?>
                             <div role="tabpanel" class="tab-pane" id="price">
 
                                 <form action="/ajax/find-tour-room.php" class="filter js-ajax-filter" method="post">
-                                    <input type="hidden" name="tour_id" value="<?=$arResult['ID'];?>">
+                                    <input type="hidden" name="tour_id" value="<?= $arResult['ID']; ?>">
                                     <div class="row">
 
                                         <div class="col-xs-12 col-sm-4">
@@ -247,12 +261,13 @@ $this->setFrameMode(true);
 
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="input">
-                                                <? if(!empty($arResult['HOTELS'])): ?>
-                                                    <label for="hotel"><?=Loc::getMessage('TOUR_HOTEL_TITLE');?></label>
+                                                <? if (!empty($arResult['HOTELS'])): ?>
+                                                    <label for="hotel"><?= Loc::getMessage('TOUR_HOTEL_TITLE'); ?></label>
                                                     <select name="hotel" id="hotel">
-                                                        <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
-                                                        <? foreach($arResult['HOTELS'] as $id => $hotel): ?>
-                                                            <option value="<?=$id;?>"><?=$hotel['NAME'];?></option>
+                                                        <option value=""
+                                                                selected="selected"><?= Loc::getMessage('TOUR_SELECT_EMPTY_VALUE'); ?></option>
+                                                        <? foreach ($arResult['HOTELS'] as $id => $hotel): ?>
+                                                            <option value="<?= $id; ?>"><?= $hotel['NAME']; ?></option>
                                                         <? endforeach; ?>
                                                     </select>
                                                 <? endif; ?>
@@ -261,12 +276,13 @@ $this->setFrameMode(true);
 
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="input">
-                                                <? if(!empty($arResult['ROOM_TYPES'])): ?>
-                                                    <label for="room_type"><?=Loc::getMessage('TOUR_ROOM_TYPE_TITLE');?></label>
+                                                <? if (!empty($arResult['ROOM_TYPES'])): ?>
+                                                    <label for="room_type"><?= Loc::getMessage('TOUR_ROOM_TYPE_TITLE'); ?></label>
                                                     <select name="room_type" id="room_type">
-                                                        <option value="" selected="selected"><?=Loc::getMessage('TOUR_SELECT_EMPTY_VALUE');?></option>
-                                                        <? foreach($arResult['ROOM_TYPES'] as $id => $roomType): ?>
-                                                            <option value="<?=$id;?>"><?=$roomType['VALUE'];?></option>
+                                                        <option value=""
+                                                                selected="selected"><?= Loc::getMessage('TOUR_SELECT_EMPTY_VALUE'); ?></option>
+                                                        <? foreach ($arResult['ROOM_TYPES'] as $id => $roomType): ?>
+                                                            <option value="<?= $id; ?>"><?= $roomType['VALUE']; ?></option>
                                                         <? endforeach; ?>
                                                     </select>
                                                 <? endif; ?>
@@ -274,14 +290,14 @@ $this->setFrameMode(true);
                                         </div>
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="core__price">
-                                                <div class="core__price__title"><?=Loc::getMessage('TOUR_SEARCH_PRICE_TITLE');?></div>
+                                                <div class="core__price__title"><?= Loc::getMessage('TOUR_SEARCH_PRICE_TITLE'); ?></div>
                                                 <div class="core__price__item">
                                                     <div class="core__price__item_l">
-                                                        <span><?=Loc::getMessage('TOUR_PRICE_FROM');?></span>
+                                                        <span><?= Loc::getMessage('TOUR_PRICE_FROM'); ?></span>
                                                         <input type="text" name="price_from" placeholder="0">
                                                     </div>
                                                     <div class="core__price__item_r">
-                                                        <span><?=Loc::getMessage('TOUR_PRICE_TO');?></span>
+                                                        <span><?= Loc::getMessage('TOUR_PRICE_TO'); ?></span>
                                                         <input type="text" name="price_to" placeholder="0">
                                                     </div>
                                                 </div>
@@ -332,40 +348,40 @@ $this->setFrameMode(true);
 */ ?>
                                     </div>
 
-                                    <button class="calculate" type="submit"><?=Loc::getMessage('TOUR_SEARCH_BTN_TITLE');?></button>
-                                    <div class="disclaimer"><?=Loc::getMessage('TOUR_SEARCH_HINT_TITLE');?></div>
+                                    <button class="calculate" type="submit"><?= Loc::getMessage('TOUR_SEARCH_BTN_TITLE'); ?></button>
+                                    <div class="disclaimer"><?= Loc::getMessage('TOUR_SEARCH_HINT_TITLE'); ?></div>
 
                                     <div class="page__program__detail__list__item__text">
-                                        <? if(!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
+                                        <? if (!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
                                             <span class="core__switch__btn__text"
                                                   data-js-core-switch-element="core__switch__btn__hidden_price_1">
-                                                <?=Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE');?>
+                                                <?= Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE'); ?>
                                             </span>
                                                 <span class="core__switch__btn__hidden core__switch__btn__hidden_price_1">
-                                                <?=$arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'];?>
+                                                <?= $arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT']; ?>
                                             </span>
                                             </p>
                                         <? endif; ?>
-                                        <? if(!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
+                                        <? if (!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
                                             <span class="core__switch__btn__text"
                                                   data-js-core-switch-element="core__switch__btn__hidden_price_2">
-                                                <?=Loc::getMessage('TOUR_ALSO_PAYS_TITLE');?>
+                                                <?= Loc::getMessage('TOUR_ALSO_PAYS_TITLE'); ?>
                                             </span>
                                                 <span class="core__switch__btn__hidden core__switch__btn__hidden_price_2">
-                                            <?=$arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'];?>
+                                            <?= $arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT']; ?>
                                         </span>
                                             </p>
                                         <? endif; ?>
-                                        <? if(!empty($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT'])): ?>
+                                        <? if (!empty($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
                                             <span class="core__switch__btn__text"
                                                   data-js-core-switch-element="core__switch__btn__hidden_price_3">
-                                                <?=Loc::getMessage('TOUR_ADDITIONAL_INFO_TITLE');?>
+                                                <?= Loc::getMessage('TOUR_ADDITIONAL_INFO_TITLE'); ?>
                                             </span>
                                                 <span class="core__switch__btn__hidden core__switch__btn__hidden_price_3">
-                                            <?=$arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT'];?>
+                                            <?= $arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT']; ?>
                                         </span>
                                             </p>
                                         <? endif; ?>
@@ -380,7 +396,7 @@ $this->setFrameMode(true);
                         <div role="tabpanel" class="tab-pane" id="jotting">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p><?=TxtToHTML($arResult['PROPERTIES']['TOUR_MEMO']['VALUE']['TEXT']);?></p>
+                                    <p><?= TxtToHTML($arResult['PROPERTIES']['TOUR_MEMO']['VALUE']['TEXT']); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -440,9 +456,9 @@ $this->setFrameMode(true);
                                 'AJAX_OPTION_ADDITIONAL' => '',
                             )); ?>
                         </div>
-                        <? if($arResult['SHOW_GROUP_TAB']): ?>
+                        <? if ($arResult['SHOW_GROUP_TAB']): ?>
                             <div role="tabpanel" class="tab-pane" id="group">
-                                <?=$arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE'];?>
+                                <?= $arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE']; ?>
                             </div>
                         <? endif; ?>
                     </div>
@@ -450,12 +466,12 @@ $this->setFrameMode(true);
 
                 <div class="row addtional-buttons">
                     <div class="col-xs-12 col-sm-6">
-                        <a href="#" class="booking"><?=Loc::getMessage('TOUR_ORDER_BTN_TITLE');?></a>
+                        <a href="#" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
                     </div>
-                    <? if(!empty($arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'])): ?>
+                    <? if (!empty($arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'])): ?>
                         <div class="col-xs-12 col-sm-6">
-                            <a href="<?=$arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'];?>" class="full_program">
-                                <?=Loc::getMessage('TOUR_SHOW_FULL_PROGRAMM_TITLE');?>
+                            <a href="<?= $arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC']; ?>" class="full_program">
+                                <?= Loc::getMessage('TOUR_SHOW_FULL_PROGRAMM_TITLE'); ?>
                             </a>
                         </div>
                     <? endif; ?>
@@ -470,17 +486,17 @@ $this->setFrameMode(true);
         <div class="row">
             <div class="col-xs-12">
                 <div class="title">
-                    <h3><?=Loc::getMessage('TOUR_GALLERY_TITLE');?></h3>
+                    <h3><?= Loc::getMessage('TOUR_GALLERY_TITLE'); ?></h3>
                 </div>
             </div>
         </div>
 
         <div class="row gallery__photo__slider">
-            <? if(!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
-                <? foreach($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
+            <? if (!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
+                <? foreach ($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 item">
-                        <a href="<?=$src;?>" data-fancybox="photo">
-                            <span style="background-image: url('<?=$src;?>');"></span>
+                        <a href="<?= $src; ?>" data-fancybox="photo">
+                            <span style="background-image: url('<?= $src; ?>');"></span>
                         </a>
                     </div>
                 <? endforeach; ?>
@@ -494,13 +510,13 @@ $this->setFrameMode(true);
         </div>
     </section>
 
-    <? if(!empty($arResult['SIMILAR_TOURS'])): ?>
+    <? if (!empty($arResult['SIMILAR_TOURS'])): ?>
         <section class="container tour-detail_interest">
 
             <div class="row">
                 <div class="col-xs-12">
                     <div class="title">
-                        <h3><?=Loc::getMessage('TOUR_MAYBE_INTERESTED');?></h3>
+                        <h3><?= Loc::getMessage('TOUR_MAYBE_INTERESTED'); ?></h3>
                     </div>
                 </div>
             </div>
@@ -610,62 +626,62 @@ $this->setFrameMode(true);
                 </a>
             </div>-->
             <div class="catalog__list catalog__list_3">
-                <? foreach($arResult['SIMILAR_TOURS'] as $tour): ?>
-                    <a href="<?=$tour['DETAIL_PAGE_URL'];?>" class="catalog__list__item">
-                        <div class="catalog__list__item__img" style="background-image: url('<?=$tour['PICTURE_SRC'];?>');">
-                            <?/* if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])): */?><!--
-                                <div class="discount">-<?/*=(int) $tour['PROPERTY_DISCOUNT_VALUE'];*/?>%</div>
-                            --><?/* endif; */?>
-                            <div class="catalog__list__item__img__title"><?=$tour['NAME'];?></div>
+                <? foreach ($arResult['SIMILAR_TOURS'] as $tour): ?>
+                    <a href="<?= $tour['DETAIL_PAGE_URL']; ?>" class="catalog__list__item">
+                        <div class="catalog__list__item__img" style="background-image: url('<?= $tour['PICTURE_SRC']; ?>');">
+                            <? /* if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])): */ ?><!--
+                                <div class="discount">-<? /*=(int) $tour['PROPERTY_DISCOUNT_VALUE'];*/ ?>%</div>
+                            --><? /* endif; */ ?>
+                            <div class="catalog__list__item__img__title"><?= $tour['NAME']; ?></div>
                             <div class="catalog__list__item__img__wrap">
                                 <div class="catalog__list__item__img__wrap__table">
                                     <div class="catalog__list__item__img__wrap__table__cell">
                                         <div class="catalog__list__item__img__wrap__title">
-                                            <?=$tour['NAME'];?>
+                                            <?= $tour['NAME']; ?>
                                         </div>
                                         <span class="catalog__list__item__img__wrap__text">
-                                            <?=$tour['PREVIEW_TEXT'];?>
+                                            <?= $tour['PREVIEW_TEXT']; ?>
                                         </span>
                                         <div class="catalog__list__item__img__wrap__btn">
-                                            <?=Loc::getMessage('TOUR_MORE_BTN');?>
+                                            <?= Loc::getMessage('TOUR_MORE_BTN'); ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="catalog__list__item__inf">
-                            <? if(!empty($tour['PROPERTY_HEADER_VALUE'])): ?>
+                            <? if (!empty($tour['PROPERTY_HEADER_VALUE'])): ?>
                                 <div class="catalog__list__item__inf__text">
-                                    <?=$tour['PROPERTY_HEADER_VALUE'];?>
+                                    <?= $tour['PROPERTY_HEADER_VALUE']; ?>
                                 </div>
                             <? endif; ?>
                             <div class="catalog__list__item__inf__footer">
                                 <div class="catalog__list__item__inf__day">
-                                    <? if(!empty($tour['PROPERTY_DAY_VALUE'])): ?>
+                                    <? if (!empty($tour['PROPERTY_DAY_VALUE'])): ?>
                                         <span>
-                                        <?=Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(
+                                        <?= Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(
                                             Loc::getMessage('TOUR_DAY_ONE'),
                                             Loc::getMessage('TOUR_DAY_TWO'),
                                             Loc::getMessage('TOUR_DAY_MORE'),
-                                        ));?>
+                                        )); ?>
                                     </span>
                                     <? endif; ?>
-                                    <? if(!empty($tour['PROPERTY_NIGHT_VALUE'])): ?>
-                                        <?=Loc::getMessage('TOUR_DAYS_/');?>
+                                    <? if (!empty($tour['PROPERTY_NIGHT_VALUE'])): ?>
+                                        <?= Loc::getMessage('TOUR_DAYS_/'); ?>
                                         <span>
-                                            <?=Helper::pluralizeN($tour['PROPERTY_NIGHT_VALUE'], array(
+                                            <?= Helper::pluralizeN($tour['PROPERTY_NIGHT_VALUE'], array(
                                                 Loc::getMessage('TOUR_NIGHT_ONE'),
                                                 Loc::getMessage('TOUR_NIGHT_TWO'),
                                                 Loc::getMessage('TOUR_NIGHT_MORE'),
-                                            ));?>
+                                            )); ?>
                                         </span>
                                     <? endif; ?>
                                 </div>
-                                <? if(!empty($tour['PROPERTY_PRICE_VALUE'])): ?>
+                                <? if (!empty($tour['PROPERTY_PRICE_VALUE'])): ?>
                                     <div class="catalog__list__item__inf__price">
-                                        <?=Loc::getMessage('TOUR_PRICE_FROM');?>
-                                        <?=number_format($tour['PROPERTY_PRICE_VALUE'], 0, '', ' ');?>
-                                        <?=Loc::getMessage('TOUR_PRICE_CURRENCY_1');?>
+                                        <?= Loc::getMessage('TOUR_PRICE_FROM'); ?>
+                                        <?= number_format($tour['PROPERTY_PRICE_VALUE'], 0, '', ' '); ?>
+                                        <?= Loc::getMessage('TOUR_PRICE_CURRENCY_1'); ?>
                                     </div>
                                 <? endif; ?>
                             </div>
@@ -673,18 +689,18 @@ $this->setFrameMode(true);
                     </a>
                 <? endforeach; ?>
                 <!--<div class="col-xs-12 col-sm-6 col-md-4 item">
-                    <div class="img" style="background-image: url('<?/*=$tour['PICTURE_SRC'];*/?>')">
-                        <?/* if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])): */?>
-                            <div class="discount">-<?/*=(int) $tour['PROPERTY_DISCOUNT_VALUE'];*/?>%</div>
-                        <?/* endif; */?>
-                        <h3><?/*=$tour['NAME'];*/?></h3>
+                    <div class="img" style="background-image: url('<? /*=$tour['PICTURE_SRC'];*/ ?>')">
+                        <? /* if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])): */ ?>
+                            <div class="discount">-<? /*=(int) $tour['PROPERTY_DISCOUNT_VALUE'];*/ ?>%</div>
+                        <? /* endif; */ ?>
+                        <h3><? /*=$tour['NAME'];*/ ?></h3>
 
                         <div class="text">
                             <div class="table">
                                 <div class="cell">
-                                    <p><?/*=$tour['PREVIEW_TEXT'];*/?></p>
+                                    <p><? /*=$tour['PREVIEW_TEXT'];*/ ?></p>
 
-                                    <a href="<?/*=$tour['DETAIL_PAGE_URL'];*/?>"><?/*=Loc::getMessage('TOUR_MORE_BTN');*/?></a>
+                                    <a href="<? /*=$tour['DETAIL_PAGE_URL'];*/ ?>"><? /*=Loc::getMessage('TOUR_MORE_BTN');*/ ?></a>
                                 </div>
                             </div>
                         </div>
@@ -694,43 +710,43 @@ $this->setFrameMode(true);
                     <div class="info">
                         <div class="text">
 
-                            <?/* if(!empty($tour['PROPERTY_HEADER_VALUE'])): */?>
-                                <h5><?/*=$tour['PROPERTY_HEADER_VALUE'];*/?></h5>
-                            <?/* endif; */?>
+                            <? /* if(!empty($tour['PROPERTY_HEADER_VALUE'])): */ ?>
+                                <h5><? /*=$tour['PROPERTY_HEADER_VALUE'];*/ ?></h5>
+                            <? /* endif; */ ?>
                             <div class="data-type">
-                                <?/* if(!empty($tour['PROPERTY_DAY_VALUE'])): */?>
+                                <? /* if(!empty($tour['PROPERTY_DAY_VALUE'])): */ ?>
                                     <span>
-                                        <?/*=Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(
+                                        <? /*=Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(
                                             Loc::getMessage('TOUR_DAY_ONE'),
                                             Loc::getMessage('TOUR_DAY_TWO'),
                                             Loc::getMessage('TOUR_DAY_MORE'),
-                                        ));*/?>
+                                        ));*/ ?>
                                     </span>
-                                <?/* endif; */?>
-                                <?/* if(!empty($tour['PROPERTY_NIGHT_VALUE'])): */?>
+                                <? /* endif; */ ?>
+                                <? /* if(!empty($tour['PROPERTY_NIGHT_VALUE'])): */ ?>
                                     <span>
-                                            <?/*=Helper::pluralizeN($tour['PROPERTY_NIGHT_VALUE'], array(
+                                            <? /*=Helper::pluralizeN($tour['PROPERTY_NIGHT_VALUE'], array(
                                                 Loc::getMessage('TOUR_NIGHT_ONE'),
                                                 Loc::getMessage('TOUR_NIGHT_TWO'),
                                                 Loc::getMessage('TOUR_NIGHT_MORE'),
-                                            ));*/?>
+                                            ));*/ ?>
                                         </span>
-                                <?/* endif; */?>
+                                <? /* endif; */ ?>
                             </div>
 
                         </div>
 
                         <div class="price">
                             <div>
-                                <?/* if(!empty($tour['PROPERTY_PRICE_VALUE'])): */?>
+                                <? /* if(!empty($tour['PROPERTY_PRICE_VALUE'])): */ ?>
                                     <span>
                                             <bold>
-                                                <?/*=Loc::getMessage('TOUR_PRICE_FROM');*/?>
-                                                <?/*=number_format($tour['PROPERTY_PRICE_VALUE'], 0, '', ' ');*/?>
-                                                <?/*=Loc::getMessage('TOUR_PRICE_CURRENCY_1');*/?>
+                                                <? /*=Loc::getMessage('TOUR_PRICE_FROM');*/ ?>
+                                                <? /*=number_format($tour['PROPERTY_PRICE_VALUE'], 0, '', ' ');*/ ?>
+                                                <? /*=Loc::getMessage('TOUR_PRICE_CURRENCY_1');*/ ?>
                                             </bold>
                                         </span>
-                                <?/* endif; */?>
+                                <? /* endif; */ ?>
                             </div>
                         </div>
                     </div>
