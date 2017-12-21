@@ -18,7 +18,11 @@
             <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Еще</a>
             <ul class="dropdown-menu">
                 <? $APPLICATION->IncludeFile(
-                    SITE_DIR."include/logo_menu/logo_menu-more.php"
+                    SITE_DIR."include/logo_menu/logo_menu-more.php",
+                    array(),
+                    array(
+                            "NAME"=>"testetstest"
+                    )
                 ); ?>
             </ul>
         </li>
