@@ -21,7 +21,7 @@
                     SITE_DIR."include/logo_menu/logo_menu-more.php",
                     array(),
                     array(
-                            "NAME"=>"testetstest"
+                            "NAME"=>"пункт меню \"Еще\" "
                     )
                 ); ?>
             </ul>
