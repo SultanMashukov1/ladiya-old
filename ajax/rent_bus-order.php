@@ -12,6 +12,7 @@ $form = new \WM\Forms\AjaxForm(array(
     array('name', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
     array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
     array('email', 'email'),
+    array('date', 'require',array('message' => 'Выберите дату встречи')),
 
 ),
     $_POST
