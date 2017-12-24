@@ -13,6 +13,8 @@ $form = new \WM\Forms\AjaxForm(array(
     array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
     array('email', 'email'),
     array('date-arrive', 'required',array('message' => 'Выберите дату встречи')),
+    array('select-from', 'required',array('message' => 'Выберите дату встречи')),
+    array('select-to', 'required',array('message' => 'Выберите дату встречи')),
 
 ),
     $_POST
