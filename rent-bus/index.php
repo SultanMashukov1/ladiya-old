@@ -31,8 +31,9 @@ $APPLICATION->SetTitle("Аренда автобусов");
                             <div class="form__filter__item__name">
                                 <span>Имя</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input  it-block">
                                 <input name="name" class="form__filter__input__control" type="text">
+                                <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
                         <div class="form__filter__item">
@@ -48,15 +49,16 @@ $APPLICATION->SetTitle("Аренда автобусов");
                             <div class="form__filter__item__name">
                                 <span>E-mail</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input  it-block">
                                 <input name="email" class="form__filter__input__control" type="text">
+                                <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
                                 <span>Место встречи</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input  it-block">
                                 <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="1" selected="selected">Выбрать</option>
                                     <option value="2">Белокуриха</option>
@@ -65,14 +67,14 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                     <option value="5">Рубцовск</option>
                                     <option value="6">Славгород</option>
                                 </select>
-                                <div class="form__filter__input__log">Вы не выбрали!</div>
+                                <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
                                 <span>Место назначения</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input  it-block">
                                 <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="1" selected="selected">Выбрать</option>
                                     <option value="2">Белокуриха</option>
@@ -81,21 +83,23 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                     <option value="5">Рубцовск</option>
                                     <option value="6">Славгород</option>
                                 </select>
+                                <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
                                 <span>Дата встречи</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input  it-block">
                                 <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
+                                <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
                                 <span>Комментарий</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input  it-block">
                                 <textarea name="comment" class="form__filter__text__control"></textarea>
                             </div>
                         </div>
