@@ -39,9 +39,9 @@ $APPLICATION->SetTitle("Аренда автобусов");
                             <div class="form__filter__item__name">
                                 <span>Телефон</span>
                             </div>
-                            <div class="form__filter__input">
+                            <div class="form__filter__input it-block">
                                 <input name="phone" class="form__filter__input__control" type="text">
-                                <div class="form__filter__input__log">Вы не выбрали!</div>
+                                <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
                         <div class="form__filter__item">
