@@ -375,6 +375,8 @@ $(function () {
                     curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
                         .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
                 }
+                console.log(ans);
+                console.log(ans.errors);
                 console.log("не работает");
             }
             else
