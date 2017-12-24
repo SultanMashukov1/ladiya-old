@@ -365,7 +365,7 @@ $(function () {
 
             BX.closeWait(waitElement);
 
-            curForm.find('input:not([type="submit"]):not([type="button"]), textarea').css({'border': '1px solid #db5959'});
+            curForm.find('input:not([type="submit"]):not([type="button"]), textarea, select').css({'border': '1px solid #db5959'});
 
             if (ans && ans.errors)
             {
