@@ -23,7 +23,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">
-                    <div class="form__filter">
+                    <form method="post" class="form__filter" action="<?=SITE_DIR?>ajax/transfer_order.php" id="order-rent_bus">
                         <div class="form__filter__title">
                             <span>Оставить заявку</span>
                         </div>
@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                 <span>Имя</span>
                             </div>
                             <div class="form__filter__input">
-                                <input class="form__filter__input__control" type="text">
+                                <input name="name" class="form__filter__input__control" type="text">
                             </div>
                         </div>
                         <div class="form__filter__item">
@@ -40,7 +40,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                 <span>Телефон</span>
                             </div>
                             <div class="form__filter__input">
-                                <input class="form__filter__input__control" type="text">
+                                <input name="phone" class="form__filter__input__control" type="text">
                                 <div class="form__filter__input__log">Вы не выбрали!</div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                 <span>E-mail</span>
                             </div>
                             <div class="form__filter__input">
-                                <input class="form__filter__input__control" type="text">
+                                <input name="email" class="form__filter__input__control" type="text">
                             </div>
                         </div>
                         <div class="form__filter__item">
@@ -57,7 +57,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                 <span>Место встречи</span>
                             </div>
                             <div class="form__filter__input">
-                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">
+                                <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="1" selected="selected">Выбрать</option>
                                     <option value="2">Белокуриха</option>
                                     <option value="3">Бийск</option>
@@ -73,7 +73,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                 <span>Место назначения</span>
                             </div>
                             <div class="form__filter__input">
-                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">
+                                <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="1" selected="selected">Выбрать</option>
                                     <option value="2">Белокуриха</option>
                                     <option value="3">Бийск</option>
@@ -101,10 +101,92 @@ $APPLICATION->SetTitle("Аренда автобусов");
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__btn">
-                                <button class="form__filter__btn__control">Отправить</button>
+                                <input type="submit" class="form__filter__btn__control">Отправить</input>
                             </div>
                         </div>
-                    </div>
+                    </form>
+<!--                    <div class="form__filter">-->
+<!--                        <div class="form__filter__title">-->
+<!--                            <span>Оставить заявку</span>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>Имя</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <input class="form__filter__input__control" type="text">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>Телефон</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <input class="form__filter__input__control" type="text">-->
+<!--                                <div class="form__filter__input__log">Вы не выбрали!</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>E-mail</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <input class="form__filter__input__control" type="text">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>Место встречи</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">-->
+<!--                                    <option value="1" selected="selected">Выбрать</option>-->
+<!--                                    <option value="2">Белокуриха</option>-->
+<!--                                    <option value="3">Бийск</option>-->
+<!--                                    <option value="4">Новоалтайск</option>-->
+<!--                                    <option value="5">Рубцовск</option>-->
+<!--                                    <option value="6">Славгород</option>-->
+<!--                                </select>-->
+<!--                                <div class="form__filter__input__log">Вы не выбрали!</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>Место назначения</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <select name="select" class="form__filter__select__control cs-select cs-skin-border">-->
+<!--                                    <option value="1" selected="selected">Выбрать</option>-->
+<!--                                    <option value="2">Белокуриха</option>-->
+<!--                                    <option value="3">Бийск</option>-->
+<!--                                    <option value="4">Новоалтайск</option>-->
+<!--                                    <option value="5">Рубцовск</option>-->
+<!--                                    <option value="6">Славгород</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>Дата встречи</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__item__name">-->
+<!--                                <span>Комментарий</span>-->
+<!--                            </div>-->
+<!--                            <div class="form__filter__input">-->
+<!--                                <textarea class="form__filter__text__control"></textarea>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form__filter__item">-->
+<!--                            <div class="form__filter__btn">-->
+<!--                                <button class="form__filter__btn__control">Отправить</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
