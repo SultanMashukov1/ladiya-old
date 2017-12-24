@@ -76,7 +76,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="1" selected="selected">Выбрать</option>
+                                    <option value="1">Выбрать</option>
                                     <option value="2">Белокуриха</option>
                                     <option value="3">Бийск</option>
                                     <option value="4">Новоалтайск</option>
