@@ -69,7 +69,7 @@ $APPLICATION->SetTitle("Трансфер");
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">
-                    <form  class="form__filter" action="<?=SITE_DIR?>ajax/rent_bus-order.php" id="order-rent_bus">
+                    <form  class="form__filter" action="<?=SITE_DIR?>ajax/rent_bus-order.php" id="order-transfer">
                         <div class="form__filter__title">
                             <span>Оставить заявку</span>
                         </div>
