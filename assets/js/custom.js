@@ -375,9 +375,11 @@ $(function () {
                     curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
                         .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
                 }
+                onsole.log("не работает");
             }
             else
             {
+                console.log("работает");
                 //ok
                 // $.fancybox(ans.message)
                 // $.fancybox.close('#order-form');
