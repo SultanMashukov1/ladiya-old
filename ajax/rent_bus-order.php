@@ -8,11 +8,10 @@ empty($_POST) && exit;
 
 //set rules & fields for form
 $form = new \WM\Forms\AjaxForm(array(
-    array('name-review', 'length', array('min' => 2, 'max' => 50, 'message' => 'Имя должно быть больше {min} и меньше {max} символов')),
-    array('name-review', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
-    array('review','length', array('min' => 2, 'max' => 5000, 'message' => 'Текст отзыва должен быть не менее {min} и не более {max} символов')),
-    array('product'),
-    array('product-id'),
+    array('name', 'length', array('min' => 2, 'max' => 50, 'message' => 'Имя должно быть больше {min} и меньше {max} символов')),
+    array('name', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
+    array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
+    array('email', 'email'),
 
 ),
     $_POST
@@ -23,23 +22,33 @@ if($form->validate())
 {
     $status = $form->formActionFull(
     //iblock id
-        16,
+        21,
         //iblock add params
         array(
-            'NAME' => Helper::enc($form->getField('name-review')),
-            'PREVIEW_TEXT' => Helper::enc($form->getField('review')),
+//            'NAME' => Helper::enc($form->getField('name-review')),
+//            'PREVIEW_TEXT' => Helper::enc($form->getField('review')),
             'PROPERTY_VALUES' => array(
-                'PRODUCT' => $form->getField('product-id'),
+                'NAME' => Helper::enc($form->getField('name')),
+                'PHONE' => Helper::enc($form->getField('phone')),
+                'EMAIL' => Helper::enc($form->getField('email')),
+                'FROM' => Helper::enc($form->getField('select_from')),
+                'TO' => Helper::enc($form->getField('select_to')),
+                'DATE' => Helper::enc($form->getField('date-arrive')),
+                'COMMENT' => Helper::enc($form->getField('comment')),
             ),
             'ACTIVE' => 'N',
         ),
         //email event name
-        'NEW_REVIEW',
+        'NEW_ORDER-RENT_BUS',
         //email send params
         array(
-            'AUTHOR' => $form->getField('name-review'),
-            'TEXT' => $form->getField('review'),
-            'PRODUCT' => $form->getField('product-id'),
+            'NAME' => Helper::enc($form->getField('name')),
+            'PHONE' => Helper::enc($form->getField('phone')),
+            'EMAIL' => Helper::enc($form->getField('email')),
+            'FROM' => Helper::enc($form->getField('select_from')),
+            'TO' => Helper::enc($form->getField('select_to')),
+            'DATE' => Helper::enc($form->getField('date-arrive')),
+            'COMMENT' => Helper::enc($form->getField('comment')),
         )
     );
 

@@ -96,7 +96,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                 <span>Комментарий</span>
                             </div>
                             <div class="form__filter__input">
-                                <textarea class="form__filter__text__control"></textarea>
+                                <textarea name="comment" class="form__filter__text__control"></textarea>
                             </div>
                         </div>
                         <div class="form__filter__item">
