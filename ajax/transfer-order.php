@@ -25,7 +25,7 @@ if($form->validate())
 {
     $status = $form->formActionFull(
     //iblock id
-        21,
+        22,
         //iblock add params
         array(
 //            'NAME' => Helper::enc($form->getField('name-review')),
