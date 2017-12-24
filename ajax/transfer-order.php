@@ -42,7 +42,7 @@ if($form->validate())
             'ACTIVE' => 'N',
         ),
         //email event name
-        'NEW_ORDER-RENT_BUS',
+        'NEW_ORDER-TRANSFER',
         //email send params
         array(
             'NAME' => Helper::enc($form->getField('name')),
