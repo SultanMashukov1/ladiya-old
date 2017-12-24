@@ -60,12 +60,12 @@ $APPLICATION->SetTitle("Аренда автобусов");
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" >Выбрать</option>
-                                    <option value="2">Белокуриха</option>
-                                    <option value="3">Бийск</option>
-                                    <option value="4">Новоалтайск</option>
-                                    <option value="5">Рубцовск</option>
-                                    <option value="6">Славгород</option>
+                                    <option >Выбрать</option>
+                                    <option >Белокуриха</option>
+                                    <option >Бийск</option>
+                                    <option >Новоалтайск</option>
+                                    <option >Рубцовск</option>
+                                    <option >Славгород</option>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
@@ -76,12 +76,12 @@ $APPLICATION->SetTitle("Аренда автобусов");
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" >Выбрать</option>
-                                    <option value="2">Белокуриха</option>
-                                    <option value="3">Бийск</option>
-                                    <option value="4">Новоалтайск</option>
-                                    <option value="5">Рубцовск</option>
-                                    <option value="6">Славгород</option>
+                                    <option  >Выбрать</option>
+                                    <option >Белокуриха</option>
+                                    <option >Бийск</option>
+                                    <option >Новоалтайск</option>
+                                    <option >Рубцовск</option>
+                                    <option >Славгород</option>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
