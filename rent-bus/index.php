@@ -3,6 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Аренда автобусов");
 CModule::IncludeModule('iblock');
 
+$allOptions = array();
 $places = array();
 $arFilter = array("IBLOCK_ID"=>"23");
 $arSelectFields = array("ID","NAME");
@@ -15,12 +16,12 @@ $places = CIBlockElement::GetList(
 );
 while($ob = $places->GetNextElement())
 {
-    $arFields[] = $ob->GetFields();
+    $allOptions[] = $ob->GetFields();
 
-    echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
+    echo "<option value=\"".$allOptions["NAME"]."\">".$allOptions["NAME"]."</option>";
 }
 
-foreach ($arFields as $wow)
+foreach ($allOptions as $wow)
 {
     var_dump($wow);
 }
