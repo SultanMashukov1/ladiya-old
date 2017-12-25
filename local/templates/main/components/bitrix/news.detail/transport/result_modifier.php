@@ -14,5 +14,5 @@ $places = CIBlockElement::GetList(
 );
 while($ob = $places->GetNextElement())
 {
-    $arResult["DESTINATION_POINTS"] = $ob->GetFields();
+    $arResult["DESTINATION_POINTS"][] = $ob->GetFields();
 }
