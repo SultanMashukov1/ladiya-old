@@ -197,7 +197,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                     <?
                         $arFilter = array("IBLOCK_ID"=>"23");
                         $arSelectFields = array("ID","NAME");
-                        $places = CIBlockElement::GetList(
+                        $places = CIBlock::GetList(
                             array(),
                             $arFilter,
                             array(),
