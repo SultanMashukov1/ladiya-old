@@ -206,7 +206,11 @@ CModule::IncludeModule('iblock');
                             array(),
                             $arSelectFields
                         );
-                        var_dump($places);
+                        while($ob = $places->GetNextElement())
+                        {
+                            $arFields = $ob->GetFields();
+                        }
+                        var_dump($arFields);
                     ?>
                     <div class="row">
                         <div class="col-sm-12">
