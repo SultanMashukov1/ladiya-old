@@ -126,7 +126,7 @@ while($ob = $places->GetNextElement())
                                 <span>Место встречи</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
+                                <select name="select-from" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
                                     <?
                                     foreach ($allOptions as $option)
@@ -143,7 +143,7 @@ while($ob = $places->GetNextElement())
                                 <span>Место назначения</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
+                                <select name="select-to" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
                                     <?
                                     foreach ($allOptions as $option)
