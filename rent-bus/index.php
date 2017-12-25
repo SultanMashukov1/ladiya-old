@@ -17,14 +17,9 @@ $places = CIBlockElement::GetList(
 while($ob = $places->GetNextElement())
 {
     $allOptions[] = $ob->GetFields();
-
     echo "<option value=\"".$allOptions["NAME"]."\">".$allOptions["NAME"]."</option>";
 }
 
-foreach ($allOptions as $wow)
-{
-    var_dump($wow);
-}
 ?>
 
     <div class="head-img head-img_rent-bus">
@@ -85,6 +80,12 @@ foreach ($allOptions as $wow)
                             <div class="form__filter__input  it-block">
                                 <select name="select-from" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
+                                    <?
+                                        foreach ($allOptions as $option)
+                                        {
+                                            echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
+                                        }
+                                    ?>
 
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
