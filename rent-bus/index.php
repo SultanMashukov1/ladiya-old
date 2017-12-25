@@ -17,7 +17,6 @@ CModule::IncludeModule('iblock');
     while($ob = $places->GetNextElement())
     {
         $allOptions[] = $ob->GetFields();
-        echo "<option value=\"".$allOptions["NAME"]."\">".$allOptions["NAME"]."</option>";
     }
 
 ?>
