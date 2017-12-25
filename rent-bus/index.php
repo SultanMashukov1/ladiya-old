@@ -194,6 +194,18 @@ $APPLICATION->SetTitle("Аренда автобусов");
                     <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
+                    <?
+                        $arFilter = array("IBLOCK_ID"=>"23");
+                        $arSelectFields = array("IBLOCK_ID","ID","NAME");
+                        $places = CIBlockElement::GetList(
+                            false,
+                            false,
+                            false,
+                            false,
+                            arSelectFields
+                        );
+                        var_dump($places);
+                    ?>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="head">
