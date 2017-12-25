@@ -81,11 +81,12 @@ CModule::IncludeModule('iblock');
                                         while($ob = $places->GetNextElement())
                                         {
                                             $arFields = $ob->GetFields();
-                                        }
-                                        foreach ($arFields as $field)
-                                        {
                                             echo "<option value=\"".$field["NAME"]."\">".$field["NAME"]."</option>";
                                         }
+//                                        foreach ($arFields as $field)
+//                                        {
+//
+//                                        }
                                     ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
