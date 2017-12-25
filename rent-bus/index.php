@@ -82,6 +82,17 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                     <option value="Новоалтайск">Новоалтайск</option>
                                     <option value="Рубцовск">Рубцовск</option>
                                     <option value="Славгород">Славгород</option>
+                                    <?
+                                        $arSelectFields = array("IBLOCK_ID","ID","NAME");
+                                        $places = CIBlockElement::GetList(
+                                            false,
+                                            false,
+                                            false,
+                                            false,
+                                            arSelectFields
+                                        );
+                                        var_dump($places);
+                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
