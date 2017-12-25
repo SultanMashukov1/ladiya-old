@@ -81,7 +81,7 @@ CModule::IncludeModule('iblock');
                                         while($ob = $places->GetNextElement())
                                         {
                                             $arFields = $ob->GetFields();
-                                            echo "<option value=\"".$field["NAME"]."\">".$field["NAME"]."</option>";
+                                            echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
                                         }
 //                                        foreach ($arFields as $field)
 //                                        {
