@@ -90,7 +90,7 @@ while($ob = $places->GetNextElement())
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">
-                    <form  class="form__filter" action="<?=SITE_DIR?>ajax/rent_bus-order.php" id="order-transfer">
+                    <form  class="form__filter" action="<?=SITE_DIR?>ajax/transfer-order.php" id="order-transfer">
                         <div class="form__filter__title">
                             <span>Оставить заявку</span>
                         </div>
