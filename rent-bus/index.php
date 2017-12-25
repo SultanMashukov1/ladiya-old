@@ -21,6 +21,17 @@ $APPLICATION->SetTitle("Аренда автобусов");
 
     <section class="content-page">
         <div class="container">
+            <?
+            $arSelectFields = array("IBLOCK_ID","ID","NAME");
+            $places = CIBlockElement::GetList(
+                false,
+                false,
+                false,
+                false,
+                arSelectFields
+            );
+            var_dump($places);
+            ?>
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-4">
                     <form  class="form__filter" action="<?=SITE_DIR?>ajax/rent_bus-order.php" id="order-rent_bus">
@@ -82,17 +93,6 @@ $APPLICATION->SetTitle("Аренда автобусов");
                                     <option value="Новоалтайск">Новоалтайск</option>
                                     <option value="Рубцовск">Рубцовск</option>
                                     <option value="Славгород">Славгород</option>
-                                    <?
-                                        $arSelectFields = array("IBLOCK_ID","ID","NAME");
-                                        $places = CIBlockElement::GetList(
-                                            false,
-                                            false,
-                                            false,
-                                            false,
-                                            arSelectFields
-                                        );
-                                        var_dump($places);
-                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
