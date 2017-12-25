@@ -28,7 +28,7 @@ if($form->validate())
         21,
         //iblock add params
         array(
-            'NAME' => Helper::enc($form->getField('Заявка на аренду автобуса')),
+            'NAME' => 'Заявка на аренду автобуса',
             'PROPERTY_VALUES' => array(
                 'NAME' => Helper::enc($form->getField('name')),
                 'PHONE' => Helper::enc($form->getField('phone')),
