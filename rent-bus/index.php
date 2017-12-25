@@ -202,7 +202,7 @@ CModule::IncludeModule('iblock');
                         $places = CIBlockElement::GetList(
                             array(),
                             $arFilter,
-                            array(),
+                            false,
                             array(),
                             $arSelectFields
                         );
