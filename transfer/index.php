@@ -174,7 +174,7 @@ while($ob = $places->GetNextElement())
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__btn">
-                                <input type="submit" class="form__filter__btn__control">Отправить</input>
+                                <input type="submit" class="form__filter__btn__control"></input>
                             </div>
                         </div>
                     </form>
