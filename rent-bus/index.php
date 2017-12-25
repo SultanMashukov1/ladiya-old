@@ -196,6 +196,7 @@ CModule::IncludeModule('iblock');
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
                     <?
+                        $places = array();
                         $arFilter = array("IBLOCK_ID"=>"23");
                         $arSelectFields = array("ID","NAME");
                         $places = CIBlockElement::GetList(
