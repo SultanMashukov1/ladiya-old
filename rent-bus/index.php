@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Аренда автобусов");
+CModule::IncludeModule('iblock');
 ?>
 
     <div class="head-img head-img_rent-bus">
@@ -197,7 +198,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                     <?
                         $arFilter = array("IBLOCK_ID"=>"23");
                         $arSelectFields = array("ID","NAME");
-                        $places = CIBlock::GetList(
+                        $places = CIBlockElement::GetList(
                             array(),
                             $arFilter,
                             array(),
