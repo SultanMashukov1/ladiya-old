@@ -101,11 +101,21 @@ CModule::IncludeModule('iblock');
 <!--                                    <option value="Рубцовск">Рубцовск</option>-->
 <!--                                    <option value="Славгород">Славгород</option>-->
                                     <?
-                                    while($ob = $places->GetNextElement())
-                                    {
-                                        $arFields = $ob->GetFields();
-                                        echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
-                                    }
+                                        $places = array();
+                                        $arFilter = array("IBLOCK_ID"=>"23");
+                                        $arSelectFields = array("ID","NAME");
+                                        $places = CIBlockElement::GetList(
+                                            array(),
+                                            $arFilter,
+                                            false,
+                                            array(),
+                                            $arSelectFields
+                                        );
+                                        while($ob = $places->GetNextElement())
+                                        {
+                                            $arFields = $ob->GetFields();
+                                            echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
+                                        }
                                     ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
