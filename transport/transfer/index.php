@@ -75,15 +75,24 @@ while($ob = $places->GetNextElement())
         </div>
     </section>
 
-    <section class="breadcrumbs">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Транспорт</a></li>
-                <li class="active">Трансфер</li>
-            </ol>
-        </div>
-    </section>
+<!--    <section class="breadcrumbs">-->
+<!--        <div class="container">-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li><a href="#">Главная</a></li>-->
+<!--                <li><a href="#">Транспорт</a></li>-->
+<!--                <li class="active">Трансфер</li>-->
+<!--            </ol>-->
+<!--        </div>-->
+<!--    </section>-->
+<? $APPLICATION->IncludeComponent(
+    "bitrix:breadcrumb",
+    "",
+    Array(
+        "PATH" => "",
+        "SITE_ID" => "s1",
+        "START_FROM" => "0"
+    )
+); ?>
 
     <section class="content-page">
         <div class="container">

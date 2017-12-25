@@ -9,15 +9,15 @@ $APPLICATION->SetTitle("Наш транспорт");
         </div>
     </div>
 
-<?// $APPLICATION->IncludeComponent(
-//    "bitrix:breadcrumb",
-//    "",
-//    Array(
-//        "PATH" => "",
-//        "SITE_ID" => "s1",
-//        "START_FROM" => "0"
-//    )
-//); ?>
+<? $APPLICATION->IncludeComponent(
+    "bitrix:breadcrumb",
+    "",
+    Array(
+        "PATH" => "",
+        "SITE_ID" => "s1",
+        "START_FROM" => "0"
+    )
+); ?>
 <?//$APPLICATION->IncludeComponent(
 //	"bitrix:news.list",
 //	"transport",
