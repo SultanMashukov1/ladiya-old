@@ -423,7 +423,7 @@ $(function () {
                 //ok
                 // $.fancybox(ans.message)
                 // $.fancybox.close('#order-form');
-                $.fancybox.open('Ваша заявка отправлена! <br> В скором времени Вам ответят');
+                $.fancybox.open('Ваша заявка трансфера отправлена! <br> В скором времени Вам ответят');
             }
         }, 'json');
         return false;
