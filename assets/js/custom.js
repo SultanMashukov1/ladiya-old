@@ -375,9 +375,7 @@ $(function () {
                     curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
                         .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
                 }
-                console.log(ans);
-                console.log(ans.errors);
-                console.log("не работает");
+
             }
             else
             {
@@ -385,7 +383,7 @@ $(function () {
                 //ok
                 // $.fancybox(ans.message)
                 // $.fancybox.close('#order-form');
-                $.fancybox.open('Test');
+                $.fancybox.open('Ваша заявка на аредну автобуса отправлена! <br> В скором времени вам ответят! ');
             }
         }, 'json');
         return false;
@@ -425,7 +423,7 @@ $(function () {
                 //ok
                 // $.fancybox(ans.message)
                 // $.fancybox.close('#order-form');
-                $.fancybox.open('Test');
+                $.fancybox.open('Ваша заявка отправлена! <br> В скором времени Вам ответят');
             }
         }, 'json');
         return false;
