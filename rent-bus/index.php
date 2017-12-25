@@ -94,12 +94,19 @@ CModule::IncludeModule('iblock');
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" selected="selected">Выбрать</option>
-                                    <option value="Белокуриха">Белокуриха</option>
-                                    <option value="Бийск">Бийск</option>
-                                    <option value="Новоалтайск">Новоалтайск</option>
-                                    <option value="Рубцовск">Рубцовск</option>
-                                    <option value="Славгород">Славгород</option>
+                                    <option value="" selected="selected"></option>
+<!--                                    <option value="Белокуриха">Белокуриха</option>-->
+<!--                                    <option value="Бийск">Бийск</option>-->
+<!--                                    <option value="Новоалтайск">Новоалтайск</option>-->
+<!--                                    <option value="Рубцовск">Рубцовск</option>-->
+<!--                                    <option value="Славгород">Славгород</option>-->
+                                    <?
+                                    while($ob = $places->GetNextElement())
+                                    {
+                                        $arFields = $ob->GetFields();
+                                        echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
+                                    }
+                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
