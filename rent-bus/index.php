@@ -226,7 +226,7 @@ CModule::IncludeModule('iblock');
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </div>-->
-                    <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>
+<!--                    <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>-->
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
                     <div class="row">
