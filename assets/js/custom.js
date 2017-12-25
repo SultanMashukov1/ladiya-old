@@ -407,7 +407,7 @@ $(function () {
 
             BX.closeWait(waitElement);
 
-            curForm.find('input:not([type="submit"]):not([type="button"]), select .cs-placeholder').css({'border': '1px solid #db5959'});
+            curForm.find('input:not([type="submit"]):not([type="button"]), select , .cs-placeholder').css({'border': '1px solid #db5959'});
 
             if (ans && ans.errors)
             {
