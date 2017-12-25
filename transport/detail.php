@@ -60,7 +60,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Страница",
 		"PROPERTY_CODE" => array(
-			0 => "",
+			0 => "AJAX_FILE",
 			1 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
