@@ -316,7 +316,7 @@ while($ob = $places->GetNextElement())
                                         <span></span>
                                         <span></span>
                                     </button>
-                                    <a href="/hotel/?VIEW=1">
+                                    <a href="/hotel?VIEW=1">
                                         <button class="grid">
                                             <span></span>
                                             <span></span>

@@ -102,7 +102,7 @@ $APPLICATION->SetTitle("Наш транспорт");
                                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                                 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                             </p>
-                            <a href="<?=SITE_DIR?>transfer" class="item-card__content__more"><span>Выбрать трансфер</span></a>
+                            <a href="<?=SITE_DIR?>transport/transfer" class="item-card__content__more"><span>Выбрать трансфер</span></a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ $APPLICATION->SetTitle("Наш транспорт");
                                 Все автобусы соответствуют стандартам безопасности и комфорта. Оснащены кондиционерами,
                                 аудио- и видео техникой, микрофонами. Эргономичные, удобные сиденья
                             </p>
-                            <a href="<?=SITE_DIR?>rent-bus" class="item-card__content__more"><span>Выбрать автобус</span></a>
+                            <a href="<?=SITE_DIR?>transport/rent-bus" class="item-card__content__more"><span>Выбрать автобус</span></a>
                         </div>
                     </div>
                 </div>
