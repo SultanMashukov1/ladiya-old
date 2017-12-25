@@ -199,7 +199,7 @@ $APPLICATION->SetTitle("Аренда автобусов");
                         $arSelectFields = array("IBLOCK_ID","ID","NAME");
                         $places = CIBlockElement::GetList(
                             false,
-                            false,
+                            $arFilter,
                             false,
                             false,
                             arSelectFields
