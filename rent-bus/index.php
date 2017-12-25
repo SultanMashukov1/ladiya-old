@@ -61,12 +61,32 @@ CModule::IncludeModule('iblock');
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" selected="selected">Выбрать</option>
-                                    <option value="2">Белокуриха</option>
-                                    <option value="3">Бийск</option>
-                                    <option value="4">Новоалтайск</option>
-                                    <option value="5">Рубцовск</option>
-                                    <option value="6">Славгород</option>
+<!--                                    <option value="" selected="selected">Выбрать</option>-->
+<!--                                    <option value="2">Белокуриха</option>-->
+<!--                                    <option value="3">Бийск</option>-->
+<!--                                    <option value="4">Новоалтайск</option>-->
+<!--                                    <option value="5">Рубцовск</option>-->
+<!--                                    <option value="6">Славгород</option>-->
+                                    <?
+                                        $places = array();
+                                        $arFilter = array("IBLOCK_ID"=>"23");
+                                        $arSelectFields = array("ID","NAME");
+                                        $places = CIBlockElement::GetList(
+                                            array(),
+                                            $arFilter,
+                                            false,
+                                            array(),
+                                            $arSelectFields
+                                        );
+                                        while($ob = $places->GetNextElement())
+                                        {
+                                            $arFields = $ob->GetFields();
+                                        }
+                                        foreach ($arFields as $field)
+                                        {
+                                            echo "<option value=\"".$field["NAME"]."\">".$field["NAME"]."</option>";
+                                        }
+                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
@@ -195,25 +215,6 @@ CModule::IncludeModule('iblock');
                     <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
-                    <?
-                        $places = array();
-                        $arFilter = array("IBLOCK_ID"=>"23");
-                        $arSelectFields = array("ID","NAME");
-                        $places = CIBlockElement::GetList(
-                            array(),
-                            $arFilter,
-                            false,
-                            array(),
-                            $arSelectFields
-                        );
-                        while($ob = $places->GetNextElement())
-                        {
-                            $arFields = $ob->GetFields();
-                            var_dump($arFields);
-                        }
-
-
-                    ?>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="head">
