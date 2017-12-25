@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("Наш транспорт");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "#SITE_DIR#/transport/#ELEMENT_CODE#/",
+		"DETAIL_URL" => "#SITE_DIR#/#ELEMENT_CODE#/",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
