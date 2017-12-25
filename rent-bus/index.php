@@ -2,6 +2,27 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Аренда автобусов");
 CModule::IncludeModule('iblock');
+
+$places = array();
+$arFilter = array("IBLOCK_ID"=>"23");
+$arSelectFields = array("ID","NAME");
+$places = CIBlockElement::GetList(
+    array(),
+    $arFilter,
+    false,
+    array(),
+    $arSelectFields
+);
+while($ob = $places->GetNextElement())
+{
+    $arFields = $ob->GetFields();
+    echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
+}
+
+foreach ($arFields as $wow)
+{
+    var_dump($wow);
+}
 ?>
 
     <div class="head-img head-img_rent-bus">
@@ -62,28 +83,7 @@ CModule::IncludeModule('iblock');
                             <div class="form__filter__input  it-block">
                                 <select name="select-from" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
-                                    <?
-                                        $places = array();
-                                        $arFilter = array("IBLOCK_ID"=>"23");
-                                        $arSelectFields = array("ID","NAME");
-                                        $places = CIBlockElement::GetList(
-                                            array(),
-                                            $arFilter,
-                                            false,
-                                            array(),
-                                            $arSelectFields
-                                        );
-                                        while($ob = $places->GetNextElement())
-                                        {
-                                            $arFields = $ob->GetFields();
-                                            echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
-                                        }
-                                    ?>
-                                    <!--                                    <option value="2">Белокуриха</option>-->
-                                    <!--                                    <option value="3">Бийск</option>-->
-                                    <!--                                    <option value="4">Новоалтайск</option>-->
-                                    <!--                                    <option value="5">Рубцовск</option>-->
-                                    <!--                                    <option value="6">Славгород</option>-->
+
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
@@ -95,28 +95,6 @@ CModule::IncludeModule('iblock');
                             <div class="form__filter__input  it-block">
                                 <select name="select-to" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
-                                    <?
-                                        $places = array();
-                                        $arFilter = array("IBLOCK_ID"=>"23");
-                                        $arSelectFields = array("ID","NAME");
-                                        $places = CIBlockElement::GetList(
-                                            array(),
-                                            $arFilter,
-                                            false,
-                                            array(),
-                                            $arSelectFields
-                                        );
-                                        while($ob = $places->GetNextElement())
-                                        {
-                                            $arFields = $ob->GetFields();
-                                            echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
-                                        }
-                                    ?>
-                                    <!--                                    <option value="Белокуриха">Белокуриха</option>-->
-                                    <!--                                    <option value="Бийск">Бийск</option>-->
-                                    <!--                                    <option value="Новоалтайск">Новоалтайск</option>-->
-                                    <!--                                    <option value="Рубцовск">Рубцовск</option>-->
-                                    <!--                                    <option value="Славгород">Славгород</option>-->
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>

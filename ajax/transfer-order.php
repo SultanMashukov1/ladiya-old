@@ -28,14 +28,13 @@ if($form->validate())
         22,
         //iblock add params
         array(
-//            'NAME' => Helper::enc($form->getField('name-review')),
-//            'PREVIEW_TEXT' => Helper::enc($form->getField('review')),
+            'NAME' => "Заявка на трансфер",
             'PROPERTY_VALUES' => array(
                 'NAME' => Helper::enc($form->getField('name')),
                 'PHONE' => Helper::enc($form->getField('phone')),
                 'EMAIL' => Helper::enc($form->getField('email')),
-                'FROM' => Helper::enc($form->getField('select_from')),
-                'TO' => Helper::enc($form->getField('select_to')),
+                'FROM' => Helper::enc($form->getField('select-from')),
+                'TO' => Helper::enc($form->getField('select-to')),
                 'DATE' => Helper::enc($form->getField('date-arrive')),
                 'COMMENT' => Helper::enc($form->getField('comment')),
             ),
@@ -48,8 +47,8 @@ if($form->validate())
             'NAME' => Helper::enc($form->getField('name')),
             'PHONE' => Helper::enc($form->getField('phone')),
             'EMAIL' => Helper::enc($form->getField('email')),
-            'FROM' => Helper::enc($form->getField('select_from')),
-            'TO' => Helper::enc($form->getField('select_to')),
+            'FROM' => Helper::enc($form->getField('select-from')),
+            'TO' => Helper::enc($form->getField('select-to')),
             'DATE' => Helper::enc($form->getField('date-arrive')),
             'COMMENT' => Helper::enc($form->getField('comment')),
         )
