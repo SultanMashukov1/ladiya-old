@@ -209,8 +209,9 @@ CModule::IncludeModule('iblock');
                         while($ob = $places->GetNextElement())
                         {
                             $arFields = $ob->GetFields();
+                            var_dump($arFields);
                         }
-                        var_dump($arFields);
+
 
                     ?>
                     <div class="row">
