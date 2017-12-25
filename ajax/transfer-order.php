@@ -12,10 +12,10 @@ $form = new \WM\Forms\AjaxForm(array(
     array('name', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
     array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
     array('email', 'email'),
-    array('date-arrive', 'required',array('message' => 'Выберите дату встречи test')),
+    array('date-arrive', 'required',array('message' => 'Выберите дату встречи')),
     array('date-arrive', 'regex', array('pattern' => '/([0-2]\d|3[01])\.(0\d|1[012])\.(\d{4})/', 'message' => 'Неправильный формат даты')),
     array('select-from', 'required',array('message' => 'Выберите место встречи')),
-    array('select-to', 'required',array('message' => 'Выберите место встречи')),
+    array('select-to', 'required',array('message' => 'Выберите место назначения')),
 
 ),
     $_POST
