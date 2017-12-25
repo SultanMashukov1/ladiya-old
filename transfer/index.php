@@ -1,6 +1,27 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Трансфер");
+
+CModule::IncludeModule('iblock');
+
+$allOptions = array();
+$places = array();
+$arFilter = array("IBLOCK_ID"=>"23");
+$arSelectFields = array("ID","NAME");
+$places = CIBlockElement::GetList(
+    array(),
+    $arFilter,
+    false,
+    array(),
+    $arSelectFields
+);
+while($ob = $places->GetNextElement())
+{
+    $allOptions[] = $ob->GetFields();
+    echo "<option value=\"".$allOptions["NAME"]."\">".$allOptions["NAME"]."</option>";
+}
+
+
 ?>
 
     <section class="lad-slideshow">
@@ -106,12 +127,13 @@ $APPLICATION->SetTitle("Трансфер");
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" selected="selected">Выбрать</option>
-                                    <option value="2">Белокуриха</option>
-                                    <option value="3">Бийск</option>
-                                    <option value="4">Новоалтайск</option>
-                                    <option value="5">Рубцовск</option>
-                                    <option value="6">Славгород</option>
+                                    <option value="" selected="selected"></option>
+                                    <?
+                                    foreach ($allOptions as $option)
+                                    {
+                                        echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
+                                    }
+                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
@@ -122,12 +144,13 @@ $APPLICATION->SetTitle("Трансфер");
                             </div>
                             <div class="form__filter__input  it-block">
                                 <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" selected="selected">Выбрать</option>
-                                    <option value="2">Белокуриха</option>
-                                    <option value="3">Бийск</option>
-                                    <option value="4">Новоалтайск</option>
-                                    <option value="5">Рубцовск</option>
-                                    <option value="6">Славгород</option>
+                                    <option value="" selected="selected"></option>
+                                    <?
+                                    foreach ($allOptions as $option)
+                                    {
+                                        echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
+                                    }
+                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
