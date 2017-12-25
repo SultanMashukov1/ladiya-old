@@ -15,7 +15,8 @@ $places = CIBlockElement::GetList(
 );
 while($ob = $places->GetNextElement())
 {
-    $arFields = $ob->GetFields();
+    $arFields[] = $ob->GetFields();
+
     echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
 }
 
