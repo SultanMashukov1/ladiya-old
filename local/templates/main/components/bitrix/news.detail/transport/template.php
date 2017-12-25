@@ -38,7 +38,8 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4 col-lg-4">
-                <form  class="form__filter" action="<?=SITE_DIR?>ajax/rent_bus-order.php" id="order-rent_bus">
+                <? var_dump($arResult["PROPERTIES"]["AJAX_FILE"]["VALUE"])?>
+                <form  class="form__filter" action="<?=SITE_DIR?>ajax/<?=$arResult["PROPERTIES"]["AJAX_FILE"]["VALUE"]?>" id="order-rent_bus">
                     <div class="form__filter__title">
                         <span>Оставить заявку</span>
                     </div>
@@ -129,7 +130,7 @@ $this->setFrameMode(true);
                 </form>
             </div>
             <div class="col-xs-12 col-md-8 col-lg-8 results">
-
+                    Some text...
             </div>
         </div>
     </div>
