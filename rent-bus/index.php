@@ -62,11 +62,6 @@ CModule::IncludeModule('iblock');
                             <div class="form__filter__input  it-block">
                                 <select name="select_from" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
-<!--                                    <option value="2">Белокуриха</option>-->
-<!--                                    <option value="3">Бийск</option>-->
-<!--                                    <option value="4">Новоалтайск</option>-->
-<!--                                    <option value="5">Рубцовск</option>-->
-<!--                                    <option value="6">Славгород</option>-->
                                     <?
                                         $places = array();
                                         $arFilter = array("IBLOCK_ID"=>"23");
@@ -84,6 +79,11 @@ CModule::IncludeModule('iblock');
                                             echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
                                         }
                                     ?>
+                                    <!--                                    <option value="2">Белокуриха</option>-->
+                                    <!--                                    <option value="3">Бийск</option>-->
+                                    <!--                                    <option value="4">Новоалтайск</option>-->
+                                    <!--                                    <option value="5">Рубцовск</option>-->
+                                    <!--                                    <option value="6">Славгород</option>-->
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
@@ -95,11 +95,6 @@ CModule::IncludeModule('iblock');
                             <div class="form__filter__input  it-block">
                                 <select name="select_to" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
-<!--                                    <option value="Белокуриха">Белокуриха</option>-->
-<!--                                    <option value="Бийск">Бийск</option>-->
-<!--                                    <option value="Новоалтайск">Новоалтайск</option>-->
-<!--                                    <option value="Рубцовск">Рубцовск</option>-->
-<!--                                    <option value="Славгород">Славгород</option>-->
                                     <?
                                         $places = array();
                                         $arFilter = array("IBLOCK_ID"=>"23");
@@ -117,6 +112,11 @@ CModule::IncludeModule('iblock');
                                             echo "<option value=\"".$arFields["NAME"]."\">".$arFields["NAME"]."</option>";
                                         }
                                     ?>
+                                    <!--                                    <option value="Белокуриха">Белокуриха</option>-->
+                                    <!--                                    <option value="Бийск">Бийск</option>-->
+                                    <!--                                    <option value="Новоалтайск">Новоалтайск</option>-->
+                                    <!--                                    <option value="Рубцовск">Рубцовск</option>-->
+                                    <!--                                    <option value="Славгород">Славгород</option>-->
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
