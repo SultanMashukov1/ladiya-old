@@ -33,21 +33,6 @@ $this->setFrameMode(true);
 <!--    </div>-->
 <!--</div>-->
 
-<div class="head-img head-img_rent-bus">
-    <div class="lad-slideshow__block-title">
-        <h1 class="lad-slideshow__block-title__h1">Аренда автобусов</h1>
-    </div>
-</div>
-
-<section class="breadcrumbs">
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Транспорт</a></li>
-            <li class="active">Аренда автобусов</li>
-        </ol>
-    </div>
-</section>
 
 <section class="content-page">
     <div class="container">
