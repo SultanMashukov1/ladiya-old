@@ -77,7 +77,7 @@ $this->setFrameMode(true);
                             <select name="select-from" class="form__filter__select__control cs-select cs-skin-border">
                                 <option value="" selected="selected"></option>
                                 <?
-                                foreach ($allOptions as $option)
+                                foreach ($arResult["DESTINATION_POINTS"] as $option)
                                 {
                                     echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
                                 }
@@ -95,7 +95,7 @@ $this->setFrameMode(true);
                             <select name="select-to" class="form__filter__select__control cs-select cs-skin-border">
                                 <option value="" selected="selected"></option>
                                 <?
-                                foreach ($allOptions as $option)
+                                foreach ($arResult["DESTINATION_POINTS"] as $option)
                                 {
                                     echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
                                 }
