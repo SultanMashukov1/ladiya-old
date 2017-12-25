@@ -206,6 +206,7 @@ CModule::IncludeModule('iblock');
                             array(),
                             $arSelectFields
                         );
+                        var_dump($places);
                         while($ob = $places->GetNextElement())
                         {
                             $arFields = $ob->GetFields();
