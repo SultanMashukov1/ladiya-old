@@ -3,22 +3,22 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Аренда автобусов");
 CModule::IncludeModule('iblock');
 
-$allOptions = array();
-$places = array();
-$arFilter = array("IBLOCK_ID"=>"23");
-$arSelectFields = array("ID","NAME");
-$places = CIBlockElement::GetList(
-    array(),
-    $arFilter,
-    false,
-    array(),
-    $arSelectFields
-);
-while($ob = $places->GetNextElement())
-{
-    $allOptions[] = $ob->GetFields();
-    echo "<option value=\"".$allOptions["NAME"]."\">".$allOptions["NAME"]."</option>";
-}
+    $allOptions = array();
+    $places = array();
+    $arFilter = array("IBLOCK_ID"=>"23");
+    $arSelectFields = array("ID","NAME");
+    $places = CIBlockElement::GetList(
+        array(),
+        $arFilter,
+        false,
+        array(),
+        $arSelectFields
+    );
+    while($ob = $places->GetNextElement())
+    {
+        $allOptions[] = $ob->GetFields();
+        echo "<option value=\"".$allOptions["NAME"]."\">".$allOptions["NAME"]."</option>";
+    }
 
 ?>
 
@@ -98,6 +98,12 @@ while($ob = $places->GetNextElement())
                             <div class="form__filter__input  it-block">
                                 <select name="select-to" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
+                                    <?
+                                    foreach ($allOptions as $option)
+                                    {
+                                        echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
+                                    }
+                                    ?>
                                 </select>
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
