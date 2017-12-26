@@ -161,7 +161,7 @@ $APPLICATION->SetTitle("О КМВ");
 		"ELEMENT_SORT_FIELD2" => "id",
 		"ELEMENT_SORT_ORDER2" => "desc",
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
+			0 => "TITLE_PREVIEW_DESCRIPTION",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE_MOBILE" => array(
